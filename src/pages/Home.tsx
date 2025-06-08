@@ -7,10 +7,13 @@ import OurWorkSection from '../component/OurWork';
 
 const Home: React.FC = () => {
   
-  const [activeTestimonial, setActiveTestimonial] = useState(0);
+    const [activeTestimonial, setActiveTestimonial] = useState(0);
   
+    const [showPopup, setShowPopup] = useState<boolean>(false);
 
-
+    const togglePopup = (): void => {
+      setShowPopup((prev) => !prev);
+    };
 
   
   const testimonials = [
@@ -54,14 +57,53 @@ const Home: React.FC = () => {
           />
           <div className="absolute inset-0 bg-gradient-to-r from-purple-900/90 to-yellow-500/60"></div>
         </div>
-        <div className="container mx-auto px-6 relative z-10 flex items-center h-full" style={{ minHeight: '80vh' }}>
+        <div
+          className="container mx-auto px-6 relative z-10 flex items-center h-full"
+          style={{ minHeight: '80vh' }}
+        >
           <div className="max-w-2xl text-white">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">Empowering Communities, Transforming Lives</h1>
-            <p className="text-xl mb-8">The Kayode Philip Foundation is dedicated to sustainable development, education, and healthcare initiatives across Africa. Join us in making a difference.</p>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+              Empowering Communities, Transforming Lives
+            </h1>
+            <p className="text-xl mb-8">
+              The Kayode Philip Foundation is dedicated to sustainable development, education, and
+              healthcare initiatives across Africa. Join us in making a difference.
+            </p>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-              <button className="bg-orange-500 text-white px-8 py-3 rounded-button hover:bg-orange-600 transition duration-300 font-medium text-lg cursor-pointer whitespace-nowrap">
+              <button
+                onClick={togglePopup}
+                className="bg-orange-500 text-white py-4 px-8 rounded-button hover:bg-orange-600 transition duration-300 font-medium text-lg"
+              >
                 Donate Now
               </button>
+
+              {showPopup && (
+                <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+                  <div className="bg-white p-8 rounded-xl shadow-lg text-left max-w-sm w-full relative">
+                    <button
+                      onClick={togglePopup}
+                      className="absolute top-3 right-3 text-gray-500 hover:text-gray-700 text-xl"
+                      aria-label="Close"
+                    >
+                      &times;
+                    </button>
+                    <h3 className="text-xl font-bold mb-4 text-gray-800">Bank Account Details</h3>
+                    <p className="text-gray-700 mb-2">
+                      <strong>Bank:</strong> Zenith Bank
+                    </p>
+                    <p className="text-gray-700 mb-2">
+                      <strong>Account Name:</strong> Kayode Philip Foundation
+                    </p>
+                    <p className="text-gray-700 mb-2">
+                      <strong>Account Number:</strong> 1234567890
+                    </p>
+                    <p className="text-sm text-gray-500 mt-4">
+                      Please use your name as the payment reference.
+                    </p>
+                  </div>
+                </div>
+              )}
+
               <button className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-button hover:bg-white/10 transition duration-300 font-medium text-lg cursor-pointer whitespace-nowrap">
                 Learn More
               </button>
