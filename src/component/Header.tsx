@@ -1,55 +1,64 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import Logo from '../assets/KPF-Logo.png';
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-  const handleScroll = () => {
-    if (window.scrollY > 50) {
-      setIsScrolled(true);
-    } else {
-      setIsScrolled(false);
-    }
-  };
-  
-  window.addEventListener('scroll', handleScroll);
-  return () => window.removeEventListener('scroll', handleScroll);
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen((prev) => !prev);
+  };
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'}`}>
       <div className="container mx-auto px-6">
         <div className="flex justify-between items-center">
-          <div className="flex items-center">
-            <div className="text-2xl font-bold text-purple-700">
-              <span className="text-orange-500">Kayode</span> Philip Foundation
-            </div>
-          </div>
+          {/* Logo */}
+          <Link to="/" className="flex items-center">
+            <img src={Logo} alt="Kayode Philip Foundation Logo" className="w-28 object-cover" />
+          </Link>
+
+          {/* Desktop Nav */}
           <nav className="hidden md:flex space-x-8">
-            <a href="#" className="text-gray-800 hover:text-purple-700 font-medium cursor-pointer">Home</a>
-            <a
-              href="https://readdy.ai/home/c23ea3ce-3d5b-4114-80f9-5b95c12ad4aa/c406457b-dec5-4f86-9dba-711b93911c5d"
-              data-readdy="true"
-              className="text-gray-800 hover:text-purple-700 font-medium cursor-pointer"
-            >
-              About Us
-            </a>
-            <a href="#" className="text-gray-800 hover:text-purple-700 font-medium cursor-pointer">Projects</a>
-            <a href="#" className="text-gray-800 hover:text-purple-700 font-medium cursor-pointer">News</a>
-            <a href="#" className="text-gray-800 hover:text-purple-700 font-medium cursor-pointer">Impact</a>
-            <a
-              href="#"
-              className="bg-orange-500 text-white px-4 py-2 rounded-button hover:bg-orange-600 transition duration-300 font-medium cursor-pointer whitespace-nowrap"
-            >
-              Donate
-            </a>
+            <Link to="/" className="text-gray-800 hover:text-purple-700 font-medium">Home</Link>
+            <Link to="/about" className="text-gray-800 hover:text-purple-700 font-medium">About Us</Link>
+            <Link to="/project" className="text-gray-800 hover:text-purple-700 font-medium">Projects</Link>
+            <Link to="/news" className="text-gray-800 hover:text-purple-700 font-medium">News</Link>
+            <Link to="/impact" className="text-gray-800 hover:text-purple-700 font-medium">Impact</Link>
+            <a href="" className="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600 transition font-medium">Donate</a>
           </nav>
+
+          {/* Hamburger Button */}
           <div className="md:hidden">
-            <button className="text-gray-800 focus:outline-none cursor-pointer whitespace-nowrap !rounded-button">
+            <button onClick={toggleMobileMenu} className="text-gray-800 focus:outline-none">
               <i className="fas fa-bars text-xl"></i>
             </button>
           </div>
         </div>
+
+        {/* Mobile Nav Dropdown */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-lg z-40">
+            <div className="px-6 py-4 space-y-4">
+              <Link to="/" onClick={toggleMobileMenu} className="block text-gray-800 hover:text-purple-700 font-medium">Home</Link>
+              <Link to="/about" onClick={toggleMobileMenu} className="block text-gray-800 hover:text-purple-700 font-medium">About Us</Link>
+              <Link to="/projects" onClick={toggleMobileMenu} className="block text-gray-800 hover:text-purple-700 font-medium">Projects</Link>
+              <Link to="/news" onClick={toggleMobileMenu} className="block text-gray-800 hover:text-purple-700 font-medium">News</Link>
+              <Link to="/impact" onClick={toggleMobileMenu} className="block text-gray-800 hover:text-purple-700 font-medium">Impact</Link>
+              <a href="#" className="block bg-orange-500 text-white text-center px-4 py-2 rounded hover:bg-orange-600 transition font-medium">Donate</a>
+            </div>
+          </div>
+        )}
       </div>
     </header>
   );
