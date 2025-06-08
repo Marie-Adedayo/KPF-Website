@@ -1,5 +1,5 @@
-// The exported code uses Tailwind CSS. Install Tailwind CSS in your dev environment to ensure all styles work.
 import React, { useState, useEffect } from 'react';
+import Header from '../component/Header';
 const Project: React.FC = () => {
 const [isScrolled, setIsScrolled] = useState(false);
 const [activeCategory, setActiveCategory] = useState('all');
@@ -145,35 +145,12 @@ setSearchQuery('');
 return (
 <div className="min-h-screen font-sans">
 {/* Header */}
-<header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'}`}>
-<div className="container mx-auto px-6">
-<div className="flex justify-between items-center">
-<div className="flex items-center">
-<div className="text-2xl font-bold text-purple-700">
-<span className="text-orange-500">Kayode</span> Philip Foundation
-</div>
-</div>
-<nav className="hidden md:flex space-x-8">
-<a href="https://readdy.ai/home/c23ea3ce-3d5b-4114-80f9-5b95c12ad4aa/0a5a6d29-9cc6-4601-81d7-21e65a1da9c7" data-readdy="true" className="text-gray-800 hover:text-purple-700 font-medium cursor-pointer">Home</a>
-<a href="https://readdy.ai/home/c23ea3ce-3d5b-4114-80f9-5b95c12ad4aa/c406457b-dec5-4f86-9dba-711b93911c5d" data-readdy="true" className="text-gray-800 hover:text-purple-700 font-medium cursor-pointer">About Us</a>
-<a href="#" className="text-purple-700 font-bold cursor-pointer">Projects</a>
-<a href="#" className="text-gray-800 hover:text-purple-700 font-medium cursor-pointer">News</a>
-<a href="#" className="text-gray-800 hover:text-purple-700 font-medium cursor-pointer">Impact</a>
-<a href="#" className="bg-orange-500 text-white px-4 py-2 !rounded-button hover:bg-orange-600 transition duration-300 font-medium cursor-pointer whitespace-nowrap">Donate</a>
-</nav>
-<div className="md:hidden">
-<button className="text-gray-800 focus:outline-none cursor-pointer whitespace-nowrap !rounded-button">
-<i className="fas fa-bars text-xl"></i>
-</button>
-</div>
-</div>
-</div>
-</header>
+< Header/>
 {/* Hero Section */}
 <section className="relative pt-24 overflow-hidden" style={{ minHeight: '80vh' }}>
 <div className="absolute inset-0 z-0">
 <img
-src="https://readdy.ai/api/search-image?query=panoramic%2520view%2520of%2520multiple%2520African%2520community%2520development%2520projects%2520with%2520schools%2520water%2520wells%2520healthcare%2520facilities%2520and%2520agricultural%2520projects%2520visible%2520with%2520purple%2520and%2520orange%2520sunset%2520creating%2520gradient%2520effect%2520with%2520space%2520for%2520text%2520on%2520left%2520side%2520with%2520clean%2520simple%2520background&width=1440&height=800&seq=200&orientation=landscape"
+src="/Images/project.jpg"
 alt="Kayode Philip Foundation Projects"
 className="w-full h-full object-cover object-top"
 />

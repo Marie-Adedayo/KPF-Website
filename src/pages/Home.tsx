@@ -3,6 +3,7 @@ import Header from '../component/Header';
 import Footer from '../component/Footer';
 import background from '../assets/homepage.jpg'
 import DonationSection from '../component/Donation';
+import OurWorkSection from '../component/OurWork';
 
 const Home: React.FC = () => {
   const [donationAmount, setDonationAmount] = useState(50);
@@ -115,184 +116,83 @@ const Home: React.FC = () => {
         </div>
       </section>
       {/* Our Work Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-6">
-          <div className="flex flex-col md:flex-row justify-between items-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 md:mb-0">Our Work</h2>
-            <div className="flex space-x-4">
-              <button className="px-4 py-2 rounded-button bg-purple-700 text-white hover:bg-purple-800 transition duration-300 cursor-pointer whitespace-nowrap">All Projects</button>
-              <button className="px-4 py-2 rounded-button bg-white text-gray-700 border border-gray-300 hover:bg-gray-50 transition duration-300 cursor-pointer whitespace-nowrap">Education</button>
-              <button className="px-4 py-2 rounded-button bg-white text-gray-700 border border-gray-300 hover:bg-gray-50 transition duration-300 cursor-pointer whitespace-nowrap">Healthcare</button>
-              <button className="px-4 py-2 rounded-button bg-white text-gray-700 border border-gray-300 hover:bg-gray-50 transition duration-300 cursor-pointer whitespace-nowrap">Water</button>
-            </div>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300 cursor-pointer">
-              <img
-                src="https://readdy.ai/api/search-image?query=African%20children%20in%20a%20newly%20built%20classroom%20with%20bright%20smiles%20and%20colorful%20school%20supplies%2C%20natural%20lighting%20through%20windows%2C%20purple%20accents%20in%20the%20classroom%20decor%2C%20modern%20educational%20setting%20with%20clean%20simple%20background&width=600&height=400&seq=5&orientation=landscape"
-                alt="Education Project"
-                className="w-full h-64 object-cover object-top transition duration-500 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-purple-900/90 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end">
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-white mb-2">New School in Mombasa</h3>
-                  <p className="text-white/90 mb-4">Providing quality education to 500+ children in rural communities.</p>
-                  <span className="text-orange-300 flex items-center">
-                    Learn more <i className="fas fa-arrow-right ml-2"></i>
-                  </span>
+      <OurWorkSection />
+     {/* Featured Stories */}
+        <section className="py-20 bg-gray-50">
+            <div className="container mx-auto px-6">
+                <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-800">Featured Stories</h2>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                {/* Education */}
+                <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                    <img
+                    src="/Images/Edu.jpeg"
+                    alt="Education Story"
+                    className="w-full h-48 object-cover object-top"
+                    />
+                    <div className="p-6">
+                    <div className="flex items-center mb-4">
+                        <span className="text-xs font-medium bg-purple-100 text-purple-700 px-3 py-1 rounded-full">Education</span>
+                        <span className="text-xs text-gray-500 ml-3">June 1, 2025</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-800 mb-3">Bright Futures Ahead: School Bags & Supplies for 1,000 Students</h3>
+                    <p className="text-gray-600 mb-4">
+                        Empowering young learners with brand new school bags and essential supplies to fuel their dreams and brighten their classroom experience.
+                    </p>
+                    <a href="#" className="text-purple-700 font-medium hover:text-purple-800 transition duration-300 flex items-center cursor-pointer">
+                        Read More <i className="fas fa-arrow-right ml-2"></i>
+                    </a>
+                    </div>
                 </div>
-              </div>
-            </div>
-            <div className="group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300 cursor-pointer">
-              <img
-                src="https://readdy.ai/api/search-image?query=clean%20water%20well%20installation%20in%20rural%20African%20village%20with%20community%20members%20gathering%20around%2C%20sunset%20with%20orange%20and%20purple%20sky%2C%20people%20celebrating%20access%20to%20clean%20water%2C%20modern%20water%20pump%20with%20simple%20clean%20background&width=600&height=400&seq=6&orientation=landscape"
-                alt="Water Project"
-                className="w-full h-64 object-cover object-top transition duration-500 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-purple-900/90 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end">
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-white mb-2">Clean Water Initiative</h3>
-                  <p className="text-white/90 mb-4">Bringing sustainable clean water solutions to remote villages.</p>
-                  <span className="text-orange-300 flex items-center">
-                    Learn more <i className="fas fa-arrow-right ml-2"></i>
-                  </span>
+                
+                {/* Health */}
+                <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                    <img
+                    src="/Images/health-1.jpeg"
+                    alt="Health Story"
+                    className="w-full h-48 object-cover object-top"
+                    />
+                    <div className="p-6">
+                    <div className="flex items-center mb-4">
+                        <span className="text-xs font-medium bg-blue-100 text-blue-700 px-3 py-1 rounded-full">Health</span>
+                        <span className="text-xs text-gray-500 ml-3">May 15, 2025</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-800 mb-3">Free Health Tests: Bringing Care Closer to Communities</h3>
+                    <p className="text-gray-600 mb-4">
+                        Offering free health screenings to catch illnesses early and ensure wellness, because everyone deserves accessible healthcare.
+                    </p>
+                    <a href="#" className="text-purple-700 font-medium hover:text-purple-800 transition duration-300 flex items-center cursor-pointer">
+                        Read More <i className="fas fa-arrow-right ml-2"></i>
+                    </a>
+                    </div>
                 </div>
-              </div>
-            </div>
-            <div className="group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300 cursor-pointer">
-              <img
-                src="https://readdy.ai/api/search-image?query=modern%20healthcare%20clinic%20in%20African%20community%20with%20medical%20staff%20helping%20patients%2C%20medical%20equipment%20visible%2C%20warm%20lighting%20with%20purple%20and%20orange%20color%20accents%2C%20professional%20healthcare%20setting%20with%20clean%20simple%20background&width=600&height=400&seq=7&orientation=landscape"
-                alt="Healthcare Project"
-                className="w-full h-64 object-cover object-top transition duration-500 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-purple-900/90 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end">
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-white mb-2">Healthcare Outreach</h3>
-                  <p className="text-white/90 mb-4">Mobile clinics providing essential healthcare services.</p>
-                  <span className="text-orange-300 flex items-center">
-                    Learn more <i className="fas fa-arrow-right ml-2"></i>
-                  </span>
+                
+                {/* Entrepreneurship */}
+                <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+                    <img
+                    src="/Images/FEED1 SAVE 1.jpg"
+                    alt="Entrepreneurship Story"
+                    className="w-full h-48 object-cover object-top"
+                    />
+                    <div className="p-6">
+                    <div className="flex items-center mb-4">
+                        <span className="text-xs font-medium bg-green-100 text-green-700 px-3 py-1 rounded-full">Entrepreneurship</span>
+                        <span className="text-xs text-gray-500 ml-3">May 28, 2025</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-800 mb-3">Unlocking Potential: Free Skill Training for Aspiring Entrepreneurs</h3>
+                    <p className="text-gray-600 mb-4">
+                        Providing free skill acquisition programs that equip individuals with tools and confidence to build thriving businesses.
+                    </p>
+                    <a href="#" className="text-purple-700 font-medium hover:text-purple-800 transition duration-300 flex items-center cursor-pointer">
+                        Read More <i className="fas fa-arrow-right ml-2"></i>
+                    </a>
+                    </div>
                 </div>
-              </div>
-            </div>
-            <div className="group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300 cursor-pointer">
-              <img
-                src="https://readdy.ai/api/search-image?query=agricultural%20training%20program%20in%20rural%20Africa%20with%20farmers%20learning%20sustainable%20farming%20techniques%2C%20lush%20crops%20visible%2C%20sunset%20with%20orange%20and%20purple%20sky%2C%20modern%20farming%20equipment%20with%20clean%20simple%20background&width=600&height=400&seq=8&orientation=landscape"
-                alt="Agriculture Project"
-                className="w-full h-64 object-cover object-top transition duration-500 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-purple-900/90 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end">
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-white mb-2">Sustainable Farming</h3>
-                  <p className="text-white/90 mb-4">Teaching modern agricultural techniques to local farmers.</p>
-                  <span className="text-orange-300 flex items-center">
-                    Learn more <i className="fas fa-arrow-right ml-2"></i>
-                  </span>
+
                 </div>
-              </div>
             </div>
-            <div className="group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300 cursor-pointer">
-              <img
-                src="https://readdy.ai/api/search-image?query=women%20entrepreneurs%20in%20African%20marketplace%20learning%20business%20skills%2C%20colorful%20market%20stalls%2C%20women%20using%20technology%2C%20sunset%20with%20orange%20and%20purple%20sky%2C%20professional%20business%20training%20with%20clean%20simple%20background&width=600&height=400&seq=9&orientation=landscape"
-                alt="Entrepreneurship Project"
-                className="w-full h-64 object-cover object-top transition duration-500 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-purple-900/90 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end">
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-white mb-2">Women Entrepreneurs</h3>
-                  <p className="text-white/90 mb-4">Empowering women with business skills and microloans.</p>
-                  <span className="text-orange-300 flex items-center">
-                    Learn more <i className="fas fa-arrow-right ml-2"></i>
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div className="group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300 cursor-pointer">
-              <img
-                src="https://readdy.ai/api/search-image?query=solar%20panel%20installation%20on%20African%20community%20building%20with%20technicians%20working%2C%20sustainable%20energy%20project%2C%20sunset%20with%20orange%20and%20purple%20sky%2C%20modern%20renewable%20energy%20technology%20with%20clean%20simple%20background&width=600&height=400&seq=10&orientation=landscape"
-                alt="Renewable Energy Project"
-                className="w-full h-64 object-cover object-top transition duration-500 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-purple-900/90 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end">
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-white mb-2">Renewable Energy</h3>
-                  <p className="text-white/90 mb-4">Solar power installations for schools and community centers.</p>
-                  <span className="text-orange-300 flex items-center">
-                    Learn more <i className="fas fa-arrow-right ml-2"></i>
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="text-center mt-12">
-            <button className="bg-orange-500 text-white px-8 py-3 rounded-button hover:bg-orange-600 transition duration-300 font-medium cursor-pointer whitespace-nowrap">
-              View All Projects
-            </button>
-          </div>
-        </div>
-      </section>
-      {/* Featured Stories */}
-    <section className="py-20 bg-gray-50">
-    <div className="container mx-auto px-6">
-    <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-800">Featured Stories</h2>
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-    <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
-    <img
-    src="https://readdy.ai/api/search-image?query=African%20children%20smiling%20in%20new%20classroom%20with%20books%20and%20educational%20materials%2C%20bright%20natural%20lighting%2C%20purple%20school%20uniforms%2C%20modern%20educational%20setting%20with%20clean%20simple%20background&width=600&height=400&seq=11&orientation=landscape"
-    alt="Education Story"
-    className="w-full h-48 object-cover object-top"
-    />
-    <div className="p-6">
-    <div className="flex items-center mb-4">
-    <span className="text-xs font-medium bg-purple-100 text-purple-700 px-3 py-1 rounded-full">Education</span>
-    <span className="text-xs text-gray-500 ml-3">June 1, 2025</span>
-    </div>
-    <h3 className="text-xl font-bold text-gray-800 mb-3">New School Opens Doors to 500 Children in Rural Kenya</h3>
-    <p className="text-gray-600 mb-4">Our latest educational initiative brings quality education to children who previously had to walk miles to attend school.</p>
-    <a href="#" className="text-purple-700 font-medium hover:text-purple-800 transition duration-300 flex items-center cursor-pointer">
-    Read More <i className="fas fa-arrow-right ml-2"></i>
-    </a>
-    </div>
-    </div>
-    <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
-    <img
-    src="https://readdy.ai/api/search-image?query=clean%20water%20well%20with%20African%20community%20members%20collecting%20water%2C%20children%20drinking%20clean%20water%2C%20sunset%20with%20orange%20and%20purple%20sky%2C%20modern%20water%20infrastructure%20with%20clean%20simple%20background&width=600&height=400&seq=12&orientation=landscape"
-    alt="Water Story"
-    className="w-full h-48 object-cover object-top"
-    />
-    <div className="p-6">
-    <div className="flex items-center mb-4">
-    <span className="text-xs font-medium bg-blue-100 text-blue-700 px-3 py-1 rounded-full">Water</span>
-    <span className="text-xs text-gray-500 ml-3">May 15, 2025</span>
-    </div>
-    <h3 className="text-xl font-bold text-gray-800 mb-3">Clean Water Initiative Transforms Village Health Outcomes</h3>
-    <p className="text-gray-600 mb-4">After installing clean water wells, local health clinic reports 70% reduction in waterborne diseases.</p>
-    <a href="#" className="text-purple-700 font-medium hover:text-purple-800 transition duration-300 flex items-center cursor-pointer">
-    Read More <i className="fas fa-arrow-right ml-2"></i>
-    </a>
-    </div>
-    </div>
-    <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
-    <img
-    src="https://readdy.ai/api/search-image?query=African%20woman%20entrepreneur%20in%20her%20shop%20with%20products%20displayed%2C%20using%20digital%20tablet%20for%20business%2C%20sunset%20light%20with%20orange%20and%20purple%20tones%20through%20window%2C%20modern%20small%20business%20with%20clean%20simple%20background&width=600&height=400&seq=13&orientation=landscape"
-    alt="Entrepreneurship Story"
-    className="w-full h-48 object-cover object-top"
-    />
-    <div className="p-6">
-    <div className="flex items-center mb-4">
-    <span className="text-xs font-medium bg-green-100 text-green-700 px-3 py-1 rounded-full">Entrepreneurship</span>
-    <span className="text-xs text-gray-500 ml-3">May 28, 2025</span>
-    </div>
-    <h3 className="text-xl font-bold text-gray-800 mb-3">Women's Cooperative Expands Business to International Markets</h3>
-    <p className="text-gray-600 mb-4">The cooperative we helped establish three years ago now exports handcrafted goods to Europe and North America.</p>
-    <a href="#" className="text-purple-700 font-medium hover:text-purple-800 transition duration-300 flex items-center cursor-pointer">
-    Read More <i className="fas fa-arrow-right ml-2"></i>
-    </a>
-    </div>
-    </div>
-    </div>
-    </div>
-    </section>
+        </section>
+
     {/* Donation Section */}
     <DonationSection />
     {/* News & Updates */}
