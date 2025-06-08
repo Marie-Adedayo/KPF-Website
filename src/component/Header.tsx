@@ -41,8 +41,9 @@ const Header: React.FC = () => {
           {/* Hamburger Button */}
           <div className="md:hidden">
             <button onClick={toggleMobileMenu} className="text-gray-800 focus:outline-none">
-              <i className="fas fa-bars text-xl"></i>
+                <i className={`text-xl fas ${isMobileMenuOpen ? 'fa-times' : 'fa-bars'}`}></i>
             </button>
+
           </div>
         </div>
 
@@ -50,7 +51,7 @@ const Header: React.FC = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-lg z-40">
             <div className="px-6 py-4 space-y-4">
-              <Link to="/" onClick={toggleMobileMenu} className="block text-gray-800 hover:text-purple-700 font-medium">Home</Link>
+              <Link to="/" onClick={toggleMobileMenu} className="block text-gray-800 hover:text-purple-700 hover:bg-purple-400 font-medium">Home</Link>
               <Link to="/about" onClick={toggleMobileMenu} className="block text-gray-800 hover:text-purple-700 font-medium">About Us</Link>
               <Link to="/projects" onClick={toggleMobileMenu} className="block text-gray-800 hover:text-purple-700 font-medium">Projects</Link>
               <Link to="/news" onClick={toggleMobileMenu} className="block text-gray-800 hover:text-purple-700 font-medium">News</Link>

@@ -11,7 +11,7 @@ const App: React.FC = () => {
     <Router>
       <div className="min-h-screen font-sans">
 
-        <main className="pt-24 px-6">
+        <main className="pt-16 md:pt-16 overflow-hidden">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />

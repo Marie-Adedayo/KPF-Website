@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Header from '../component/Header';
 import Footer from '../component/Footer';
+import background from '../assets/homepage.jpg'
 
 const Home: React.FC = () => {
   const [donationAmount, setDonationAmount] = useState(50);
@@ -54,7 +55,7 @@ const Home: React.FC = () => {
       <section className="relative pt-24 overflow-hidden" style={{ minHeight: '90vh' }}>
         <div className="absolute inset-0 z-0">
           <img
-            src="https://readdy.ai/api/search-image?query=beautiful%20panoramic%20view%20of%20African%20community%20development%20project%20with%20people%20working%20together%20on%20sustainable%20initiatives%20with%20purple%20and%20orange%20sunset%20sky%20in%20background%20creating%20a%20gradient%20effect%20with%20space%20for%20text%20on%20left%20side&width=1440&height=800&seq=4&orientation=landscape"
+            src={background}
             alt="Community Impact"
             className="w-full h-full object-cover object-top"
           />
