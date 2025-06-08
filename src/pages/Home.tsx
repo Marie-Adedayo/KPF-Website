@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Header from '../component/Header';
 import Footer from '../component/Footer';
 import background from '../assets/homepage.jpg'
+import DonationSection from '../component/Donation';
 
 const Home: React.FC = () => {
   const [donationAmount, setDonationAmount] = useState(50);
@@ -293,146 +294,7 @@ const Home: React.FC = () => {
     </div>
     </section>
     {/* Donation Section */}
-    <section className="py-20 bg-gradient-to-r from-purple-900 to-purple-700">
-    <div className="container mx-auto px-6">
-    <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-xl overflow-hidden">
-    <div className="md:flex">
-    <div className="md:w-1/2 p-8 md:p-12 bg-white">
-    <h2 className="text-3xl font-bold text-gray-800 mb-6">Make a Donation</h2>
-    <p className="text-gray-600 mb-8">Your contribution helps us continue our mission of empowering communities and transforming lives across Africa.</p>
-    <div className="mb-6">
-    <p className="text-gray-700 font-medium mb-3">Select Amount</p>
-    <div className="grid grid-cols-3 gap-3">
-    <button
-    onClick={() => handleDonationAmountChange(25)}
-    className={`py-3 rounded-button font-medium cursor-pointer whitespace-nowrap ${donationAmount === 25 ? 'bg-purple-700 text-white' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'}`}
-    >
-    $25
-    </button>
-    <button
-    onClick={() => handleDonationAmountChange(50)}
-    className={`py-3 rounded-button font-medium cursor-pointer whitespace-nowrap ${donationAmount === 50 ? 'bg-purple-700 text-white' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'}`}
-    >
-    $50
-    </button>
-    <button
-    onClick={() => handleDonationAmountChange(100)}
-    className={`py-3 rounded-button font-medium cursor-pointer whitespace-nowrap ${donationAmount === 100 ? 'bg-purple-700 text-white' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'}`}
-    >
-    $100
-    </button>
-    <button
-    onClick={() => handleDonationAmountChange(250)}
-    className={`py-3 rounded-button font-medium cursor-pointer whitespace-nowrap ${donationAmount === 250 ? 'bg-purple-700 text-white' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'}`}
-    >
-    $250
-    </button>
-    <button
-    onClick={() => handleDonationAmountChange(500)}
-    className={`py-3 rounded-button font-medium cursor-pointer whitespace-nowrap ${donationAmount === 500 ? 'bg-purple-700 text-white' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'}`}
-    >
-    $500
-    </button>
-    <button
-    onClick={() => handleDonationAmountChange(1000)}
-    className={`py-3 rounded-button font-medium cursor-pointer whitespace-nowrap ${donationAmount === 1000 ? 'bg-purple-700 text-white' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'}`}
-    >
-    $1000
-    </button>
-    </div>
-    </div>
-    <div className="mb-6">
-    <label htmlFor="customAmount" className="text-gray-700 font-medium mb-2 block">Custom Amount</label>
-    <div className="relative">
-    <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">$</span>
-    <input
-    type="text"
-    id="customAmount"
-    value={customAmount}
-    onChange={handleCustomAmountChange}
-    className="w-full pl-8 pr-4 py-3 border border-gray-300 rounded-button focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-    placeholder="Enter amount"
-    />
-    </div>
-    </div>
-    <div className="mb-8">
-    <p className="text-gray-700 font-medium mb-3">Payment Method</p>
-    <div className="flex space-x-4">
-    <button className="p-3 border border-gray-300 rounded-button hover:bg-gray-50 cursor-pointer whitespace-nowrap">
-    <i className="fab fa-cc-visa text-blue-700 text-2xl"></i>
-    </button>
-    <button className="p-3 border border-gray-300 rounded-button hover:bg-gray-50 cursor-pointer whitespace-nowrap">
-    <i className="fab fa-cc-mastercard text-red-600 text-2xl"></i>
-    </button>
-    <button className="p-3 border border-gray-300 rounded-button hover:bg-gray-50 cursor-pointer whitespace-nowrap">
-    <i className="fab fa-cc-paypal text-blue-500 text-2xl"></i>
-    </button>
-    <button className="p-3 border border-gray-300 rounded-button hover:bg-gray-50 cursor-pointer whitespace-nowrap">
-    <i className="fab fa-apple-pay text-black text-2xl"></i>
-    </button>
-    </div>
-    </div>
-    <button className="w-full bg-orange-500 text-white py-4 rounded-button hover:bg-orange-600 transition duration-300 font-medium text-lg cursor-pointer whitespace-nowrap">
-    Donate Now
-    </button>
-    <div className="mt-4 flex items-center justify-center">
-    <i className="fas fa-lock text-gray-400 mr-2"></i>
-    <span className="text-sm text-gray-500">Secure Payment</span>
-    </div>
-    </div>
-    <div className="md:w-1/2 bg-purple-50 p-8 md:p-12">
-    <h3 className="text-xl font-bold text-gray-800 mb-4">Your Impact</h3>
-    <div className="mb-6">
-    <div className="flex justify-between mb-2">
-    <span className="font-medium text-gray-700">Current Campaign: Clean Water</span>
-    <span className="font-medium text-purple-700">75%</span>
-    </div>
-    <div className="w-full bg-gray-200 rounded-full h-2.5">
-    <div className="bg-purple-700 h-2.5 rounded-full" style={{ width: '75%' }}></div>
-    </div>
-    <div className="flex justify-between mt-2 text-sm text-gray-600">
-    <span>$75,000 raised</span>
-    <span>$100,000 goal</span>
-    </div>
-    </div>
-    <div className="bg-white p-4 rounded-lg shadow-sm mb-6">
-    <div className="flex items-start">
-    <div className="bg-orange-100 p-3 rounded-full mr-4">
-    <i className="fas fa-tint text-orange-500"></i>
-    </div>
-    <div>
-    <h4 className="font-medium text-gray-800">$25 provides</h4>
-    <p className="text-gray-600">Clean water for a family for one month</p>
-    </div>
-    </div>
-    </div>
-    <div className="bg-white p-4 rounded-lg shadow-sm mb-6">
-    <div className="flex items-start">
-    <div className="bg-orange-100 p-3 rounded-full mr-4">
-    <i className="fas fa-book text-orange-500"></i>
-    </div>
-    <div>
-    <h4 className="font-medium text-gray-800">$50 provides</h4>
-    <p className="text-gray-600">School supplies for a child for one year</p>
-    </div>
-    </div>
-    </div>
-    <div className="bg-white p-4 rounded-lg shadow-sm">
-    <div className="flex items-start">
-    <div className="bg-orange-100 p-3 rounded-full mr-4">
-    <i className="fas fa-heartbeat text-orange-500"></i>
-    </div>
-    <div>
-    <h4 className="font-medium text-gray-800">$100 provides</h4>
-    <p className="text-gray-600">Healthcare for a village for one week</p>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </section>
+    <DonationSection />
     {/* News & Updates */}
     <section className="py-20">
     <div className="container mx-auto px-6">
