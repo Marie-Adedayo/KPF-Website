@@ -6,21 +6,12 @@ import DonationSection from '../component/Donation';
 import OurWorkSection from '../component/OurWork';
 
 const Home: React.FC = () => {
-  const [donationAmount, setDonationAmount] = useState(50);
-  const [customAmount, setCustomAmount] = useState('');
+  
   const [activeTestimonial, setActiveTestimonial] = useState(0);
   
 
 
-  const handleDonationAmountChange = (amount: number) => {
-    setDonationAmount(amount);
-    setCustomAmount('');
-  };
 
-  const handleCustomAmountChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setCustomAmount(e.target.value);
-    setDonationAmount(0);
-  };
   
   const testimonials = [
     {

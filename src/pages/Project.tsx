@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Header from '../component/Header';
 const Project: React.FC = () => {
-const [isScrolled, setIsScrolled] = useState(false);
 const [activeCategory, setActiveCategory] = useState('all');
 const [activeLocation, setActiveLocation] = useState('all');
 const [activeStatus, setActiveStatus] = useState('all');
@@ -125,17 +124,7 @@ return matchesCategory && matchesLocation && matchesStatus && matchesSearch;
 });
 // Get unique locations for filter
 const locations = [...new Set(projects.map(project => project.location))];
-useEffect(() => {
-const handleScroll = () => {
-if (window.scrollY > 50) {
-setIsScrolled(true);
-} else {
-setIsScrolled(false);
-}
-};
-window.addEventListener('scroll', handleScroll);
-return () => window.removeEventListener('scroll', handleScroll);
-}, []);
+
 const handleClearFilters = () => {
 setActiveCategory('all');
 setActiveLocation('all');
