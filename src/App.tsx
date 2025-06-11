@@ -4,6 +4,7 @@ import Home  from './pages/Home';
 import About from './pages/About';
 import Impact from './pages/Impact';
 import Project from './pages/Project';
+import Impat from './pages/Impat';
 
 
 const App: React.FC = () => {
@@ -17,6 +18,7 @@ const App: React.FC = () => {
             <Route path="/about" element={<About />} />
             <Route path="/project" element={<Project />} />
             <Route path="/impact" element={<Impact />} />
+            <Route path="/impat" element={<Impat />} />
           </Routes>
         </main>
 
