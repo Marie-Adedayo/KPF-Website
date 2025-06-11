@@ -212,7 +212,7 @@ const About: React.FC = () => {
                             <div className="p-6">
                                 <h3 className="text-xl font-bold text-gray-800 mb-1">Dr. Kayode Philip</h3>
                                 <p className="text-purple-700 font-medium mb-4">Founder & CEO</p>
-                                <p className="text-gray-600 mb-4">With over 25 years of experience in international development, Dr. Philip founded the organization with a vision to transform communities across Africa.</p>
+                                {/* <p className="text-gray-600 mb-4">With over 25 years of experience in international development, Dr. Philip founded the organization with a vision to transform communities across Africa.</p>
                                 <div className="flex space-x-3">
                                     <a href="#" className="text-gray-400 hover:text-purple-700 transition duration-300 cursor-pointer">
                                         <i className="fab fa-linkedin-in"></i>
@@ -223,23 +223,22 @@ const About: React.FC = () => {
                                     <a href="#" className="text-gray-400 hover:text-purple-700 transition duration-300 cursor-pointer">
                                         <i className="fas fa-envelope"></i>
                                     </a>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                         {/* COO */}
                         <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300 group">
                             <div className="h-80 overflow-hidden">
                                 <img
-                                    src="https://readdy.ai/api/search-image?query=professional%20portrait%20of%20African%20female%20COO%20in%20her%2040s%20wearing%20business%20attire%20against%20neutral%20background%20with%20warm%20smile%20and%20professional%20lighting%20with%20clean%20simple%20background&width=600&height=800&seq=108&orientation=portrait"
+                                    src="/Images/2.jpg"
                                     alt="Amina Okafor"
                                     className="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500"
                                 />
                             </div>
                             <div className="p-6">
-                                <h3 className="text-xl font-bold text-gray-800 mb-1">Amina Okafor</h3>
+                                <h3 className="text-xl font-bold text-gray-800 mb-1">Fasanya Marie Adedayo</h3>
                                 <p className="text-purple-700 font-medium mb-4">Chief Operations Officer</p>
-                                <p className="text-gray-600 mb-4">Amina brings 15 years of operational expertise from the nonprofit sector, ensuring our programs deliver maximum impact efficiently.</p>
-                                <div className="flex space-x-3">
+                               {/*  <div className="flex space-x-3">
                                     <a href="#" className="text-gray-400 hover:text-purple-700 transition duration-300 cursor-pointer">
                                         <i className="fab fa-linkedin-in"></i>
                                     </a>
@@ -249,35 +248,10 @@ const About: React.FC = () => {
                                     <a href="#" className="text-gray-400 hover:text-purple-700 transition duration-300 cursor-pointer">
                                         <i className="fas fa-envelope"></i>
                                     </a>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
-                        {/* CFO */}
-                        <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300 group">
-                            <div className="h-80 overflow-hidden">
-                                <img
-                                    src="https://readdy.ai/api/search-image?query=professional%20portrait%20of%20African%20male%20CFO%20in%20his%2040s%20wearing%20business%20suit%20against%20neutral%20background%20with%20glasses%20and%20professional%20expression%20with%20clean%20simple%20background%20and%20professional%20lighting&width=600&height=800&seq=109&orientation=portrait"
-                                    alt="David Mensah"
-                                    className="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500"
-                                />
-                            </div>
-                            <div className="p-6">
-                                <h3 className="text-xl font-bold text-gray-800 mb-1">David Mensah</h3>
-                                <p className="text-purple-700 font-medium mb-4">Chief Financial Officer</p>
-                                <p className="text-gray-600 mb-4">David oversees our financial strategy, ensuring transparency and accountability in all our operations and funding allocations.</p>
-                                <div className="flex space-x-3">
-                                    <a href="#" className="text-gray-400 hover:text-purple-700 transition duration-300 cursor-pointer">
-                                        <i className="fab fa-linkedin-in"></i>
-                                    </a>
-                                    <a href="#" className="text-gray-400 hover:text-purple-700 transition duration-300 cursor-pointer">
-                                        <i className="fab fa-twitter"></i>
-                                    </a>
-                                    <a href="#" className="text-gray-400 hover:text-purple-700 transition duration-300 cursor-pointer">
-                                        <i className="fas fa-envelope"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+                        
                         {/* Program Director */}
                         <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300 group">
                             <div className="h-80 overflow-hidden">
@@ -288,10 +262,10 @@ const About: React.FC = () => {
                                 />
                             </div>
                             <div className="p-6">
-                                <h3 className="text-xl font-bold text-gray-800 mb-1">Sarah Adeyemi</h3>
-                                <p className="text-purple-700 font-medium mb-4">Program Director</p>
-                                <p className="text-gray-600 mb-4">Sarah leads our program development and implementation, bringing extensive experience in community development across Africa.</p>
-                                <div className="flex space-x-3">
+                                <h3 className="text-xl font-bold text-gray-800 mb-1">Tolu </h3>
+                                <p className="text-purple-700 font-medium mb-4">Volunteers Coordinator</p>
+                                {/* <p className="text-gray-600 mb-4">Sarah leads our program development and implementation, bringing extensive experience in community development across Africa.</p> */}
+                                {/*<div className="flex space-x-3">
                                     <a href="#" className="text-gray-400 hover:text-purple-700 transition duration-300 cursor-pointer">
                                         <i className="fab fa-linkedin-in"></i>
                                     </a>
@@ -301,75 +275,53 @@ const About: React.FC = () => {
                                     <a href="#" className="text-gray-400 hover:text-purple-700 transition duration-300 cursor-pointer">
                                         <i className="fas fa-envelope"></i>
                                     </a>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
-                        {/* Communications Director */}
-                        <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300 group">
-                            <div className="h-80 overflow-hidden">
-                                <img
-                                    src="https://readdy.ai/api/search-image?query=professional%20portrait%20of%20African%20male%20communications%20director%20in%20his%2030s%20wearing%20smart%20casual%20attire%20against%20neutral%20background%20with%20engaging%20expression%20and%20professional%20lighting%20with%20clean%20simple%20background&width=600&height=800&seq=111&orientation=portrait"
-                                    alt="Michael Osei"
-                                    className="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500"
-                                />
-                            </div>
-                        <div className="p-6">
-                            <h3 className="text-xl font-bold text-gray-800 mb-1">Michael Osei</h3>
-                            <p className="text-purple-700 font-medium mb-4">Communications Director</p>
-                            <p className="text-gray-600 mb-4">Michael manages our communications strategy, sharing our impact stories and building partnerships with stakeholders worldwide.</p>
-                            <div className="flex space-x-3">
-                                <a href="#" className="text-gray-400 hover:text-purple-700 transition duration-300 cursor-pointer">
-                                    <i className="fab fa-linkedin-in"></i>
-                                </a>
-                                <a href="#" className="text-gray-400 hover:text-purple-700 transition duration-300 cursor-pointer">
-                                    <i className="fab fa-twitter"></i>
-                                </a>
-                                <a href="#" className="text-gray-400 hover:text-purple-700 transition duration-300 cursor-pointer">
-                                    <i className="fas fa-envelope"></i>
-                                </a>
-                            </div>
-                        </div>
+                        
+
                     </div>
 
                 </div>
-            </div>
+        
             </section>
             {/* Board Members Section */}
             <section className="py-20 bg-gray-50">
                 <div className="container mx-auto px-6">
                     <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-800">Board of Directors</h2>
                     <p className="text-gray-600 text-center max-w-3xl mx-auto mb-16">Our diverse board brings expertise from various sectors to guide our strategic direction and governance.</p>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                        {/* Board Member 1 */}
-                        <div className="bg-white rounded-lg shadow-md p-6 border-t-4 border-purple-700">
+                    <div className="flex justify-center">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                            {/* Board Member 1 */}
+                            <div className="bg-white rounded-lg shadow-md p-6 border-t-4 border-purple-700">
                             <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden">
                                 <img
-                                    src="https://readdy.ai/api/search-image?query=professional%20headshot%20of%20distinguished%20African%20male%20board%20member%20in%20his%2060s%20wearing%20formal%20attire%20against%20neutral%20background%20with%20dignified%20expression%20and%20professional%20lighting%20with%20clean%20simple%20background&width=200&height=200&seq=113&orientation=squarish"
-                                    alt="Prof. Oluwaseun Adebayo"
-                                    className="w-full h-full object-cover object-top"
+                                src="https://readdy.ai/api/search-image?query=professional%20headshot%20of%20distinguished%20African%20male%20board%20member%20in%20his%2060s%20wearing%20formal%20attire%20against%20neutral%20background%20with%20dignified%20expression%20and%20professional%20lighting%20with%20clean%20simple%20background&width=200&height=200&seq=113&orientation=squarish"
+                                alt="Prof. Oluwaseun Adebayo"
+                                className="w-full h-full object-cover object-top"
                                 />
                             </div>
                             <h3 className="text-lg font-bold text-gray-800 text-center mb-1">Prof. Oluwaseun Adebayo</h3>
                             <p className="text-purple-700 font-medium text-center mb-3">Board Chair</p>
                             <p className="text-gray-600 text-center text-sm">Former Minister of Education, Nigeria</p>
-                        </div>
-                        {/* Board Member 2 */}
-                        <div className="bg-white rounded-lg shadow-md p-6 border-t-4 border-orange-500">
-                        <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden">
-                        <img
-                        src="https://readdy.ai/api/search-image?query=professional%20headshot%20of%20distinguished%20African%20female%20board%20member%20in%20her%2050s%20wearing%20business%20attire%20against%20neutral%20background%20with%20confident%20expression%20and%20professional%20lighting%20with%20clean%20simple%20background&width=200&height=200&seq=114&orientation=squarish"
-                        alt="Dr. Fatima Diallo"
-                        className="w-full h-full object-cover object-top"
-                        />
-                        </div>
-                        <h3 className="text-lg font-bold text-gray-800 text-center mb-1">Dr. Fatima Diallo</h3>
-                        <p className="text-purple-700 font-medium text-center mb-3">Vice Chair</p>
-                        <p className="text-gray-600 text-center text-sm">CEO, Pan-African Health Initiative</p>
-                        </div>
+                            </div>
 
- 
-                        {/* Board Member 8 */}
-                        <div className="bg-white rounded-lg shadow-md p-6 border-t-4 border-orange-500">
+                            {/* Board Member 2 */}
+                            <div className="bg-white rounded-lg shadow-md p-6 border-t-4 border-orange-500">
+                            <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden">
+                                <img
+                                src="https://readdy.ai/api/search-image?query=professional%20headshot%20of%20distinguished%20African%20female%20board%20member%20in%20her%2050s%20wearing%20business%20attire%20against%20neutral%20background%20with%20confident%20expression%20and%20professional%20lighting%20with%20clean%20simple%20background&width=200&height=200&seq=114&orientation=squarish"
+                                alt="Dr. Fatima Diallo"
+                                className="w-full h-full object-cover object-top"
+                                />
+                            </div>
+                            <h3 className="text-lg font-bold text-gray-800 text-center mb-1">Dr. Fatima Diallo</h3>
+                            <p className="text-purple-700 font-medium text-center mb-3">Vice Chair</p>
+                            <p className="text-gray-600 text-center text-sm">CEO, Pan-African Health Initiative</p>
+                            </div>
+
+                            {/* Board Member 3 */}
+                            <div className="bg-white rounded-lg shadow-md p-6 border-t-4 border-orange-500">
                             <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden">
                                 <img
                                 src="https://readdy.ai/api/search-image?query=professional%20headshot%20of%20distinguished%20African%20female%20board%20member%20in%20her%2060s%20wearing%20traditional%20attire%20against%20neutral%20background%20with%20wise%20expression%20and%20professional%20lighting%20with%20clean%20simple%20background&width=200&height=200&seq=120&orientation=squarish"
@@ -380,8 +332,10 @@ const About: React.FC = () => {
                             <h3 className="text-lg font-bold text-gray-800 text-center mb-1">Chief Amara Okonkwo</h3>
                             <p className="text-purple-700 font-medium text-center mb-3">Member</p>
                             <p className="text-gray-600 text-center text-sm">Traditional Leader & Philanthropist</p>
+                            </div>
                         </div>
                     </div>
+
                 </div>
             </section>
                 {/* Achievements Section */}
@@ -394,23 +348,23 @@ const About: React.FC = () => {
                 <div className="inline-block p-4 rounded-full bg-purple-100 mb-6">
                 <i className="fas fa-hands-helping text-3xl text-purple-700"></i>
                 </div>
-                <h3 className="text-4xl font-bold text-purple-700 mb-2">120+</h3>
+                {/* <h3 className="text-4xl font-bold text-purple-700 mb-2">10+</h3> */}
                 <p className="text-gray-800 font-medium mb-2">Projects Completed</p>
-                <p className="text-gray-600">Across 12 African countries, bringing sustainable solutions to communities in need.</p>
+                <p className="text-gray-600">Across serval cmmunities in the south-west, bringing sustainable solutions to communities in need.</p>
                 </div>
                 <div className="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-lg transition duration-300 transform hover:-translate-y-1">
                 <div className="inline-block p-4 rounded-full bg-orange-100 mb-6">
                 <i className="fas fa-users text-3xl text-orange-500"></i>
                 </div>
-                <h3 className="text-4xl font-bold text-orange-500 mb-2">50,000+</h3>
+                {/* <h3 className="text-4xl font-bold text-orange-500 mb-2">10,000+</h3> */}
                 <p className="text-gray-800 font-medium mb-2">Lives Impacted</p>
-                <p className="text-gray-600">Through our education, healthcare, water, and economic empowerment initiatives.</p>
+                <p className="text-gray-600">Through our education, healthcare, food items, and vocational empowerment initiatives.</p>
                 </div>
                 <div className="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-lg transition duration-300 transform hover:-translate-y-1">
                 <div className="inline-block p-4 rounded-full bg-purple-100 mb-6">
                 <i className="fas fa-award text-3xl text-purple-700"></i>
                 </div>
-                <h3 className="text-4xl font-bold text-purple-700 mb-2">15</h3>
+                {/* <h3 className="text-4xl font-bold text-purple-700 mb-2"></h3> */}
                 <p className="text-gray-800 font-medium mb-2">International Awards</p>
                 <p className="text-gray-600">Recognizing our innovative approaches to sustainable development challenges.</p>
                 </div>
@@ -418,7 +372,7 @@ const About: React.FC = () => {
                 <div className="inline-block p-4 rounded-full bg-orange-100 mb-6">
                 <i className="fas fa-handshake text-3xl text-orange-500"></i>
                 </div>
-                <h3 className="text-4xl font-bold text-orange-500 mb-2">75+</h3>
+                {/* <h3 className="text-4xl font-bold text-orange-500 mb-2">75+</h3> */}
                 <p className="text-gray-800 font-medium mb-2">Global Partners</p>
                 <p className="text-gray-600">Collaborating with organizations worldwide to maximize our impact and reach.</p>
                 </div>
@@ -456,8 +410,8 @@ const About: React.FC = () => {
                 <ul className="text-sm text-gray-600 space-y-2">
                 <li>Education Initiatives</li>
                 <li>Healthcare Programs</li>
-                <li>Water & Sanitation</li>
-                <li>Economic Empowerment</li>
+                <li>Food Items Distribution</li>
+                <li>Vocational Skills Empowerment</li>
                 </ul>
                 </div>
                 <div className="text-center px-4 py-5 bg-purple-100 rounded-lg border-t-4 border-purple-700">
@@ -481,8 +435,8 @@ const About: React.FC = () => {
                 </div>
                 <div className="mt-12 text-center">
                 <div className="inline-block px-6 py-3 bg-gray-100 rounded-lg">
-                <h3 className="font-medium text-gray-800 mb-1">Field Operations</h3>
-                <p className="text-sm text-gray-600">12 Country Offices Across Africa</p>
+                <h3 className="font-medium text-gray-800 mb-1">Volunteer</h3>
+                <p className="text-sm text-gray-600">30 volunteer across Nigeria</p>
                 </div>
                 </div>
                 </div>

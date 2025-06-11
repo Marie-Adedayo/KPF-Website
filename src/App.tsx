@@ -10,7 +10,6 @@ const App: React.FC = () => {
   return (
     <Router>
       <div className="min-h-screen font-sans">
-
         <main className="pt-16 md:pt-16 overflow-hidden">
           <Routes>
             <Route path="/" element={<Home />} />

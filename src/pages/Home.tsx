@@ -121,7 +121,7 @@ const Home: React.FC = () => {
               <div className="inline-block p-4 rounded-full bg-purple-100 mb-6">
                 <i className="fas fa-hands-helping text-3xl text-purple-700"></i>
               </div>
-              <h3 className="text-4xl font-bold text-purple-700 mb-2">120+</h3>
+              <h3 className="text-4xl font-bold text-purple-700 mb-2">Many</h3>
               <p className="text-gray-600">Projects Completed</p>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-lg transition duration-300 transform hover:-translate-y-1">
@@ -135,16 +135,16 @@ const Home: React.FC = () => {
               <div className="inline-block p-4 rounded-full bg-purple-100 mb-6">
                 <i className="fas fa-globe-africa text-3xl text-purple-700"></i>
               </div>
-              <h3 className="text-4xl font-bold text-purple-700 mb-2">12</h3>
-              <p className="text-gray-600">Countries Served</p>
+              <h3 className="text-4xl font-bold text-purple-700 mb-2">Serval</h3>
+              <p className="text-gray-600">Communities Served</p>
             </div>
-            <div className="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-lg transition duration-300 transform hover:-translate-y-1">
+{/*             <div className="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-lg transition duration-300 transform hover:-translate-y-1">
               <div className="inline-block p-4 rounded-full bg-purple-100 mb-6">
                 <i className="fas fa-school text-3xl text-purple-700"></i>
               </div>
               <h3 className="text-4xl font-bold text-purple-700 mb-2">75</h3>
               <p className="text-gray-600">Schools Built</p>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
@@ -188,7 +188,7 @@ const Home: React.FC = () => {
                     <div className="p-6">
                     <div className="flex items-center mb-4">
                         <span className="text-xs font-medium bg-blue-100 text-blue-700 px-3 py-1 rounded-full">Health</span>
-                        <span className="text-xs text-gray-500 ml-3">May 15, 2025</span>
+                        <span className="text-xs text-gray-500 ml-3"></span>
                     </div>
                     <h3 className="text-xl font-bold text-gray-800 mb-3">Free Health Tests: Bringing Care Closer to Communities</h3>
                     <p className="text-gray-600 mb-4">
