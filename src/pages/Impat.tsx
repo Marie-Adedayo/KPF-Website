@@ -7,11 +7,8 @@ import TabNavigation from '../component/impactFolder/TabNavigation';
 import OverviewTab from '../component/impactFolder/OverviewTab';
 import EducationTab from '../component/impactFolder/EducationTab';
 import HealthcareTab from '../component/impactFolder/HealthcareTab';
-import WaterTab from '../component/impactFolder/WaterTab';
-import EconomicTab from '../component/impactFolder/EconomicTab';
+import VocationalTab from '../component/impactFolder/VoacationalTab';
 import StoriesTab from '../component/impactFolder/StoriesTab';
-import DownloadReports from '../component/impactFolder/DownloadReport';
-import CallToAction from '../component/impactFolder/CallToAction';
 
 const Impact: React.FC = () => {
   const [selectedYear, setSelectedYear] = useState(2025);
@@ -26,15 +23,12 @@ const Impact: React.FC = () => {
       <StatsSummary selectedYear={selectedYear} />
       <TabNavigation activeTab={activeTab} setActiveTab={setActiveTab} />
 
-      {activeTab === 'overview' && <OverviewTab selectedYear={selectedYear} />}
+      {activeTab === 'overview' && <OverviewTab />}
       {activeTab === 'education' && <EducationTab />}
       {activeTab === 'healthcare' && <HealthcareTab />}
-      {activeTab === 'water' && <WaterTab />}
-      {activeTab === 'economic' && <EconomicTab />}
+      {activeTab === 'vocational' && <VocationalTab />}
       {activeTab === 'stories' && <StoriesTab />}
 
-      <DownloadReports />
-      <CallToAction />
       <Footer />
     </div>
   );

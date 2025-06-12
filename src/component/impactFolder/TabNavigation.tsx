@@ -9,8 +9,7 @@ const tabs = [
   { id: 'overview', label: 'Overview' },
   { id: 'education', label: 'Education' },
   { id: 'healthcare', label: 'Healthcare' },
-  { id: 'water', label: 'Water Access' },
-  { id: 'economic', label: 'Economic Empowerment' },
+  { id: 'vocational', label: 'Vocational Empowerment' },
   { id: 'stories', label: 'Success Stories' },
 ];
 
