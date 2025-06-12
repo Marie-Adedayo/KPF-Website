@@ -21,7 +21,7 @@ const About: React.FC = () => {
                 <div className="container mx-auto px-6 relative z-10 flex items-center h-full" style={{ minHeight: '70vh' }}>
                     <div className="max-w-2xl text-white">
                         <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">About Our Foundation</h1>
-                        <p className="text-xl mb-8">Discover the story, mission and people behind the Kayode Philip Foundation's commitment to transforming lives across Africa through sustainable development initiatives.</p>
+                        <p className="text-xl mb-8">Discover the story, mission and people behind the Kayode Philip Foundation's commitment to transforming lives across Nigeria and beyond through sustainable development initiatives.</p>
                         <a
                             href="https://readdy.ai/home/c23ea3ce-3d5b-4114-80f9-5b95c12ad4aa/0a5a6d29-9cc6-4601-81d7-21e65a1da9c7"
                             data-readdy="true"
@@ -44,10 +44,10 @@ const About: React.FC = () => {
                                 <h2 className="text-3xl font-bold text-gray-800">Our Mission</h2>
                             </div>
                             <p className="text-gray-700 text-lg leading-relaxed mb-8">
-                                The Kayode Philip Foundation is dedicated to empowering communities across Africa through sustainable development initiatives. We believe in creating lasting change by focusing on education, healthcare, clean water access, and economic empowerment.
+                                Kayode Philip Foundation is a humanitarian organization committed to transforming lives through empowerment, education, healthcare, and social support. We believe in creating sustainable change by addressing key challenges that hinder human development, particularly in underserved communities. Feed One Save One is a life-saving intervention program.
                             </p>
                             <p className="text-gray-700 text-lg leading-relaxed">
-                                Our approach is centered on community partnership, ensuring that local voices guide our projects and that solutions are sustainable for generations to come. We work hand-in-hand with communities to identify needs, develop solutions, and implement programs that create meaningful and lasting impact.
+                                Our approach is to improve the quality of life for underserved communities in Nigeria and beyond by addressing core human security needs through food relief, youth empowerment, and access to basic healthcare.
                             </p>
                         </div>
                         <div className="md:w-1/2">

@@ -7,13 +7,12 @@ import {
   FaMapMarkerAlt,
   FaPhoneAlt,
   FaEnvelope,
-  FaCcVisa,
-  FaCcMastercard,
-  FaCcPaypal,
-  FaApplePay
+ 
 } from 'react-icons/fa';
+import { useDonatePopup } from '../context/DonatePopupContext';
 
 const Footer: React.FC = () => {
+    const { openPopup } = useDonatePopup();
   return (
     <footer className="bg-purple-900 text-white pt-16 pb-8">
       <div className="container mx-auto px-6">
@@ -88,21 +87,13 @@ const Footer: React.FC = () => {
             <p className="text-purple-200 mb-4">
               Your donation makes a difference in the lives of communities across Africa.
             </p>
-            <a
-              href="#"
-              className="bg-orange-500 text-white px-6 py-3 rounded-button hover:bg-orange-600 transition duration-300 inline-block font-medium cursor-pointer whitespace-nowrap"
-            >
-              Donate Now
-            </a>
-            <div className="mt-6">
-              <p className="text-sm text-purple-300 mb-2">Secure Payment Options</p>
-              <div className="flex space-x-3 text-gray-300 text-2xl">
-                <FaCcVisa />
-                <FaCcMastercard />
-                <FaCcPaypal />
-                <FaApplePay />
-              </div>
-            </div>
+            <button
+                onClick={openPopup}
+                className="bg-orange-500 text-white px-6 py-3 rounded-button hover:bg-orange-600 transition duration-300 inline-block font-medium cursor-pointer whitespace-nowrap"
+                >
+                Donate Now
+            </button>
+           
           </div>
         </div>
 
