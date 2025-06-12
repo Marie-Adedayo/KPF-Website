@@ -296,7 +296,7 @@ const Home: React.FC = () => {
     <input
     type="email"
     placeholder="Your email address"
-    className="flex-grow px-4 py-3 rounded-l-button border-none focus:outline-none focus:ring-2 focus:ring-purple-500"
+    className="flex-grow px-4 py-3 rounded-l-button border-2 focus:outline-none focus:ring-2 focus:ring-purple-500"
     />
     <button className="bg-purple-700 text-white px-6 py-3 rounded-r-button hover:bg-purple-800 transition duration-300 font-medium cursor-pointer whitespace-nowrap">
     Subscribe
