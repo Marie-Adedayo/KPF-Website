@@ -148,19 +148,19 @@ className="w-full h-full object-cover object-top"
 <div className="container mx-auto px-6 relative z-10 flex items-center h-full" style={{ minHeight: '70vh' }}>
 <div className="max-w-2xl text-white">
 <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">Our Projects</h1>
-<p className="text-xl mb-8">Discover the transformative initiatives we're implementing across Africa to empower communities and create lasting positive change.</p>
+<p className="text-xl mb-8">Discover the transformative initiatives we're implementing across Nigeria to empower communities and create lasting positive change.</p>
 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
 <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg">
-<div className="text-4xl font-bold text-white mb-2">120+</div>
+{/* <div className="text-4xl font-bold text-white mb-2">120+</div> */}
 <div className="text-orange-300">Active Projects</div>
 </div>
 <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg">
-<div className="text-4xl font-bold text-white mb-2">12</div>
-<div className="text-orange-300">Countries</div>
+{/* <div className="text-4xl font-bold text-white mb-2"></div> */}
+<div className="text-orange-300">Communities</div>
 </div>
 <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg">
-<div className="text-4xl font-bold text-white mb-2">50K+</div>
-<div className="text-orange-300">Lives Impacted</div>
+{/* <div className="text-4xl font-bold text-white mb-2">50K+</div> */}
+<div className="text-orange-300">5000+ Lives Impacted</div>
 </div>
 </div>
 </div>

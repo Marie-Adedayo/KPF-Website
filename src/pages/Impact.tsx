@@ -200,7 +200,7 @@ const Impact: React.FC = () => {
       <section className="relative pt-24 overflow-hidden" style={{ minHeight: '70vh' }}>
         <div className="absolute inset-0 z-0">
           <img
-            src="https://readdy.ai/api/search-image?query=impact%2520report%2520visualization%2520with%2520charts%2520graphs%2520and%2520statistics%2520showing%2520community%2520development%2520in%2520Africa%2520with%2520purple%2520and%2520orange%2520gradient%2520overlay%2520creating%2520a%2520modern%2520professional%2520look%2520with%2520space%2520for%2520text%2520on%2520left%2520side%2520with%2520clean%2520simple%2520background&width=1440&height=600&seq=301&orientation=landscape"
+            src="#"
             alt="Impact Report"
             className="w-full h-full object-cover object-top"
           />
@@ -528,7 +528,7 @@ const Impact: React.FC = () => {
                   <h3 className="text-xl font-bold text-gray-800 mb-4">Success Highlight</h3>
                   <div className="bg-white border border-gray-200 rounded-lg overflow-hidden">
                     <img 
-                      src="https://readdy.ai/api/search-image?query=before%2520and%2520after%2520comparison%2520of%2520rural%2520African%2520school%2520transformation%2520showing%2520dilapidated%2520classroom%2520on%2520left%2520and%2520modern%2520bright%2520classroom%2520with%2520computers%2520and%2520happy%2520students%2520on%2520right%2520with%2520clean%2520simple%2520background&width=600&height=400&seq=302&orientation=landscape" 
+                      src="#" 
                       alt="School Transformation" 
                       className="w-full h-48 object-cover object-top"
                     />
@@ -638,7 +638,7 @@ const Impact: React.FC = () => {
                   <h3 className="text-xl font-bold text-gray-800 mb-4">Success Highlight</h3>
                   <div className="bg-white border border-gray-200 rounded-lg overflow-hidden">
                     <img 
-                      src="https://readdy.ai/api/search-image?query=mobile%2520health%2520clinic%2520in%2520rural%2520African%2520setting%2520with%2520medical%2520professionals%2520treating%2520patients%2520and%2520community%2520members%2520waiting%2520in%2520line%2520with%2520medical%2520equipment%2520visible%2520with%2520clean%2520simple%2520background&width=600&height=400&seq=303&orientation=landscape" 
+                      src="#" 
                       alt="Mobile Health Clinic" 
                       className="w-full h-48 object-cover object-top"
                     />
@@ -748,7 +748,7 @@ const Impact: React.FC = () => {
                   <h3 className="text-xl font-bold text-gray-800 mb-4">Success Highlight</h3>
                   <div className="bg-white border border-gray-200 rounded-lg overflow-hidden">
                     <img 
-                      src="https://readdy.ai/api/search-image?query=before%2520and%2520after%2520comparison%2520of%2520water%2520access%2520in%2520African%2520village%2520showing%2520women%2520carrying%2520water%2520from%2520distant%2520source%2520on%2520left%2520and%2520new%2520water%2520well%2520with%2520community%2520members%2520collecting%2520clean%2520water%2520on%2520right%2520with%2520clean%2520simple%2520background&width=600&height=400&seq=304&orientation=landscape" 
+                      src="#" 
                       alt="Water Access Transformation" 
                       className="w-full h-48 object-cover object-top"
                     />
@@ -857,7 +857,7 @@ const Impact: React.FC = () => {
                   <h3 className="text-xl font-bold text-gray-800 mb-4">Success Highlight</h3>
                   <div className="bg-white border border-gray-200 rounded-lg overflow-hidden">
                     <img 
-                      src="https://readdy.ai/api/search-image?query=group%2520of%2520African%2520women%2520entrepreneurs%2520proudly%2520displaying%2520their%2520products%2520and%2520businesses%2520in%2520local%2520market%2520setting%2520showing%2520economic%2520empowerment%2520and%2520success%2520with%2520clean%2520simple%2520background&width=600&height=400&seq=305&orientation=landscape" 
+                      src="#" 
                       alt="Women Entrepreneurs" 
                       className="w-full h-48 object-cover object-top"
                     />
@@ -899,7 +899,7 @@ const Impact: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div>
                     <img 
-                      src="https://readdy.ai/api/search-image?query=portrait%2520of%2520confident%2520smiling%2520African%2520female%2520teacher%2520in%2520modern%2520classroom%2520with%2520students%2520visible%2520in%2520background%2520showing%2520transformation%2520and%2520success%2520with%2520clean%2520simple%2520background&width=500&height=600&seq=306&orientation=portrait" 
+                      src="#" 
                       alt="Teacher Success Story" 
                       className="w-full h-auto rounded-lg"
                     />
@@ -931,7 +931,7 @@ const Impact: React.FC = () => {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
                 <div className="bg-white rounded-lg shadow-md overflow-hidden">
                   <img 
-                    src="https://readdy.ai/api/search-image?query=portrait%2520of%2520smiling%2520African%2520woman%2520entrepreneur%2520with%2520her%2520small%2520business%2520shop%2520visible%2520in%2520background%2520showing%2520economic%2520empowerment%2520success%2520with%2520clean%2520simple%2520background&width=400&height=300&seq=307&orientation=landscape" 
+                    src="#" 
                     alt="Entrepreneur Success" 
                     className="w-full h-48 object-cover object-top"
                   />
@@ -951,7 +951,7 @@ const Impact: React.FC = () => {
                 
                 <div className="bg-white rounded-lg shadow-md overflow-hidden">
                   <img 
-                    src="https://readdy.ai/api/search-image?query=portrait%2520of%2520African%2520village%2520elder%2520standing%2520proudly%2520next%2520to%2520new%2520water%2520well%2520with%2520community%2520members%2520collecting%2520water%2520in%2520background%2520showing%2520water%2520access%2520success%2520with%2520clean%2520simple%2520background&width=400&height=300&seq=308&orientation=landscape" 
+                    src="#" 
                     alt="Water Access Success" 
                     className="w-full h-48 object-cover object-top"
                   />
@@ -971,7 +971,7 @@ const Impact: React.FC = () => {
                 
                 <div className="bg-white rounded-lg shadow-md overflow-hidden">
                   <img 
-                    src="https://readdy.ai/api/search-image?query=portrait%2520of%2520smiling%2520African%2520healthcare%2520worker%2520in%2520rural%2520clinic%2520setting%2520with%2520medical%2520equipment%2520and%2520patients%2520visible%2520in%2520background%2520showing%2520healthcare%2520success%2520with%2520clean%2520simple%2520background&width=400&height=300&seq=309&orientation=landscape" 
+                    src="#" 
                     alt="Healthcare Success" 
                     className="w-full h-48 object-cover object-top"
                   />
@@ -996,7 +996,7 @@ const Impact: React.FC = () => {
                   <div className="bg-white rounded-lg overflow-hidden shadow-sm">
                     <div className="relative">
                       <img 
-                        src="https://readdy.ai/api/search-image?query=video%2520thumbnail%2520of%2520African%2520teacher%2520in%2520classroom%2520with%2520students%2520showing%2520education%2520impact%2520with%2520play%2520button%2520overlay%2520with%2520clean%2520simple%2520background&width=400&height=225&seq=310&orientation=landscape" 
+                        src="#" 
                         alt="Education Video" 
                         className="w-full h-auto"
                       />
@@ -1015,7 +1015,7 @@ const Impact: React.FC = () => {
                   <div className="bg-white rounded-lg overflow-hidden shadow-sm">
                     <div className="relative">
                       <img 
-                        src="https://readdy.ai/api/search-image?query=video%2520thumbnail%2520of%2520African%2520community%2520celebrating%2520around%2520new%2520water%2520well%2520showing%2520water%2520access%2520impact%2520with%2520play%2520button%2520overlay%2520with%2520clean%2520simple%2520background&width=400&height=225&seq=311&orientation=landscape" 
+                        src="#" 
                         alt="Water Access Video" 
                         className="w-full h-auto"
                       />
