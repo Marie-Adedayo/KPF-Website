@@ -103,16 +103,16 @@ const About: React.FC = () => {
                         {/* 2015 */}
                         <div className="mb-16 flex flex-col md:flex-row items-center">
                             <div className="md:w-1/2 md:pr-12 md:text-right mb-8 md:mb-0">
-                                <h3 className="text-2xl font-bold text-gray-800 mb-3">2015</h3>
+                                <h3 className="text-2xl font-bold text-gray-800 mb-3">2020</h3>
                                 <h4 className="text-xl font-semibold text-purple-700 mb-3">Foundation Established</h4>
-                                <p className="text-gray-600">The Kayode Philip Foundation was established with a mission to transform lives across Africa through sustainable development initiatives.</p>
+                                <p className="text-gray-600">The Kayode Philip Foundation was established with a mission to improve the quality of life during Codvid period. 40 families were syupport with food relief packages</p>
                             </div>
                             <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center">
                                 <div className="w-8 h-8 rounded-full bg-purple-700 border-4 border-white"></div>
                             </div>
                             <div className="md:w-1/2 md:pl-12">
                                 <img
-                                    src="https://readdy.ai/api/search-image?query=foundation%20establishment%20ceremony%20with%20diverse%20group%20of%20people%20cutting%20ribbon%20at%20new%20office%20building%20with%20purple%20and%20orange%20decorative%20elements%20and%20professional%20setting%20with%20clean%20simple%20background&width=500&height=300&seq=102&orientation=landscape"
+                                    src="/Images/2020-1.jpg"
                                     alt="Foundation Established"
                                     className="rounded-lg shadow-md w-full h-64 object-cover object-top"
                                  />
@@ -121,9 +121,9 @@ const About: React.FC = () => {
                         {/* 2017 */}
                         <div className="mb-16 flex flex-col md:flex-row-reverse items-center">
                             <div className="md:w-1/2 md:pl-12 md:text-left mb-8 md:mb-0">
-                                <h3 className="text-2xl font-bold text-gray-800 mb-3">2017</h3>
-                                <h4 className="text-xl font-semibold text-purple-700 mb-3">First Major Project</h4>
-                                <p className="text-gray-600">Launched our first major clean water initiative in rural Nigeria, providing access to clean water for over 5,000 people.</p>
+                                <h3 className="text-2xl font-bold text-gray-800 mb-3">2022</h3>
+                                <h4 className="text-xl font-semibold text-purple-700 mb-3">We successfully launched our first major outreach project in Ibadan, impacting over 1,200 lives.</h4>
+                                <p className="text-gray-600">The initiative included the distribution of food relief packages, school bags for children, free medical check-ups for the elderly, and skill acquisition programs. To further empower participants, top-performing trainees were awarded full scholarships to complete their training programs. </p>
                             </div>
                             <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center">
                                 <div className="w-8 h-8 rounded-full bg-purple-700 border-4 border-white"></div>
@@ -139,9 +139,9 @@ const About: React.FC = () => {
                         {/* 2019 */}
                         <div className="mb-16 flex flex-col md:flex-row items-center">
                             <div className="md:w-1/2 md:pr-12 md:text-right mb-8 md:mb-0">
-                                <h3 className="text-2xl font-bold text-gray-800 mb-3">2019</h3>
-                                <h4 className="text-xl font-semibold text-purple-700 mb-3">Educational Initiative</h4>
-                                <p className="text-gray-600">Established our educational program, building 10 schools and providing scholarships to over 1,000 children across three countries.</p>
+                                <h3 className="text-2xl font-bold text-gray-800 mb-3">2023</h3>
+                                <h4 className="text-xl font-semibold text-purple-700 mb-3">In 2023, we extended our impact to another underserved community in Ibadan, reaching hundreds of beneficiaries.</h4>
+                                <p className="text-gray-600">Building on the success of our first project, this foundation featured another distribution of food relief items, school bags for children, free medical check-ups for elderly residents, and hands-on skill acquisition training. Outstanding participants were once again awarded scholarships to complete their vocational programs, reinforcing our commitment to sustainable community development.</p>
                             </div>
                             <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center">
                                 <div className="w-8 h-8 rounded-full bg-purple-700 border-4 border-white"></div>
@@ -199,88 +199,81 @@ const About: React.FC = () => {
                 <div className="container mx-auto px-6">
                     <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-800">Our Leadership</h2>
                     <p className="text-gray-600 text-center max-w-3xl mx-auto mb-16">Meet the dedicated team of professionals guiding our foundation's mission and vision with passion and expertise.</p>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {/* CEO */}
-                        <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300 group">
-                            <div className="h-80 overflow-hidden">
-                                <img
-                                    src="https://readdy.ai/api/search-image?query=professional%20portrait%20of%20African%20male%20CEO%20in%20his%2050s%20wearing%20business%20suit%20against%20neutral%20background%20with%20confident%20expression%20and%20professional%20lighting%20with%20clean%20simple%20background&width=600&height=800&seq=107&orientation=portrait"
-                                    alt="Kayode Philip"
-                                    className="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500"
-                                />
+                   <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-1 gap-8">
+                        {/* Team Member - CEO */}
+                        <div className="bg-white flex flex-col items-center text-center  p-6">
+                            <div className="h-80 md:h-auto md:w-1/3 overflow-hidden">
+                            <img
+                                src="https://readdy.ai/api/search-image?query=professional%20portrait%20of%20African%20male%20CEO%20in%20his%2050s..."
+                                alt="Kayode Philip"
+                                className="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500"
+                            />
                             </div>
-                            <div className="p-6">
-                                <h3 className="text-xl font-bold text-gray-800 mb-1">Dr. Kayode Philip</h3>
-                                <p className="text-purple-700 font-medium mb-4">Founder & CEO</p>
-                                {/* <p className="text-gray-600 mb-4">With over 25 years of experience in international development, Dr. Philip founded the organization with a vision to transform communities across Africa.</p>
-                                <div className="flex space-x-3">
-                                    <a href="#" className="text-gray-400 hover:text-purple-700 transition duration-300 cursor-pointer">
-                                        <i className="fab fa-linkedin-in"></i>
-                                    </a>
-                                    <a href="#" className="text-gray-400 hover:text-purple-700 transition duration-300 cursor-pointer">
-                                        <i className="fab fa-twitter"></i>
-                                    </a>
-                                    <a href="#" className="text-gray-400 hover:text-purple-700 transition duration-300 cursor-pointer">
-                                        <i className="fas fa-envelope"></i>
-                                    </a>
-                                </div> */}
+                            <div className="p-6 md:w-2/3">
+                            <h3 className="text-xl font-bold text-gray-800 mb-1">Kayode Philip Fadele</h3>
+                            <p className="text-purple-700 font-medium mb-4">President</p>
+                            <p className="text-gray-600 mb-4 text-sm leading-relaxed">
+                                Oluwakayode Fadele is a dynamic lifestyle coach, author, social entrepreneur, and content creator, passionate about transforming lives and empowering communities. He is the visionary founder of the Kayode Philip Foundation, a non-profit organization dedicated to youth empowerment, education, and community development across underserved areas.
+                                With a deep commitment to personal growth and societal impact, Oluwakayode combines his expertise in coaching and storytelling to inspire individuals to unlock their full potential. Through his content and public engagements, he addresses themes around purpose, mindset, relationships, and sustainable development.
+                                As a trusted voice in the personal development space, Oluwakayode has authored transformative resources and created digital platforms that reach audiences globally. His work reflects a lifelong mission to create meaningful change, especially among youth and marginalized groups.
+                                Whether in coaching sessions, community projects, or digital content, Oluwakayode Fadele continues to lead with authenticity, compassion, and an unwavering belief in the power of purpose-driven living.
+                            </p>
                             </div>
                         </div>
-                        {/* COO */}
-                        <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300 group">
-                            <div className="h-80 overflow-hidden">
-                                <img
-                                    src="/Images/2.jpg"
-                                    alt="Amina Okafor"
-                                    className="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500"
-                                />
-                            </div>
-                            <div className="p-6">
-                                <h3 className="text-xl font-bold text-gray-800 mb-1">Fasanya Marie Adedayo</h3>
-                                <p className="text-purple-700 font-medium mb-4">Chief Operations Officer</p>
-                               {/*  <div className="flex space-x-3">
-                                    <a href="#" className="text-gray-400 hover:text-purple-700 transition duration-300 cursor-pointer">
-                                        <i className="fab fa-linkedin-in"></i>
-                                    </a>
-                                    <a href="#" className="text-gray-400 hover:text-purple-700 transition duration-300 cursor-pointer">
-                                        <i className="fab fa-twitter"></i>
-                                    </a>
-                                    <a href="#" className="text-gray-400 hover:text-purple-700 transition duration-300 cursor-pointer">
-                                        <i className="fas fa-envelope"></i>
-                                    </a>
-                                </div> */}
-                            </div>
-                        </div>
-                        
-                        {/* Program Director */}
-                        <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300 group">
-                            <div className="h-80 overflow-hidden">
-                                <img
-                                    src="https://readdy.ai/api/search-image?query=professional%20portrait%20of%20African%20female%20program%20director%20in%20her%2030s%20wearing%20smart%20casual%20attire%20against%20neutral%20background%20with%20friendly%20expression%20and%20professional%20lighting%20with%20clean%20simple%20background&width=600&height=800&seq=110&orientation=portrait"
-                                    alt="Sarah Adeyemi"
-                                    className="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500"
-                                />
-                            </div>
-                            <div className="p-6">
-                                <h3 className="text-xl font-bold text-gray-800 mb-1">Tolu </h3>
-                                <p className="text-purple-700 font-medium mb-4">Volunteers Coordinator</p>
-                                {/* <p className="text-gray-600 mb-4">Sarah leads our program development and implementation, bringing extensive experience in community development across Africa.</p> */}
-                                {/*<div className="flex space-x-3">
-                                    <a href="#" className="text-gray-400 hover:text-purple-700 transition duration-300 cursor-pointer">
-                                        <i className="fab fa-linkedin-in"></i>
-                                    </a>
-                                    <a href="#" className="text-gray-400 hover:text-purple-700 transition duration-300 cursor-pointer">
-                                        <i className="fab fa-twitter"></i>
-                                    </a>
-                                    <a href="#" className="text-gray-400 hover:text-purple-700 transition duration-300 cursor-pointer">
-                                        <i className="fas fa-envelope"></i>
-                                    </a>
-                                </div> */}
-                            </div>
-                        </div>
-                        
 
-                    </div>
+                        {/* Team Member - VP */}
+                        <div className="bg-white flex flex-col items-center text-center  p-6">
+                            {/* Image */}
+                            <div className="w-48 h-48  overflow-hidden mb-4 shadow-sm">
+                                <img
+                                src="/Images/Vice President.jpg"
+                                alt="Jumoby D.A"
+                                className="w-full h-full object-cover object-top "
+                                />
+                            </div>
+
+                            {/* Text */}
+                            <h3 className="text-xl font-bold text-gray-800 mb-1">Jumoby D.A</h3>
+                            <p className="text-purple-700 font-medium mb-4">Vice President</p>
+                            <p className="text-gray-600 text-sm leading-relaxed max-w-xl">
+                                Jumoby D.A — Creator. Disruptor. Curator. Founder & Chief Thinking Officer at Travul.org Ltd, a travel fintech company reimagining how people explore, save, and grow through borderless living.
+                                I fuse creativity with strategy, disruption with execution. With a proven track record in innovation, entrepreneurship, and client experience, I don’t just think outside the box—I redesign the box entirely.
+                                Known for bold ideas, detailed execution, and a relentless drive for excellence, I lead with vision, build with purpose, and deliver with heart.
+                            </p>
+                            </div>
+
+
+                        {/* Team Member - COO */}
+                       <div className="bg-white flex flex-col items-center text-center  p-6">
+                            <div className="w-48 h-48  overflow-hidden mb-4 shadow-sm">
+                            <img
+                                src="/Images/2.jpg"
+                                alt="Fasanya Marie Adedayo"
+                                className="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500"
+                            />
+                            </div>
+                            <div className="p-6 md:w-2/3">
+                            <h3 className="text-xl font-bold text-gray-800 mb-1">Fasanya Marie Adedayo</h3>
+                            <p className="text-purple-700 font-medium mb-4">Chief Operations Officer</p>
+                            </div>
+                        </div>
+
+                        {/* Team Member - Program Director */}
+                        <div className="bg-white flex flex-col items-center text-center  p-6">
+                            <div className="w-48 h-48  overflow-hidden mb-4 shadow-sm">
+                            <img
+                                src="/Images/Tolu-1.jpg"
+                                alt="Tolu"
+                                className="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500"
+                            />
+                            </div>
+                            <div className="p-6 md:w-2/3">
+                            <h3 className="text-xl font-bold text-gray-800 mb-1">Tolu</h3>
+                            <p className="text-purple-700 font-medium mb-4">Volunteers Coordinator</p>
+                            </div>
+                        </div>
+                        </div>
+
 
                 </div>
         
