@@ -1,6 +1,7 @@
 import React from 'react';
 import Footer from '../component/Footer';
 import Header from '../component/Header';
+import LeadershipCard from '../component/LeadershipCard';
 
 const About: React.FC = () => {
 
@@ -194,89 +195,57 @@ const About: React.FC = () => {
                 </div>
             </div>
             </section>
-            {/* Leadership Team Section */}
-            <section className="py-20 bg-white">
+           <section className="py-20 bg-purple-900">
                 <div className="container mx-auto px-6">
-                    <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-800">Our Leadership</h2>
-                    <p className="text-gray-600 text-center max-w-3xl mx-auto mb-16">Meet the dedicated team of professionals guiding our foundation's mission and vision with passion and expertise.</p>
-                   <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-1 gap-8">
-                        {/* Team Member - CEO */}
-                        <div className="bg-white flex flex-col items-center text-center  p-6">
-                            <div className="h-80 md:h-auto md:w-1/3 overflow-hidden">
-                            <img
-                                src="https://readdy.ai/api/search-image?query=professional%20portrait%20of%20African%20male%20CEO%20in%20his%2050s..."
-                                alt="Kayode Philip"
-                                className="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500"
-                            />
-                            </div>
-                            <div className="p-6 md:w-2/3">
-                            <h3 className="text-xl font-bold text-gray-800 mb-1">Kayode Philip Fadele</h3>
-                            <p className="text-purple-700 font-medium mb-4">President</p>
-                            <p className="text-gray-600 mb-4 text-sm leading-relaxed">
-                                Oluwakayode Fadele is a dynamic lifestyle coach, author, social entrepreneur, and content creator, passionate about transforming lives and empowering communities. He is the visionary founder of the Kayode Philip Foundation, a non-profit organization dedicated to youth empowerment, education, and community development across underserved areas.
+                    <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-white">Our Leadership</h2>
+                    <p className="text-white text-center max-w-3xl mx-auto mb-16">
+                    Meet the dedicated team of professionals guiding our foundation's mission and vision with passion and expertise.
+                    </p>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <LeadershipCard
+                        name="Kayode Philip Fadele"
+                        title="President"
+                        image="/Images/President.png"
+                        summary="Oluwakayode Fadele is a dynamic lifestyle coach, author, and social entrepreneur, and content creator, passionate about transforming lives and empowering communities..."
+                        fullText={`Oluwakayode Fadele is a dynamic lifestyle coach, author, social entrepreneur, and content creator, passionate about transforming lives and empowering communities. He is the visionary founder of the Kayode Philip Foundation, a non-profit organization dedicated to youth empowerment, education, and community development across underserved areas.
                                 With a deep commitment to personal growth and societal impact, Oluwakayode combines his expertise in coaching and storytelling to inspire individuals to unlock their full potential. Through his content and public engagements, he addresses themes around purpose, mindset, relationships, and sustainable development.
                                 As a trusted voice in the personal development space, Oluwakayode has authored transformative resources and created digital platforms that reach audiences globally. His work reflects a lifelong mission to create meaningful change, especially among youth and marginalized groups.
-                                Whether in coaching sessions, community projects, or digital content, Oluwakayode Fadele continues to lead with authenticity, compassion, and an unwavering belief in the power of purpose-driven living.
-                            </p>
-                            </div>
-                        </div>
+                                Whether in coaching sessions, community projects, or digital content, Oluwakayode Fadele continues to lead with authenticity, compassion, and an unwavering belief in the power of purpose-driven living.`}
+                        
+                    />
 
-                        {/* Team Member - VP */}
-                        <div className="bg-white flex flex-col items-center text-center  p-6">
-                            {/* Image */}
-                            <div className="w-48 h-48  overflow-hidden mb-4 shadow-sm">
-                                <img
-                                src="/Images/Vice President.jpg"
-                                alt="Jumoby D.A"
-                                className="w-full h-full object-cover object-top "
-                                />
-                            </div>
+                    <LeadershipCard
+                        name="Jumoby D.A"
+                        title="Vice President"
+                        image="/Images/Vice President.jpg"
+                        summary="Creator. Disruptor. Curator. Founder & Chief Thinking Officer at Travul.org Ltd, a travel fintech company reimagining how people explore, save, and grow through borderless living..."
+                        fullText={`Creator. Disruptor. Curator. Founder & Chief Thinking Officer at Travul.org Ltd, a travel fintech company reimagining how people explore, save, and grow through borderless living.
+                            I fuse creativity with strategy, disruption with execution. With a proven track record in innovation, entrepreneurship, and client experience, I don’t just think outside the box—I redesign the box entirely.
+                            Known for bold ideas, detailed execution, and a relentless drive for excellence, I lead with vision, build with purpose, and deliver with heart.`}
+                    />
 
-                            {/* Text */}
-                            <h3 className="text-xl font-bold text-gray-800 mb-1">Jumoby D.A</h3>
-                            <p className="text-purple-700 font-medium mb-4">Vice President</p>
-                            <p className="text-gray-600 text-sm leading-relaxed max-w-xl">
-                                Jumoby D.A — Creator. Disruptor. Curator. Founder & Chief Thinking Officer at Travul.org Ltd, a travel fintech company reimagining how people explore, save, and grow through borderless living.
-                                I fuse creativity with strategy, disruption with execution. With a proven track record in innovation, entrepreneurship, and client experience, I don’t just think outside the box—I redesign the box entirely.
-                                Known for bold ideas, detailed execution, and a relentless drive for excellence, I lead with vision, build with purpose, and deliver with heart.
-                            </p>
-                            </div>
+                    <LeadershipCard
+                        name="Marie A. Fasanya"
+                        title="Chief Operations Officer"
+                        image="/Images/2.jpg"
+                        summary="As the Chief Operations Officer of the Kayode Philip Foundation, I am honored to contribute to a mission that resonates deeply with my values..."
+                        fullText={`As the Chief Operations Officer of the Kayode Philip Foundation, I am honored to contribute to a mission that resonates deeply with my values — empowering lives and creating lasting impact. I bring strong organizational skills, strategic thinking, and a deep commitment to service.
+                        My approach focuses on building systems that help our programs run smoothly, ensuring that every effort is aligned with our goals and reaches those who need it most. I am learning, growing, and driven by a desire to see real change happen — from behind the scenes and on the field.
+                        I am excited to be part of a team that is dedicated to making a difference in the lives of individuals and communities across Africa. Together, we are not just addressing immediate needs but also laying the groundwork for sustainable development and empowerment.`}
+                    />
 
-
-                        {/* Team Member - COO */}
-                       <div className="bg-white flex flex-col items-center text-center  p-6">
-                            <div className="w-48 h-48  overflow-hidden mb-4 shadow-sm">
-                            <img
-                                src="/Images/2.jpg"
-                                alt="Fasanya Marie Adedayo"
-                                className="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500"
-                            />
-                            </div>
-                            <div className="p-6 md:w-2/3">
-                            <h3 className="text-xl font-bold text-gray-800 mb-1">Fasanya Marie Adedayo</h3>
-                            <p className="text-purple-700 font-medium mb-4">Chief Operations Officer</p>
-                            </div>
-                        </div>
-
-                        {/* Team Member - Program Director */}
-                        <div className="bg-white flex flex-col items-center text-center  p-6">
-                            <div className="w-48 h-48  overflow-hidden mb-4 shadow-sm">
-                            <img
-                                src="/Images/Tolu-1.jpg"
-                                alt="Tolu"
-                                className="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500"
-                            />
-                            </div>
-                            <div className="p-6 md:w-2/3">
-                            <h3 className="text-xl font-bold text-gray-800 mb-1">Tolu</h3>
-                            <p className="text-purple-700 font-medium mb-4">Volunteers Coordinator</p>
-                            </div>
-                        </div>
-                        </div>
-
-
+                    <LeadershipCard
+                        name="Toluwanimi S. Oluwagbemiga"
+                        title="Voluteer Coordinator"
+                        image="/Images/Tolu-1.jpg"
+                        summary="As the Volunteer Coordinator at the Kayode Philip Foundation, I work closely with our amazing team of volunteers the heart of our impact..."
+                        fullText={`As the Volunteer Coordinator at the Kayode Philip Foundation, I work closely with our amazing team of volunteers the heart of our impact.
+                        My role involves recruiting, organizing, and supporting passionate individuals who are committed to community development. I ensure each volunteer is equipped, valued, and inspired to serve with excellence. From events to outreach, I help bridge the gap between vision and execution, making sure every helping hand counts.
+                        I am dedicated to fostering a culture of service, collaboration, and continuous learning. Together, we are not just making a difference we are building a movement of change-makers who believe in the power of community and the potential of every individual.`}
+                    />
+                    </div>
                 </div>
-        
             </section>
             {/* Board Members Section */}
             <section className="py-20 bg-gray-50">

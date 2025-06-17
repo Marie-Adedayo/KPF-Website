@@ -158,26 +158,21 @@ const OurWorkSection: React.FC = () => {
         {/* Projects grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {selectedCategory === 'All Projects' ? (
-            projectsData.map((category) => (
+            projectsData.flatMap((category) =>
+            category.images.map((image) => (
               <div
-                key={category.name}
-                className="group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300 cursor-pointer"
+                key={`${category.name}-${image.id}`}
+                className="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300 cursor-pointer"
               >
                 <img
-                  src={category.previewImage.src}
-                  alt={category.previewImage.alt}
-                  className="w-full h-64 object-cover object-top transition duration-500 group-hover:scale-110"
+                  src={image.src}
+                  alt={image.alt}
+                  className="w-full h-64 object-cover object-top transition duration-500 hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-purple-900/90 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end">
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold text-white mb-2">{category.name} Project</h3>
-                    <span className="text-orange-300 flex items-center">
-                      Learn more <i className="fas fa-arrow-right ml-2"></i>
-                    </span>
-                  </div>
-                </div>
               </div>
             ))
+          )
+
           ) : (
             projectsData
               .find((cat) => cat.name === selectedCategory)
@@ -197,9 +192,9 @@ const OurWorkSection: React.FC = () => {
         </div>
 
         <div className="text-center mt-12">
-          <button className="bg-orange-500 text-white px-8 py-3 rounded-button hover:bg-orange-600 transition duration-300 font-medium cursor-pointer whitespace-nowrap">
+          <a href='/project' className="bg-orange-500 text-white px-8 py-3 rounded-button hover:bg-orange-600 transition duration-300 font-medium cursor-pointer whitespace-nowrap">
             View All Projects
-          </button>
+          </a>
         </div>
       </div>
     </section>

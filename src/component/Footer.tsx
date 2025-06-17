@@ -7,10 +7,10 @@ import {
   FaMapMarkerAlt,
   FaPhoneAlt,
   FaEnvelope,
-  FaCcVisa,
+ /*  FaCcVisa,
   FaCcMastercard,
   FaCcPaypal,
-  FaApplePay
+  FaApplePay */
 } from 'react-icons/fa';
 
 const Footer: React.FC = () => {
@@ -89,7 +89,7 @@ const Footer: React.FC = () => {
             >
               Donate
             </button>
-            <div className="mt-6">
+{/*             <div className="mt-6">
               <p className="text-sm text-purple-300 mb-2">Secure Payment Options</p>
               <div className="flex space-x-3 text-gray-300 text-2xl">
                 <FaCcVisa />
@@ -97,7 +97,7 @@ const Footer: React.FC = () => {
                 <FaCcPaypal />
                 <FaApplePay />
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
 
@@ -119,7 +119,7 @@ const Footer: React.FC = () => {
 
         {/* Popup */}
         {showPopup && (
-          <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+          <div className="fixed inset-0 bg-white/10 backdrop-blur-sm flex justify-center items-center z-50">
             <div className="bg-white p-8 rounded-xl shadow-lg text-left max-w-sm w-full relative">
               <button
                 onClick={togglePopup}

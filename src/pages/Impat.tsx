@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+/* import React, { useState } from 'react';
 import Header from '../component/Header';
 import Footer from '../component/Footer';
 import HeroSection from '..//component/impactFolder/HeroSection';
@@ -35,3 +35,4 @@ const Impact: React.FC = () => {
 };
 
 export default Impact;
+ */

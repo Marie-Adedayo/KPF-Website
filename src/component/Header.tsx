@@ -40,7 +40,7 @@ const Header: React.FC = () => {
             <Link to="/about" className="text-gray-800 hover:text-purple-700 font-medium">About Us</Link>
             <Link to="/project" className="text-gray-800 hover:text-purple-700 font-medium">Projects</Link>
             <Link to="/news" className="text-gray-800 hover:text-purple-700 font-medium">News</Link>
-            <Link to="/impat" className="text-gray-800 hover:text-purple-700 font-medium">Impact</Link>
+            {/* <Link to="/impat" className="text-gray-800 hover:text-purple-700 font-medium">Impact</Link> */}
             <button
               onClick={togglePopup}
               className="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600 transition font-medium"
@@ -65,7 +65,7 @@ const Header: React.FC = () => {
               <Link to="/about" onClick={toggleMobileMenu} className="block text-gray-800 hover:text-purple-700 font-medium">About Us</Link>
               <Link to="/projects" onClick={toggleMobileMenu} className="block text-gray-800 hover:text-purple-700 font-medium">Projects</Link>
               <Link to="/news" onClick={toggleMobileMenu} className="block text-gray-800 hover:text-purple-700 font-medium">News</Link>
-              <Link to="/impact" onClick={toggleMobileMenu} className="block text-gray-800 hover:text-purple-700 font-medium">Impact</Link>
+              {/* <Link to="/impact" onClick={toggleMobileMenu} className="block text-gray-800 hover:text-purple-700 font-medium">Impact</Link> */}
               <button
                 onClick={togglePopup}
                 className="w-full block bg-orange-500 text-white text-center px-4 py-2 rounded hover:bg-orange-600 transition font-medium"
@@ -78,7 +78,7 @@ const Header: React.FC = () => {
 
         {/* Popup */}
         {showPopup && (
-          <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+          <div className="fixed inset-0 bg-white/10 backdrop-blur-sm flex justify-center items-center z-50">
             <div className="bg-white p-8 rounded-xl shadow-lg text-left max-w-sm w-full relative">
               <button
                 onClick={togglePopup}
@@ -88,9 +88,15 @@ const Header: React.FC = () => {
                 &times;
               </button>
               <h3 className="text-xl font-bold mb-4 text-gray-800">Bank Account Details</h3>
-              <p className="text-gray-700 mb-2"><strong>Bank:</strong> Zenith Bank</p>
-              <p className="text-gray-700 mb-2"><strong>Account Name:</strong> Kayode Philip Foundation</p>
-              <p className="text-gray-700 mb-2"><strong>Account Number:</strong> 1234567890</p>
+              <p className="text-gray-700 mb-2">
+                <strong>Bank:</strong> Polaris Bank
+              </p>
+              <p className="text-gray-700 mb-2">
+                <strong>Account Name:</strong> Kayode Philip Foundation
+              </p>
+              <p className="text-gray-700 mb-2">
+                <strong>Account Number:</strong> 40 9175 7460
+              </p>
               <p className="text-sm text-gray-500 mt-4">Please use your name as the payment reference.</p>
             </div>
           </div>
