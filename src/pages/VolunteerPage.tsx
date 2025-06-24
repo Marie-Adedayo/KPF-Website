@@ -1,58 +1,15 @@
 import React, { useState, useRef } from "react";
 import Header from "@/component/Header";
 import Footer from "@/component/Footer";
-/* import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay } from "swiper/modules";
- */
-/* const initialVolunteers = [
-  {
-    id: 1,
-    name: "Ada Johnson",
-    role: "Community Organizer",
-    bio: "Ada has led numerous outreach programs across rural areas.",
-    image: "https://i.pravatar.cc/150?img=1",
-  },
-  {
-    id: 2,
-    name: "John Doe",
-    role: "Education Volunteer",
-    bio: "John tutors students in math and science every weekend.",
-    image: "https://i.pravatar.cc/150?img=2",
-  },
-  {
-    id: 3,
-    name: "Grace Lee",
-    role: "Medical Support",
-    bio: "Grace assists with medical outreach events in underserved communities.",
-    image: "https://i.pravatar.cc/150?img=3",
-  },
-  {
-    id: 4,
-    name: "Michael Smith",
-    role: "Youth Mentor",
-    bio: "Michael mentors teenagers in career planning and leadership.",
-    image: "https://i.pravatar.cc/150?img=4",
-  },
-  {
-    id: 5,
-    name: "Sophia Brown",
-    role: "Women Empowerment Advocate",
-    bio: "Sophia leads training sessions for women entrepreneurs.",
-    image: "https://i.pravatar.cc/150?img=5",
-  },
-]; */
 
 export default function VolunteersPage() {
-  /* const [volunteers] = useState(initialVolunteers); */
   const [form, setForm] = useState({ name: "", email: "", role: "", bio: "" });
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const formRef = useRef<HTMLDivElement>(null);
 
   const scrollToForm = () => {
-    if (formRef.current) {
-      formRef.current.scrollIntoView({ behavior: "smooth" });
-    }
+    formRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
   const validateEmail = (email: string) => {
@@ -75,6 +32,7 @@ export default function VolunteersPage() {
       alert("Please fill in all fields.");
       return;
     }
+
     if (!validateEmail(form.email)) {
       alert("Please enter a valid email address.");
       return;
@@ -82,23 +40,24 @@ export default function VolunteersPage() {
 
     setLoading(true);
 
-    const payload = {
-      name: form.name,
-      email: form.email,
-      role: form.role,
-      bio: form.bio,
-    };
+    // ✅ Use FormData to bypass CORS preflight
+    const formData = new FormData();
+    formData.append("name", form.name);
+    formData.append("email", form.email);
+    formData.append("role", form.role);
+    formData.append("bio", form.bio);
 
     try {
-      const response = await fetch("https://script.google.com/macros/s/AKfycbxt6A_0qalwk3c7Nm2iTVVUamaE32P4yTYXbo0ryZhUITMPJVhcDxSPYAFetQphUnA/exec", {
-        method: "POST",
-        body: JSON.stringify(payload),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+      const response = await fetch(
+        "https://script.google.com/macros/s/AKfycbzJb-BLUXlCZ8r2BO5hkXbC7evds0ls6j6X89qh8y5F1ZMZ-MlILQfvc8AYF99NzfM/exec",
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
 
       const result = await response.json();
+
       if (result.status === "success") {
         setSuccess(true);
         setForm({ name: "", email: "", role: "", bio: "" });
@@ -121,17 +80,14 @@ export default function VolunteersPage() {
       <section className="relative pt-24 overflow-hidden" style={{ minHeight: "90vh" }}>
         <div className="absolute inset-0 z-0">
           <img
-            src='/Images/volunteer.jpeg'
+            src="/Images/volunteer.jpeg"
             alt="Volunteer with Kayode Philip Foundation"
             className="w-full h-full object-cover object-top"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-purple-900/90 to-yellow-500/70" />
         </div>
 
-        <div
-          className="container mx-auto px-6 relative z-10 flex items-center h-full"
-          style={{ minHeight: "80vh" }}
-        >
+        <div className="container mx-auto px-6 relative z-10 flex items-center h-full" style={{ minHeight: "80vh" }}>
           <div className="max-w-2xl text-white">
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
               Volunteer with Us, <br /> Transform Lives
@@ -241,7 +197,9 @@ export default function VolunteersPage() {
           <button
             type="submit"
             disabled={loading}
-            className={`w-full bg-orange-500 text-white py-2 rounded-md transition ${loading ? 'opacity-50 cursor-not-allowed' : 'hover:bg-orange-600'}`}
+            className={`w-full bg-orange-500 text-white py-2 rounded-md transition ${
+              loading ? "opacity-50 cursor-not-allowed" : "hover:bg-orange-600"
+            }`}
           >
             {loading ? "Submitting..." : "Submit Application"}
           </button>

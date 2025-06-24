@@ -78,7 +78,7 @@ const Home: React.FC = () => {
               </button>
 
               {showPopup && (
-                <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+                <div className="fixed inset-0 bg-white/10 backdrop-blur-sm flex justify-center items-center z-50">
                   <div className="bg-white p-8 rounded-xl shadow-lg text-left max-w-sm w-full relative">
                     <button
                       onClick={togglePopup}
@@ -104,9 +104,9 @@ const Home: React.FC = () => {
                 </div>
               )}
 
-              <button className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-button hover:bg-white/10 transition duration-300 font-medium text-lg cursor-pointer whitespace-nowrap">
+              <a href='/about' className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-button hover:bg-white/10 transition duration-300 font-medium text-lg cursor-pointer whitespace-nowrap">
                 Learn More
-              </button>
+              </a>
             </div>
           </div>
         </div>
