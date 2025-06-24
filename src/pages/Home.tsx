@@ -121,21 +121,21 @@ const Home: React.FC = () => {
               <div className="inline-block p-4 rounded-full bg-purple-100 mb-6">
                 <i className="fas fa-hands-helping text-3xl text-purple-700"></i>
               </div>
-              <h3 className="text-4xl font-bold text-purple-700 mb-2">Many</h3>
+              <h3 className="text-4xl font-bold text-purple-700 mb-2">10+</h3>
               <p className="text-gray-600">Projects Completed</p>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-lg transition duration-300 transform hover:-translate-y-1">
               <div className="inline-block p-4 rounded-full bg-purple-100 mb-6">
                 <i className="fas fa-users text-3xl text-purple-700"></i>
               </div>
-              <h3 className="text-4xl font-bold text-purple-700 mb-2">50,000+</h3>
+              <h3 className="text-4xl font-bold text-purple-700 mb-2">15,000+</h3>
               <p className="text-gray-600">Lives Impacted</p>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-lg transition duration-300 transform hover:-translate-y-1">
               <div className="inline-block p-4 rounded-full bg-purple-100 mb-6">
                 <i className="fas fa-globe-africa text-3xl text-purple-700"></i>
               </div>
-              <h3 className="text-4xl font-bold text-purple-700 mb-2">Serval</h3>
+              <h3 className="text-4xl font-bold text-purple-700 mb-2">11+</h3>
               <p className="text-gray-600">Communities Served</p>
             </div>
 {/*             <div className="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-lg transition duration-300 transform hover:-translate-y-1">

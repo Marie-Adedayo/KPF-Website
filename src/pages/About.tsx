@@ -106,7 +106,7 @@ const About: React.FC = () => {
                             <div className="md:w-1/2 md:pr-12 md:text-right mb-8 md:mb-0">
                                 <h3 className="text-2xl font-bold text-gray-800 mb-3">2020</h3>
                                 <h4 className="text-xl font-semibold text-purple-700 mb-3">Foundation Established</h4>
-                                <p className="text-gray-600">The Kayode Philip Foundation was established with a mission to improve the quality of life during Codvid period. 40 families were syupport with food relief packages</p>
+                                <p className="text-gray-600">The Kayode Philip Foundation was established with a mission to improve the quality of life during Codvid period. 40 families were support with food relief packages</p>
                             </div>
                             <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center">
                                 <div className="w-8 h-8 rounded-full bg-purple-700 border-4 border-white"></div>

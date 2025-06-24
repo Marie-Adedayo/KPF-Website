@@ -64,7 +64,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-3">
               <li className="flex items-start">
                 <FaMapMarkerAlt className="mt-1 mr-3 text-orange-400" />
-                <span className="text-purple-200">123 Foundation Street, Lagos, Nigeria</span>
+                <span className="text-purple-200">Ogunmokun way, Iroko Town, Ogun state. Nigeria </span>
               </li>
               <li className="flex items-center">
                 <FaPhoneAlt className="mr-3 text-orange-400" />
