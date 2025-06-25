@@ -286,7 +286,13 @@ const Home: React.FC = () => {
                 </div>
               </div>
             </div>
-            <div className="mt-12 bg-purple-50 rounded-xl p-8 md:p-10">
+            <form
+              action="https://kayodephilipfoundation.us10.list-manage.com/subscribe/post?u=618ffcf0cba44816287c3a243&amp;id=8f695fd776&amp;f_id=0000c1e3f0"
+              method="post"
+              target="_blank"
+              noValidate
+              className="mt-12 bg-purple-50 rounded-xl p-8 md:p-10"
+            >
               <div className="md:flex items-center justify-between">
                 <div className="md:w-1/2 mb-6 md:mb-0">
                   <h3 className="text-2xl font-bold text-gray-800 mb-3">Subscribe to Our Newsletter</h3>
@@ -296,16 +302,32 @@ const Home: React.FC = () => {
                   <div className="flex">
                     <input
                       type="email"
+                      name="EMAIL" // Required by Mailchimp
                       placeholder="Your email address"
+                      required
                       className="flex-grow px-4 py-3 rounded-l-button border-2 focus:outline-none focus:ring-2 focus:ring-purple-500"
                     />
-                    <button className="bg-purple-700 text-white px-6 py-3 rounded-r-button hover:bg-purple-800 transition duration-300 font-medium cursor-pointer whitespace-nowrap">
+                    <button
+                      type="submit"
+                      className="bg-purple-700 text-white px-6 py-3 rounded-r-button hover:bg-purple-800 transition duration-300 font-medium cursor-pointer whitespace-nowrap"
+                    >
                       Subscribe
                     </button>
                   </div>
                 </div>
               </div>
-            </div>
+
+              {/* Anti-bot hidden input */}
+              <div style={{ position: 'absolute', left: '-5000px' }} aria-hidden="true">
+                <input
+                  type="text"
+                  name="b_618ffcf0cba44816287c3a243_8f695fd776"
+                  tabIndex="-1"
+                  defaultValue=""
+                />
+              </div>
+            </form>
+
           </div>
         </section>
     {/* Testimonials */}
