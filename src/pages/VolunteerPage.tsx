@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import Header from "@/component/Header";
 import Footer from "@/component/Footer";
 
-export default function VolunteersPage() {
+export default function VolunteerPage() {
   const [form, setForm] = useState({ name: "", email: "", role: "", bio: "" });
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);

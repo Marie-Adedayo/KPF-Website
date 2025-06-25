@@ -5,7 +5,7 @@ import About from './pages/About';
 import Project from './pages/Project';
 import News from './pages/News';
 import Subscribe from './pages/News';
-import VolunteersPage from './pages/VolunteerPage'; 
+import VolunteerPage from './pages/VolunteerPage'; 
 
 
 const App: React.FC = () => {
@@ -18,7 +18,7 @@ const App: React.FC = () => {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/project" element={<Project />} />
-            <Route path="/volunteer" element={<VolunteersPage />} /> 
+            <Route path="/volunteer" element={<VolunteerPage />} /> 
             <Route path="/news" element={<News />} />
             <Route path='id=:subscribeId' element={<Subscribe />} />
           </Routes>
