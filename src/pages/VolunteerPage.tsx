@@ -150,7 +150,7 @@ export default function VolunteerPage() {
               value={form.name}
               onChange={handleChange}
               required
-              className="w-full border px-3 py-2 rounded-md focus:ring-2 focus:ring-purple-500 outline-none"
+              className="w-full border border-gray-400 px-3 py-2 rounded-md focus:ring-1 focus:ring-purple-600 focus:border-purple-600 focus:outline-none"
             />
           </div>
           <div>
@@ -164,7 +164,7 @@ export default function VolunteerPage() {
               value={form.email}
               onChange={handleChange}
               required
-              className="w-full border px-3 py-2 rounded-md focus:ring-2 focus:ring-purple-500 outline-none"
+              className="w-full border border-gray-400 px-3 py-2 rounded-md focus:ring-1 focus:ring-purple-600 focus:border-purple-600 focus:outline-none"
             />
           </div>
           <div>
@@ -177,21 +177,21 @@ export default function VolunteerPage() {
               value={form.role}
               onChange={handleChange}
               required
-              className="w-full border px-3 py-2 rounded-md focus:ring-2 focus:ring-purple-500 outline-none"
+              className="w-full border border-gray-400 px-3 py-2 rounded-md focus:ring-1 focus:ring-purple-600 focus:border-purple-600 focus:outline-none"
             />
           </div>
           <div>
             <label htmlFor="bio" className="block font-medium text-gray-700 mb-1">
               Tell us about yourself
             </label>
-            <textarea
+           <textarea
               id="bio"
               name="bio"
               rows={4}
               value={form.bio}
               onChange={handleChange}
               required
-              className="w-full border px-3 py-2 rounded-md focus:ring-2 focus:ring-purple-500 outline-none"
+              className="w-full border border-gray-400 px-3 py-2 rounded-md focus:ring-1 focus:ring-purple-600 focus:border-purple-600 focus:outline-none"
             />
           </div>
           <button

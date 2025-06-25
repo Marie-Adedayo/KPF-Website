@@ -28,20 +28,52 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-2xl font-bold mb-6">Kayode Philip Foundation</h3>
             <p className="text-purple-200 mb-6">
-              Empowering communities and transforming lives through sustainable development initiatives across Africa.
+              Empowering communities and transforming lives through sustainable development initiatives across Nigeria and beyond.
             </p>
+          
+
             <div className="flex space-x-4">
-              {[FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn].map((Icon, index) => (
-                <a
-                  key={index}
-                  href="#"
-                  className="bg-purple-800 hover:bg-purple-700 w-10 h-10 rounded-full flex items-center justify-center transition duration-300 cursor-pointer"
-                  aria-label="Social Media"
-                >
-                  <Icon className="text-white" />
-                </a>
-              ))}
+              <a
+                href="https://www.facebook.com/yourpage"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-purple-800 hover:bg-purple-700 w-10 h-10 rounded-full flex items-center justify-center transition duration-300"
+                aria-label="Facebook"
+              >
+                <FaFacebookF className="text-white" />
+              </a>
+
+              <a
+                href="https://www.twitter.com/yourhandle"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-purple-800 hover:bg-purple-700 w-10 h-10 rounded-full flex items-center justify-center transition duration-300"
+                aria-label="Twitter"
+              >
+                <FaTwitter className="text-white" />
+              </a>
+
+              <a
+                href="https://www.instagram.com/kayodephilipfoundation/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-purple-800 hover:bg-purple-700 w-10 h-10 rounded-full flex items-center justify-center transition duration-300"
+                aria-label="Instagram"
+              >
+                <FaInstagram className="text-white" />
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/yourprofile"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-purple-800 hover:bg-purple-700 w-10 h-10 rounded-full flex items-center justify-center transition duration-300"
+                aria-label="LinkedIn"
+              >
+                <FaLinkedinIn className="text-white" />
+              </a>
             </div>
+
           </div>
 
           {/* Quick Links */}
@@ -68,7 +100,7 @@ const Footer: React.FC = () => {
               </li>
               <li className="flex items-center">
                 <FaPhoneAlt className="mr-3 text-orange-400" />
-                <span className="text-purple-200">+234 123 456 7890</span>
+                <span className="text-purple-200">+234 7011 242 595</span>
               </li>
               <li className="flex items-center">
                 <FaEnvelope className="mr-3 text-orange-400" />
@@ -81,7 +113,7 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-lg font-bold mb-6">Support Us</h4>
             <p className="text-purple-200 mb-4">
-              Your donation makes a difference in the lives of communities across Africa.
+              Your donation makes a difference in the lives of communities across Nigeria and beyond.
             </p>
             <button
               onClick={togglePopup}

@@ -41,13 +41,17 @@ const Header: React.FC = () => {
             <Link to="/project" className="text-gray-800 hover:text-purple-700 font-medium">Projects</Link>
             <Link to="/news" className="text-gray-800 hover:text-purple-700 font-medium">News</Link>
             {/* <Link to="/impat" className="text-gray-800 hover:text-purple-700 font-medium">Impact</Link> */}
-            <a href="/volunteer" className='bg-transparent border-2 rounded border-purple-800 hover:border-0 hover:bg-purple-800 py-2 px-4 '>JOIN US</a>
-            <button
-              onClick={togglePopup}
-              className="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600 transition font-medium"
-            >
-              Donate
-            </button>
+            <div className='flex items-center space-x-4'>
+              <button
+                onClick={togglePopup}
+                className="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600 transition font-medium"
+              >
+                Donate
+              </button>
+              <a href="/volunteer" className=' block bg-transparent border-2 rounded border-purple-800 hover:border-0 hover:bg-purple-800 py-2 px-4 transition font-medium text-center '>Join Us</a>
+
+            </div>
+           
           </nav>
 
           {/* Hamburger Button */}
@@ -67,13 +71,14 @@ const Header: React.FC = () => {
               <Link to="/projects" onClick={toggleMobileMenu} className="block text-gray-800 hover:text-purple-700 font-medium">Projects</Link>
               <Link to="/news" onClick={toggleMobileMenu} className="block text-gray-800 hover:text-purple-700 font-medium">News</Link>
               {/* <Link to="/impact" onClick={toggleMobileMenu} className="block text-gray-800 hover:text-purple-700 font-medium">Impact</Link> */}
-              <a href="/volunteer" className='bg-transparent border-2 rounded border-purple-800 hover:border-0 hover:bg-purple-800 py-2 px-4 '>JOIN US</a>
+              
               <button
                 onClick={togglePopup}
-                className="w-full block bg-orange-500 text-white text-center px-4 py-2 rounded hover:bg-orange-600 transition font-medium"
+                className=" block bg-orange-500 text-white text-center px-4 py-2 rounded hover:bg-orange-600 transition font-medium"
               >
                 Donate
               </button>
+              <a href="/volunteer" className='mb-4 bg-transparent border-2 rounded border-purple-800 hover:border-0 hover:bg-purple-800 py-2 px-4 transition font-medium text-center '>Join Us</a>
             </div>
           </div>
         )}

@@ -5,6 +5,8 @@ const DonationSection: React.FC = () => {
   const [showItemPopup, setShowItemPopup] = useState(false);
   const [selectedItem, setSelectedItem] = useState<string>("");
   const [donationMessage, setDonationMessage] = useState<string>("");
+  const [contactInfo, setContactInfo] = useState<string>("");
+
 
   const togglePopup = (): void => {
     setShowPopup((prev) => !prev);
@@ -15,11 +17,36 @@ const DonationSection: React.FC = () => {
     setShowItemPopup(true);
   };
 
-  const handleItemMessageSubmit = () => {
-    alert(`Thank you for offering to donate: ${selectedItem}\nMessage: ${donationMessage}`);
+  const handleItemMessageSubmit = async () => {
+    try {
+      const response = await fetch("https://script.google.com/macros/s/AKfycbweSK0WMYXjd8vNQRbzbUxFOOt_66y5FMGvfmuhV1mvOn0YqL8qAHA6BbcLQknu-BgD9A/exec", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: new URLSearchParams({
+          item: selectedItem,
+          message: donationMessage,
+          contact: contactInfo,
+        }).toString(),
+      });
+
+      if (response.ok) {
+        alert("Thank you! Your donation message was sent.");
+      } else {
+        alert("Failed to send your message. Please try again.");
+      }
+    } catch (error) {
+      alert("Error sending message.");
+      console.error(error);
+    }
+
     setShowItemPopup(false);
     setDonationMessage("");
+    setContactInfo("");
   };
+
+
 
 
   return (
@@ -124,12 +151,22 @@ const DonationSection: React.FC = () => {
               </button>
               <h3 className="text-lg font-bold text-gray-800 mb-4">Donate: {selectedItem}</h3>
               <textarea
-                className="w-full border rounded-md p-3 text-gray-700 focus:ring-2 focus:ring-orange-500"
+                className="w-full border border-gray-400 rounded-md p-3 text-gray-700 mb-4 focus:ring-1 focus:ring-orange-500 focus:outline-none focus:border-orange-500"
                 placeholder="Write your message here..."
                 rows={4}
                 value={donationMessage}
                 onChange={(e) => setDonationMessage(e.target.value)}
               />
+
+              <input
+                type="text"
+                className="w-full border border-gray-400 rounded-md p-3 text-gray-700 mb-4 focus:ring-1 focus:ring-orange-500 focus:outline-none focus:border-orange-500"
+                placeholder="Your name, email or phone number..."
+                value={contactInfo}
+                onChange={(e) => setContactInfo(e.target.value)}
+              />
+
+
               <button
                 onClick={handleItemMessageSubmit}
                 className="mt-4 w-full bg-orange-500 text-white py-2 rounded-md hover:bg-orange-600 transition"
