@@ -24,7 +24,7 @@ const About: React.FC = () => {
                         <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">About Our Foundation</h1>
                         <p className="text-xl mb-8">Discover the story, mission and people behind the Kayode Philip Foundation's commitment to transforming lives across Nigeria and beyond through sustainable development initiatives.</p>
                         <a
-                            href="https://readdy.ai/home/c23ea3ce-3d5b-4114-80f9-5b95c12ad4aa/0a5a6d29-9cc6-4601-81d7-21e65a1da9c7"
+                            href="/"
                             data-readdy="true"
                             className="inline-flex items-center text-orange-300 hover:text-orange-200 transition duration-300 cursor-pointer"
                         >
