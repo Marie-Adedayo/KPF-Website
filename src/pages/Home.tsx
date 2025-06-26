@@ -89,13 +89,13 @@ const Home: React.FC = () => {
                     </button>
                     <h3 className="text-xl font-bold mb-4 text-gray-800">Bank Account Details</h3>
                     <p className="text-gray-700 mb-2">
-                      <strong>Bank:</strong> Zenith Bank
+                      <strong>Bank:</strong> Polaris Bank
                     </p>
                     <p className="text-gray-700 mb-2">
                       <strong>Account Name:</strong> Kayode Philip Foundation
                     </p>
                     <p className="text-gray-700 mb-2">
-                      <strong>Account Number:</strong> 1234567890
+                      <strong>Account Number:</strong>40 9175 7460
                     </p>
                     <p className="text-sm text-gray-500 mt-4">
                       Please use your name as the payment reference.
@@ -322,7 +322,6 @@ const Home: React.FC = () => {
                 <input
                   type="text"
                   name="b_618ffcf0cba44816287c3a243_8f695fd776"
-                  tabIndex="-1"
                   defaultValue=""
                 />
               </div>

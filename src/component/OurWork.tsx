@@ -39,9 +39,30 @@ const projectsData: ProjectCategory[] = [
     images: [
       {
         id: 2,
-        src: '/Images/Health-2.jpeg',
+        src: 'https://drive.google.com/file/d/1Bxd11ZdvTUW9ysON7Pq1MH2ap5eM3UrZ/view?usp=drive_link',
         alt: 'Healthcare Project 1',
       },
+      {
+        id: 5,
+        src: '/Images/health-2.jpeg',
+        alt: 'Healthcare Project 2',
+      },
+      {
+        id: 6,
+        src: 'https://drive.google.com/file/d/1o5EuvuIUzJ5e3W6thBAkiUBCVAm9_5_i/view?usp=drive_link',
+        alt: 'Healthcare Project 3',
+      },
+      {
+        id: 7,
+        src: '/Images/health-4.jpeg',
+        alt: 'Healthcare Project 4',
+      },
+      {
+        id: 8,
+        src: '/Images/health-5.jpeg',
+        alt: 'Healthcare Project 5',
+      },
+      
       // add more healthcare images here
     ],
   },
