@@ -39,7 +39,7 @@ const projectsData: ProjectCategory[] = [
     images: [
       {
         id: 2,
-        src: 'https://drive.google.com/file/d/1Bxd11ZdvTUW9ysON7Pq1MH2ap5eM3UrZ/view?usp=drive_link',
+        src: '',
         alt: 'Healthcare Project 1',
       },
       {
@@ -49,7 +49,7 @@ const projectsData: ProjectCategory[] = [
       },
       {
         id: 6,
-        src: 'https://drive.google.com/file/d/1o5EuvuIUzJ5e3W6thBAkiUBCVAm9_5_i/view?usp=drive_link',
+        src: '',
         alt: 'Healthcare Project 3',
       },
       {

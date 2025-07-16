@@ -2,6 +2,7 @@ import React from 'react';
 import Footer from '../component/Footer';
 import Header from '../component/Header';
 import LeadershipCard from '../component/LeadershipCard';
+import OurJourney from '@/component/OurJourney';
 
 const About: React.FC = () => {
 
@@ -13,7 +14,7 @@ const About: React.FC = () => {
             <section className="relative pt-24 overflow-hidden" style={{ minHeight: '80vh' }}>
                 <div className="absolute inset-0 z-0">
                     <img
-                        src="https://readdy.ai/api/search-image?query=beautiful%20panoramic%20view%20of%20African%20community%20development%20project%20with%20people%20working%20together%20on%20sustainable%20initiatives%20with%20purple%20and%20orange%20sunset%20sky%20in%20background%20creating%20a%20gradient%20effect%20with%20space%20for%20text%20on%20left%20side%20and%20clear%20visibility%20of%20foundation%20work%20in%20rural%20communities&width=1440&height=800&seq=101&orientation=landscape"
+                        src="/Images/AboutPic.jpg"
                         alt="About Kayode Philip Foundation"
                         className="w-full h-full object-cover object-top"
                     />
@@ -92,110 +93,9 @@ const About: React.FC = () => {
                 </div>
                 </div>
             </section>
+            < OurJourney />
             {/* History Timeline Section */}
-            <section className="py-20 bg-gray-50">
-                <div className="container mx-auto px-6">
-                    <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-800">Our Journey</h2>
-                    <div className="relative">
-                        {/* Vertical Line */}
-                        <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-purple-200"></div>
-                        {/* Timeline Items */}
-                        <div className="relative z-10">
-                        {/* 2015 */}
-                        <div className="mb-16 flex flex-col md:flex-row items-center">
-                            <div className="md:w-1/2 md:pr-12 md:text-right mb-8 md:mb-0">
-                                <h3 className="text-2xl font-bold text-gray-800 mb-3">2020</h3>
-                                <h4 className="text-xl font-semibold text-purple-700 mb-3">Foundation Established</h4>
-                                <p className="text-gray-600">The Kayode Philip Foundation was established with a mission to improve the quality of life during Codvid period. 40 families were support with food relief packages</p>
-                            </div>
-                            <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center">
-                                <div className="w-8 h-8 rounded-full bg-purple-700 border-4 border-white"></div>
-                            </div>
-                            <div className="md:w-1/2 md:pl-12">
-                                <img
-                                    src="/Images/2020-1.jpg"
-                                    alt="Foundation Established"
-                                    className="rounded-lg shadow-md w-full h-64 object-cover object-top"
-                                 />
-                            </div>
-                        </div>
-                        {/* 2017 */}
-                        <div className="mb-16 flex flex-col md:flex-row-reverse items-center">
-                            <div className="md:w-1/2 md:pl-12 md:text-left mb-8 md:mb-0">
-                                <h3 className="text-2xl font-bold text-gray-800 mb-3">2022</h3>
-                                <h4 className="text-xl font-semibold text-purple-700 mb-3">We successfully launched our first major outreach project in Ibadan, impacting over 1,200 lives.</h4>
-                                <p className="text-gray-600">The initiative included the distribution of food relief packages, school bags for children, free medical check-ups for the elderly, and skill acquisition programs. To further empower participants, top-performing trainees were awarded full scholarships to complete their training programs. </p>
-                            </div>
-                            <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center">
-                                <div className="w-8 h-8 rounded-full bg-purple-700 border-4 border-white"></div>
-                            </div>
-                            <div className="md:w-1/2 md:pr-12">
-                                <img
-                                    src="https://readdy.ai/api/search-image?query=clean%20water%20well%20installation%20in%20rural%20African%20village%20with%20community%20members%20celebrating%20access%20to%20clean%20water%20with%20purple%20and%20orange%20sunset%20sky%20in%20background%20and%20modern%20water%20infrastructure%20with%20clean%20simple%20background&width=500&height=300&seq=103&orientation=landscape"
-                                    alt="First Major Project"
-                                    className="rounded-lg shadow-md w-full h-64 object-cover object-top"
-                                />
-                            </div>
-                        </div>
-                        {/* 2019 */}
-                        <div className="mb-16 flex flex-col md:flex-row items-center">
-                            <div className="md:w-1/2 md:pr-12 md:text-right mb-8 md:mb-0">
-                                <h3 className="text-2xl font-bold text-gray-800 mb-3">2023</h3>
-                                <h4 className="text-xl font-semibold text-purple-700 mb-3">In 2023, we extended our impact to another underserved community in Ibadan, reaching hundreds of beneficiaries.</h4>
-                                <p className="text-gray-600">Building on the success of our first project, this foundation featured another distribution of food relief items, school bags for children, free medical check-ups for elderly residents, and hands-on skill acquisition training. Outstanding participants were once again awarded scholarships to complete their vocational programs, reinforcing our commitment to sustainable community development.</p>
-                            </div>
-                            <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center">
-                                <div className="w-8 h-8 rounded-full bg-purple-700 border-4 border-white"></div>
-                            </div>
-                            <div className="md:w-1/2 md:pl-12">
-                                <img
-                                    src="https://readdy.ai/api/search-image?query=newly%20built%20school%20in%20African%20village%20with%20children%20in%20purple%20uniforms%20entering%20classroom%20with%20teachers%20and%20educational%20materials%20visible%20with%20clean%20simple%20background%20and%20bright%20natural%20lighting&width=500&height=300&seq=104&orientation=landscape"
-                                    alt="Educational Initiative"
-                                    className="rounded-lg shadow-md w-full h-64 object-cover object-top"
-                                />
-                            </div>
-                        </div>
-                        {/* 2021 */}
-                        <div className="mb-16 flex flex-col md:flex-row-reverse items-center">
-                            <div className="md:w-1/2 md:pl-12 md:text-left mb-8 md:mb-0">
-                                <h3 className="text-2xl font-bold text-gray-800 mb-3">2021</h3>
-                                <h4 className="text-xl font-semibold text-purple-700 mb-3">Healthcare Expansion</h4>
-                                <p className="text-gray-600">Launched our mobile healthcare clinics program, bringing essential medical services to remote communities across five countries.</p>
-                            </div>
-                            <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center">
-                                <div className="w-8 h-8 rounded-full bg-purple-700 border-4 border-white"></div>
-                            </div>
-                            <div className="md:w-1/2 md:pr-12">
-                                <img
-                                    src="https://readdy.ai/api/search-image?query=mobile%20healthcare%20clinic%20in%20rural%20African%20setting%20with%20medical%20professionals%20treating%20patients%20with%20modern%20medical%20equipment%20and%20purple%20branded%20vehicles%20with%20clean%20simple%20background%20and%20natural%20lighting&width=500&height=300&seq=105&orientation=landscape"
-                                    alt="Healthcare Expansion"
-                                    className="rounded-lg shadow-md w-full h-64 object-cover object-top"
-                                />
-                            </div>
-                        </div>
-                        {/* 2023 */}
-                        <div className="flex flex-col md:flex-row items-center">
-                            <div className="md:w-1/2 md:pr-12 md:text-right mb-8 md:mb-0">
-                                <h3 className="text-2xl font-bold text-gray-800 mb-3">2023</h3>
-                                <h4 className="text-xl font-semibold text-purple-700 mb-3">Economic Empowerment</h4>
-                                <p className="text-gray-600">Established our microfinance and entrepreneurship program, supporting over 200 small businesses and creating 1,000+ jobs.</p>
-                            </div>
-                            <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center">
-                                <div className="w-8 h-8 rounded-full bg-purple-700 border-4 border-white"></div>
-                            </div>
-                            <div className="md:w-1/2 md:pl-12">
-                                <img
-                                    src="https://readdy.ai/api/search-image?query=African%20entrepreneurs%20in%20marketplace%20receiving%20business%20training%20and%20microloans%20with%20digital%20technology%20visible%20and%20purple%20branded%20materials%20with%20clean%20simple%20background%20and%20natural%20lighting&width=500&height=300&seq=106&orientation=landscape"
-                                    alt="Economic Empowerment"
-                                    className="rounded-lg shadow-md w-full h-64 object-cover object-top"
-                                />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </section>
-           <section className="py-20 bg-purple-900">
+                       <section className="py-20 bg-purple-900">
                 <div className="container mx-auto px-6">
                     <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-white">Our Leadership</h2>
                     <p className="text-white text-center max-w-3xl mx-auto mb-16">

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import {
   FaFacebookF,
   FaTwitter,
@@ -14,11 +15,7 @@ import {
 } from 'react-icons/fa';
 
 const Footer: React.FC = () => {
-  const [showPopup, setShowPopup] = useState(false);
-
-  const togglePopup = () => {
-    setShowPopup(!showPopup);
-  };
+ 
 
   return (
     <footer className="bg-purple-900 text-white pt-16 pb-8">
@@ -115,12 +112,13 @@ const Footer: React.FC = () => {
             <p className="text-purple-200 mb-4">
               Your donation makes a difference in the lives of communities across Nigeria and beyond.
             </p>
-            <button
-              onClick={togglePopup}
+            <Link
+              to= {'/#donate'}
+              
               className="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600 transition font-medium"
             >
               Donate
-            </button>
+            </Link>
 {/*             <div className="mt-6">
               <p className="text-sm text-purple-300 mb-2">Secure Payment Options</p>
               <div className="flex space-x-3 text-gray-300 text-2xl">
@@ -149,25 +147,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        {/* Popup */}
-        {showPopup && (
-          <div className="fixed inset-0 bg-white/10 backdrop-blur-sm flex justify-center items-center z-50">
-            <div className="bg-white p-8 rounded-xl shadow-lg text-left max-w-sm w-full relative">
-              <button
-                onClick={togglePopup}
-                className="absolute top-3 right-3 text-gray-500 hover:text-gray-700 text-xl"
-                aria-label="Close"
-              >
-                &times;
-              </button>
-              <h3 className="text-xl font-bold mb-4 text-gray-800">Bank Account Details</h3>
-              <p className="text-gray-700 mb-2"><strong>Bank:</strong> Zenith Bank</p>
-              <p className="text-gray-700 mb-2"><strong>Account Name:</strong> Kayode Philip Foundation</p>
-              <p className="text-gray-700 mb-2"><strong>Account Number:</strong> 1234567890</p>
-              <p className="text-sm text-gray-500 mt-4">Please use your name as the payment reference.</p>
-            </div>
-          </div>
-        )}
+      
       </div>
     </footer>
   );
