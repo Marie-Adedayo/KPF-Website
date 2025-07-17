@@ -90,18 +90,27 @@ export default function VolunteerPage() {
         <div className="container mx-auto px-6 relative z-10 flex items-center h-full" style={{ minHeight: "80vh" }}>
           <div className="max-w-2xl text-white">
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-              Volunteer with Us, <br /> Transform Lives
+              Partner or Volunteer with Us<br /> and Transform Lives
             </h1>
             <p className="text-xl mb-8">
-              Be the reason someone smiles. Join our mission to bring hope, education, and
-              empowerment to underserved communities.
+              Whether you're looking to contribute your time or resources, your involvement can help us bring hope, education, and empowerment to communities in need.
             </p>
-            <button
-              onClick={scrollToForm}
-              className="bg-orange-500 text-white py-4 px-8 rounded-button hover:bg-orange-600 transition duration-300 font-medium text-lg"
-            >
-              Apply Now
-            </button>
+
+            <div className="flex flex-col sm:flex-row gap-4">
+              <button
+                onClick={scrollToForm}
+                className="bg-orange-500 text-white py-4 px-8 rounded-md hover:bg-orange-600 transition duration-300 font-medium text-lg"
+              >
+                Volunteer
+              </button>
+              <a
+                href="/partnership"
+                className="bg-purple-600 text-white py-4 px-8 rounded-md hover:bg-purple-700 transition duration-300 font-medium text-lg text-center"
+              >
+                Partner with Us
+              </a>
+            </div>
+
           </div>
         </div>
       </section>

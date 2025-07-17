@@ -17,51 +17,48 @@ const projectsData: ProjectCategory[] = [
     name: 'Education',
     previewImage: {
       id: 1,
-      src: '/Images/SCHOLARSHIP.jpg',
+      src: '/Images/edu-1.jpg',
       alt: 'Education Project',
     },
     images: [
       {
         id: 1,
-        src: '/Images/SCHOLARSHIP 2.jpeg',
+        src: '/Images/Edu.jpeg',
         alt: 'Education Project 1',
       },
+      {
+        id: 2,
+        src: '/Images/edu-2.jpeg',
+        alt: 'Education Project 1',
+      },
+      {
+        id: 3,
+        src: '/Images/edu-3.jpeg',
+        alt: 'Education Project 2',
+      },
+      
       // add more education images here if you want
     ],
   },
   {
     name: 'Healthcare',
     previewImage: {
-      id: 2,
+      id: 1,
       src: '/Images/health-1.jpeg',
       alt: 'Healthcare Project',
     },
     images: [
       {
-        id: 2,
-        src: '',
+        id:2,
+        src: '/Images/health-2.jpeg',
         alt: 'Healthcare Project 1',
       },
-      {
+     /*  {
         id: 5,
         src: '/Images/health-2.jpeg',
         alt: 'Healthcare Project 2',
-      },
-      {
-        id: 6,
-        src: '',
-        alt: 'Healthcare Project 3',
-      },
-      {
-        id: 7,
-        src: '/Images/health-4.jpeg',
-        alt: 'Healthcare Project 4',
-      },
-      {
-        id: 8,
-        src: '/Images/health-5.jpeg',
-        alt: 'Healthcare Project 5',
-      },
+      }, */
+      
       
       // add more healthcare images here
     ],
@@ -70,29 +67,43 @@ const projectsData: ProjectCategory[] = [
     name: 'Enterprenuership',
     previewImage: {
       id: 3,
-      src: '/Images/TRAINING.jpeg',
+      src: '/Images/voc-1.jpeg',
       alt: 'Enterprenuership Project',
     },
     images: [
       {
-        id: 3,
-        src: '/Images/TRAINEE HAIRDRESSING.jpeg',
+        id: 2,
+        src: '/Images/voc-2.jpeg',
         alt: 'Enterprenuership Project 1',
       },
-      // add more entrepreneurship images here
+      {
+        id: 3,
+        src: '/Images/voc-3.jpeg',
+        alt: 'Enterprenuership Project 1',
+      },
+      {
+        id: 4,
+        src: '/Images/voc-4.jpeg',
+        alt: 'Enterprenuership Project 1',
+      },
     ],
   },
   {
     name: 'Zero Hunger',
     previewImage: {
       id: 4,
-      src: '/Images/FEED ONE SAVE ONE 2.jpg',
+      src: '/Images/food-22.jpg',
       alt: 'Zero Hunger Project',
     },
     images: [
       {
         id: 4,
-        src: '/Images/FEED ONE SAVE ONE.jpg',
+        src: '/Images/food-1.jpg',
+        alt: 'Zero Hunger Project 1',
+      },
+      {
+        id: 4,
+        src: '/Images/food-3.jpg',
         alt: 'Zero Hunger Project 1',
       },
       // add more zero hunger images here
