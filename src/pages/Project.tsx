@@ -195,7 +195,7 @@ project.category === 'healthcare' ? 'bg-red-500 text-white' :
 project.category === 'water' ? 'bg-cyan-500 text-white' :
 'bg-green-500 text-white'
 }`}>
-{project.category}
+{project.category} 
 </span>
 </div>
 </div>
@@ -554,11 +554,7 @@ Clear All Filters
 <p className="text-gray-600">Through microloans, training, and economic initiatives.</p>
 </div>
 </div>
-<div className="mt-16 text-center">
-<a href="https://readdy.ai/home/c23ea3ce-3d5b-4114-80f9-5b95c12ad4aa/605ecc5b-e681-4d0b-beb3-20b9833b6d49" data-readdy="true" className="inline-block bg-purple-700 text-white px-8 py-3 !rounded-button hover:bg-purple-800 transition duration-300 font-medium cursor-pointer whitespace-nowrap">
-View Impact Report
-</a>
-</div>
+
 </div>
 </section>
 {/* Footer */}

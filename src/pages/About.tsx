@@ -106,7 +106,7 @@ const About: React.FC = () => {
                     <LeadershipCard
                         name="Kayode Philip Fadele"
                         title="President"
-                        image="/Images/President.png"
+                        image="/Images/kayode.jpg"
                         summary="Oluwakayode Fadele is a dynamic lifestyle coach, author, and social entrepreneur, and content creator, passionate about transforming lives and empowering communities..."
                         fullText={`Oluwakayode Fadele is a dynamic lifestyle coach, author, social entrepreneur, and content creator, passionate about transforming lives and empowering communities. He is the visionary founder of the Kayode Philip Foundation, a non-profit organization dedicated to youth empowerment, education, and community development across underserved areas.
                                 With a deep commitment to personal growth and societal impact, Oluwakayode combines his expertise in coaching and storytelling to inspire individuals to unlock their full potential. Through his content and public engagements, he addresses themes around purpose, mindset, relationships, and sustainable development.
@@ -116,23 +116,20 @@ const About: React.FC = () => {
                     />
 
                     <LeadershipCard
-                        name="Jumoby D.A"
-                        title="Vice President"
-                        image="/Images/Vice President.jpg"
-                        summary="Creator. Disruptor. Curator. Founder & Chief Thinking Officer at Travul.org Ltd, a travel fintech company reimagining how people explore, save, and grow through borderless living..."
-                        fullText={`Creator. Disruptor. Curator. Founder & Chief Thinking Officer at Travul.org Ltd, a travel fintech company reimagining how people explore, save, and grow through borderless living.
-                            I fuse creativity with strategy, disruption with execution. With a proven track record in innovation, entrepreneurship, and client experience, I don’t just think outside the box—I redesign the box entirely.
-                            Known for bold ideas, detailed execution, and a relentless drive for excellence, I lead with vision, build with purpose, and deliver with heart.`}
-                    />
-
-                    <LeadershipCard
                         name="Marie A. Fasanya"
                         title="Chief Operations Officer"
-                        image="/Images/2.jpg"
+                        image="/Images/Adedayo.jpg"
                         summary="As the Chief Operations Officer of the Kayode Philip Foundation, I am honored to contribute to a mission that resonates deeply with my values..."
                         fullText={`As the Chief Operations Officer of the Kayode Philip Foundation, I am honored to contribute to a mission that resonates deeply with my values — empowering lives and creating lasting impact. I bring strong organizational skills, strategic thinking, and a deep commitment to service.
                         My approach focuses on building systems that help our programs run smoothly, ensuring that every effort is aligned with our goals and reaches those who need it most. I am learning, growing, and driven by a desire to see real change happen — from behind the scenes and on the field.
                         I am excited to be part of a team that is dedicated to making a difference in the lives of individuals and communities across Africa. Together, we are not just addressing immediate needs but also laying the groundwork for sustainable development and empowerment.`}
+                    />
+                     <LeadershipCard
+                        name="Oyewale Ebunoluwa"
+                        title="Social Media Manager"
+                        image="/Images/gift.png"
+                        summary="As the Social Media Manager for the Kayode Philip Foundation, I am passionate about using digital platforms to amplify our mission and connect with our community..."
+                        fullText={`As the Social Media Manager for the Kayode Philip Foundation, I am passionate about using digital platforms to amplify our mission and connect with our community. My role involves creating engaging content that tells our story, showcases our impact, and inspires action.`}
                     />
 
                     <LeadershipCard
@@ -158,28 +155,28 @@ const About: React.FC = () => {
                             <div className="bg-white rounded-lg shadow-md p-6 border-t-4 border-purple-700">
                             <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden">
                                 <img
-                                src="https://readdy.ai/api/search-image?query=professional%20headshot%20of%20distinguished%20African%20male%20board%20member%20in%20his%2060s%20wearing%20formal%20attire%20against%20neutral%20background%20with%20dignified%20expression%20and%20professional%20lighting%20with%20clean%20simple%20background&width=200&height=200&seq=113&orientation=squarish"
-                                alt="Prof. Oluwaseun Adebayo"
+                                src="Images/kayode.jpg"
+                                alt="President"
                                 className="w-full h-full object-cover object-top"
                                 />
                             </div>
-                            <h3 className="text-lg font-bold text-gray-800 text-center mb-1">Prof. Oluwaseun Adebayo</h3>
-                            <p className="text-purple-700 font-medium text-center mb-3">Board Chair</p>
-                            <p className="text-gray-600 text-center text-sm">Former Minister of Education, Nigeria</p>
+                            <h3 className="text-lg font-bold text-gray-800 text-center mb-1">Kayode Philip Fadele </h3>
+                            <p className="text-purple-700 font-medium text-center mb-3">Board Chairman</p>
+                            <p className="text-gray-600 text-center text-sm">Coach Khay Speaks</p>
                             </div>
 
                             {/* Board Member 2 */}
                             <div className="bg-white rounded-lg shadow-md p-6 border-t-4 border-orange-500">
                             <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden">
                                 <img
-                                src="https://readdy.ai/api/search-image?query=professional%20headshot%20of%20distinguished%20African%20female%20board%20member%20in%20her%2050s%20wearing%20business%20attire%20against%20neutral%20background%20with%20confident%20expression%20and%20professional%20lighting%20with%20clean%20simple%20background&width=200&height=200&seq=114&orientation=squarish"
+                                src="Images/Vice President.jpg"
                                 alt="Dr. Fatima Diallo"
                                 className="w-full h-full object-cover object-top"
                                 />
                             </div>
-                            <h3 className="text-lg font-bold text-gray-800 text-center mb-1">Dr. Fatima Diallo</h3>
-                            <p className="text-purple-700 font-medium text-center mb-3">Vice Chair</p>
-                            <p className="text-gray-600 text-center text-sm">CEO, Pan-African Health Initiative</p>
+                            <h3 className="text-lg font-bold text-gray-800 text-center mb-1">Jumoby D.A</h3>
+                            <p className="text-purple-700 font-medium text-center mb-3">Vice Chairman</p>
+                            <p className="text-gray-600 text-center text-sm">CEO, </p>
                             </div>
 
                             {/* Board Member 3 */}
@@ -191,7 +188,7 @@ const About: React.FC = () => {
                                 className="w-full h-full object-cover object-top"
                                 />
                             </div>
-                            <h3 className="text-lg font-bold text-gray-800 text-center mb-1">Chief Amara Okonkwo</h3>
+                            <h3 className="text-lg font-bold text-gray-800 text-center mb-1">Mr Idowu </h3>
                             <p className="text-purple-700 font-medium text-center mb-3">Member</p>
                             <p className="text-gray-600 text-center text-sm">Traditional Leader & Philanthropist</p>
                             </div>

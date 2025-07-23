@@ -23,7 +23,7 @@ const OurJourney: React.FC = () => {
                             </div>
                             <div className="md:w-1/2 md:pl-12">
                                 <img
-                                    src="/Images/2020-1.jpg"
+                                    src="/Images/year/2020-1.jpg"
                                     alt="Foundation Established"
                                     className="rounded-lg shadow-md w-full h-64 object-cover object-top"
                                  />
@@ -44,7 +44,7 @@ const OurJourney: React.FC = () => {
                             </div>
                             <div className="md:w-1/2 md:pr-12">
                                 <img
-                                    src="/Images/2021.jpg"
+                                    src="/Images/year/2021.jpg"
                                     alt="First Major Project"
                                     className="rounded-lg shadow-md w-full h-64 object-cover object-top"
                                 />
@@ -64,7 +64,7 @@ const OurJourney: React.FC = () => {
                             </div>
                             <div className="md:w-1/2 md:pl-12">
                                 <img
-                                    src="/Images/2022-1.jpeg"
+                                    src="/Images/year/2022-1.jpeg"
                                     alt="Educational Initiative"
                                     className="rounded-lg shadow-md w-full h-64 object-cover object-top"
                                 />
@@ -83,7 +83,7 @@ const OurJourney: React.FC = () => {
                             </div>
                             <div className="md:w-1/2 md:pr-12">
                                 <img
-                                    src="/Images/2023.jpeg"
+                                    src="/Images/year/2023.jpeg"
                                     alt="Ibadan 2023 Project"
                                     className="rounded-lg shadow-md w-full h-64 object-cover object-top"
                                 />
@@ -101,7 +101,7 @@ const OurJourney: React.FC = () => {
                             </div>
                             <div className="md:w-1/2 md:pl-12">
                                 <img
-                                    src="/Images/2024.jpg"
+                                    src="/Images/year/2024.jpg"
                                     alt="Ibadan 2024 Project"
                                     className="rounded-lg shadow-md w-full h-64 object-cover object-top"
                                 />
@@ -119,7 +119,7 @@ const OurJourney: React.FC = () => {
                             </div>
                             <div className="md:w-1/2 md:pr-12">
                                 <img
-                                    src="/Images/2025.jpg"
+                                    src="/Images/year/2025.jpg"
                                     alt="Ogunmakin 2025 Project"
                                     className="rounded-lg shadow-md w-full h-64 object-cover object-top"
                                 />

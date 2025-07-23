@@ -37,8 +37,7 @@ const projectsData: ProjectCategory[] = [
         alt: 'Education Project 2',
       },
       
-      // add more education images here if you want
-    ],
+    ], 
   },
   {
     name: 'Healthcare',
