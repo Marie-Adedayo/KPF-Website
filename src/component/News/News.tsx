@@ -16,7 +16,7 @@ const News: React.FC = () => {
                 <div className="md:flex h-full">
                   <div className="md:w-1/2">
                     <img
-                      src="https://readdy.ai/api/search-image?query=African%20community%20celebration%20event%20with%20colorful%20decorations%2C%20people%20gathered%20for%20foundation%20anniversary%2C%20sunset%20with%20orange%20and%20purple%20sky%2C%20festive%20atmosphere%20with%20clean%20simple%20background&width=600&height=400&seq=14&orientation=landscape"
+                      src=""
                       alt="Foundation Anniversary"
                       className="w-full h-full object-cover object-top"
                     />

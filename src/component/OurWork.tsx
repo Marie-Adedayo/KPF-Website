@@ -52,12 +52,20 @@ const projectsData: ProjectCategory[] = [
         src: '/Images/health-2.jpeg',
         alt: 'Healthcare Project 1',
       },
-     /*  {
+      {
         id: 5,
-        src: '/Images/health-2.jpeg',
+        src: '/Images/health-7.jpg',
         alt: 'Healthcare Project 2',
-      }, */
-      
+      }, 
+      {
+        id: 5,
+        src: '/Images/health-5.jpg',
+        alt: 'Healthcare Project 2',
+      }, {
+        id: 5,
+        src: '/Images/health-6.jpg',
+        alt: 'Healthcare Project 2',
+      }, 
       
       // add more healthcare images here
     ],
@@ -189,10 +197,15 @@ const OurWorkSection: React.FC = () => {
         {/* Projects grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {selectedCategory === 'All Projects' ? (
-            projectsData.flatMap((category) =>
-            category.images.map((image) => (
+            Array.from(
+              new Map(
+                projectsData
+                  .flatMap((category) => category.images)
+                  .map((img) => [img.src, img]) // Use src as unique key
+              ).values()
+            ).map((image) => (
               <div
-                key={`${category.name}-${image.id}`}
+                key={image.src}
                 className="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300 cursor-pointer"
               >
                 <img
@@ -202,9 +215,8 @@ const OurWorkSection: React.FC = () => {
                 />
               </div>
             ))
-          )
-
           ) : (
+
             projectsData
               .find((cat) => cat.name === selectedCategory)
               ?.images.map((image) => (
