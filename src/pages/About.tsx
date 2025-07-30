@@ -95,13 +95,76 @@ const About: React.FC = () => {
             </section>
             < OurJourney />
             {/* History Timeline Section */}
-                       <section className="py-20 bg-purple-900">
+            <section className="py-20 bg-purple-900">
                 <div className="container mx-auto px-6">
                     <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-white">Our Leadership</h2>
                     <p className="text-white text-center max-w-3xl mx-auto mb-16">
                     Meet the dedicated team of professionals guiding our foundation's mission and vision with passion and expertise.
                     </p>
+                     <div className="flex justify-center">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                            {/* Board Member 1 */}
+                            <div className="bg-white rounded-lg shadow-md p-6 border-t-4 border-purple-700">
+                            <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden">
+                                <img
+                                src="Images/kayode.jpg"
+                                alt="President"
+                                className="w-full h-full object-cover object-top"
+                                />
+                            </div>
+                            <h3 className="text-lg font-bold text-gray-800 text-center mb-1">Kayode Philip Fadele </h3>
+                            <p className="text-purple-700 font-medium text-center mb-3">Founder</p>
+                           
+                            </div>
 
+                            {/* Board Member 2 */}
+                            <div className="bg-white rounded-lg shadow-md p-6 border-t-4 border-orange-500">
+                            <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden">
+                                <img
+                                src="/Images/Adedayo.jpg"
+                                alt="Adedayo"
+                                className="w-full h-full object-cover object-top"
+                                />
+                            </div>
+                            <h3 className="text-lg font-bold text-gray-800 text-center mb-1">Fasanya Marie Adedayo</h3>
+                            <p className="text-purple-700 font-medium text-center mb-3">Chief Operating Officer</p>
+                            </div>
+
+                            {/* Board Member 3 */}
+                            <div className="bg-white rounded-lg shadow-md p-6 border-t-4 border-orange-500">
+                            <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden">
+                                <img
+                                src="/Images/gift.png"
+                                alt="Gift"
+                                className="w-full h-full object-cover object-top"
+                                />
+                            </div>
+                            <h3 className="text-lg font-bold text-gray-800 text-center mb-1">Oyewale Ebunoluwa</h3>
+                            <p className="text-purple-700 font-medium text-center mb-3">Social Media Manager</p>
+                            </div>
+                             <div className="bg-white rounded-lg shadow-md p-6 border-t-4 border-orange-500">
+                            <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden">
+                                <img
+                                src="/Images/Tolu-1.jpg"
+                                alt="Tolu"
+                                className="w-full h-full object-cover object-top"
+                                />
+                            </div>
+                            <h3 className="text-lg font-bold text-gray-800 text-center mb-1">Toluwanimi S. Oluwagbemiga</h3>
+                            <p className="text-purple-700 font-medium text-center mb-3">Voluteer Coordinator</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    
+                </div>
+            </section>
+            {/* Board Members Section */}
+            <section className="py-20 bg-gray-50">
+                <div className="container mx-auto px-6">
+                    <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-800">Board of Directors</h2>
+                    <p className="text-gray-600 text-center max-w-3xl mx-auto mb-16">Our diverse board brings expertise from various sectors to guide our strategic direction and governance.</p>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <LeadershipCard
                         name="Kayode Philip Fadele"
@@ -116,13 +179,13 @@ const About: React.FC = () => {
                     />
 
                     <LeadershipCard
-                        name="Marie A. Fasanya"
-                        title="Chief Operations Officer"
-                        image="/Images/Adedayo.jpg"
-                        summary="As the Chief Operations Officer of the Kayode Philip Foundation, I am honored to contribute to a mission that resonates deeply with my values..."
-                        fullText={`As the Chief Operations Officer of the Kayode Philip Foundation, I am honored to contribute to a mission that resonates deeply with my values — empowering lives and creating lasting impact. I bring strong organizational skills, strategic thinking, and a deep commitment to service.
-                        My approach focuses on building systems that help our programs run smoothly, ensuring that every effort is aligned with our goals and reaches those who need it most. I am learning, growing, and driven by a desire to see real change happen — from behind the scenes and on the field.
-                        I am excited to be part of a team that is dedicated to making a difference in the lives of individuals and communities across Africa. Together, we are not just addressing immediate needs but also laying the groundwork for sustainable development and empowerment.`}
+                        name="Jumoby D.A"
+                        title="Vice President"
+                        image="/Images/Vice President.jpg"
+                        summary="Creator. Disruptor. Curator. Founder & Chief Thinking Officer at Travul.org Ltd, a travel..."
+                        fullText={`Creator. Disruptor. Curator. Founder & Chief Thinking Officer at Travul.org Ltd, a travel fintech company reimagining how people explore, save, and grow through borderless living.
+                        I fuse creativity with strategy, disruption with execution. With a proven track record in innovation, entrepreneurship, and client experience, I don’t just think outside the box—I redesign the box entirely.
+                        Known for bold ideas, detailed execution, and a relentless drive for excellence, I lead with vision, build with purpose, and deliver with heart.`}
                     />
                      <LeadershipCard
                         name="Oyewale Ebunoluwa"
@@ -142,59 +205,6 @@ const About: React.FC = () => {
                         I am dedicated to fostering a culture of service, collaboration, and continuous learning. Together, we are not just making a difference we are building a movement of change-makers who believe in the power of community and the potential of every individual.`}
                     />
                     </div>
-                </div>
-            </section>
-            {/* Board Members Section */}
-            <section className="py-20 bg-gray-50">
-                <div className="container mx-auto px-6">
-                    <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-800">Board of Directors</h2>
-                    <p className="text-gray-600 text-center max-w-3xl mx-auto mb-16">Our diverse board brings expertise from various sectors to guide our strategic direction and governance.</p>
-                    <div className="flex justify-center">
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                            {/* Board Member 1 */}
-                            <div className="bg-white rounded-lg shadow-md p-6 border-t-4 border-purple-700">
-                            <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden">
-                                <img
-                                src="Images/kayode.jpg"
-                                alt="President"
-                                className="w-full h-full object-cover object-top"
-                                />
-                            </div>
-                            <h3 className="text-lg font-bold text-gray-800 text-center mb-1">Kayode Philip Fadele </h3>
-                            <p className="text-purple-700 font-medium text-center mb-3">Board Chairman</p>
-                            <p className="text-gray-600 text-center text-sm">Coach Khay Speaks</p>
-                            </div>
-
-                            {/* Board Member 2 */}
-                            <div className="bg-white rounded-lg shadow-md p-6 border-t-4 border-orange-500">
-                            <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden">
-                                <img
-                                src="Images/Vice President.jpg"
-                                alt="Dr. Fatima Diallo"
-                                className="w-full h-full object-cover object-top"
-                                />
-                            </div>
-                            <h3 className="text-lg font-bold text-gray-800 text-center mb-1">Jumoby D.A</h3>
-                            <p className="text-purple-700 font-medium text-center mb-3">Vice Chairman</p>
-                            <p className="text-gray-600 text-center text-sm">CEO, </p>
-                            </div>
-
-                            {/* Board Member 3 */}
-                            <div className="bg-white rounded-lg shadow-md p-6 border-t-4 border-orange-500">
-                            <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden">
-                                <img
-                                src="https://readdy.ai/api/search-image?query=professional%20headshot%20of%20distinguished%20African%20female%20board%20member%20in%20her%2060s%20wearing%20traditional%20attire%20against%20neutral%20background%20with%20wise%20expression%20and%20professional%20lighting%20with%20clean%20simple%20background&width=200&height=200&seq=120&orientation=squarish"
-                                alt="Chief Amara Okonkwo"
-                                className="w-full h-full object-cover object-top"
-                                />
-                            </div>
-                            <h3 className="text-lg font-bold text-gray-800 text-center mb-1">Mr Idowu </h3>
-                            <p className="text-purple-700 font-medium text-center mb-3">Member</p>
-                            <p className="text-gray-600 text-center text-sm">Traditional Leader & Philanthropist</p>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
             </section>
                 {/* Achievements Section */}
