@@ -188,11 +188,39 @@ const About: React.FC = () => {
                         Known for bold ideas, detailed execution, and a relentless drive for excellence, I lead with vision, build with purpose, and deliver with heart.`}
                     />
                      <LeadershipCard
-                        name="Oyewale Ebunoluwa"
-                        title="Social Media Manager"
+                        name="Oriyomi Joseph"
+                        title="Member"
                         image="/Images/gift.png"
-                        summary="As the Social Media Manager for the Kayode Philip Foundation, I am passionate about using digital platforms to amplify our mission and connect with our community..."
-                        fullText={`As the Social Media Manager for the Kayode Philip Foundation, I am passionate about using digital platforms to amplify our mission and connect with our community. My role involves creating engaging content that tells our story, showcases our impact, and inspires action.`}
+                        summary="A fellow at Global Arts In Medicine, His exceptional talents extend across various domains..."
+                        fullText={`Oriyomi Joseph, affectionately known as ORí, is a multifaceted performing artist both on screen and stage, with a deep-rooted
+                            passion for the arts. A Bachelor of Arts degree holder in Theatre Arts. His journey is a testament to the enriching experiences that the study of Theatre Arts can offer. He embodies the cultural
+                            richness and diversity of his heritage. A fellow at Global Arts In Medicine, His exceptional talents extend across various domains,
+                            making him a true Renaissance artist. ORí has earned recognition and awards for his outstanding contributions to the theatre, excelling in areas such as dance, drums, acting, recitation,
+                            voice(over)acting, singing, chanting, etc. Hailing from the esteemed lineage of the Ojomu of Ajiran Kingdom in Lagos, Nigeria, One of
+                            ORí's notable achievements lies in his captivating portrayal of 'Wasiu Wakanaki' in the renowned
+                            TV sitcom, "The Johnsons." This beloved character continues to entertain audiences on Africa's
+                            most-viewed TV platform, Africa Magic, available on DsTV. Additionally, ORí has taken on
+                            leading roles in a Yoruba TV series titled "ELENINI," produced by NOSTALGIA MEDIA NG,
+                            sub-lead, supporting roles in other films and television series.
+                            Beyond the screen, ORí has achieved international acclaim, representing Nigerian culture and the
+                            arts on global
+                            platforms. He led a group of performers at the International Youth Arts Festival (IYAF) in the UK,
+                            promoting African culture and artistic excellence. He has also facilitated theatre workshops and
+                            cultural exchanges in Ghana, the Republic of Benin, Togo, and the Ivory Coast, further
+                            strengthening the ties between nations through the medium of theatre.
+                            ORí is more than just an actor; he's a cultural ambassador and educator. He has shared his vast
+                            knowledge of Theatre for Development (TFD) by engaging with colleges, NGOs, Higher
+                            institutions, communities, and beyond. This work showcases his commitment to preserving and
+                            promoting cultural aesthetics through the transformative power of theatre.
+                            Notably, he has made two special theater appearances at the Badagry Diaspora Festival (BDF),
+                            alongside distinguished figures like Honorable Abike Dabiri, Senior Special Assistant to the former
+                            President of Nigeria on Foreign Affairs and Diaspora. His contributions to cultural enrichment have
+                            been recognized and celebrated, as evidenced by his recent decoration and award as an Ambassador
+                            of Arts and Culture under the auspices of the Alimosho Art Initiative (AAI) and the Alimosho Art
+                            Community (AAC).
+                            ORí's journey from conception to application to becoming a cultural icon and ambassador is an
+                            inspiring testament to the boundless adventures which continue to enrich the world with the beauty
+                            and depth of Nigerian culture, captivating hearts on both the local and global stages`}
                     />
 
                     <LeadershipCard

@@ -242,279 +242,8 @@ View Details
 </div>
 </div>
 </section>
-{/* Project Filter Section */}
-<section id="all-projects" className="py-16 bg-gray-50">
-<div className="container mx-auto px-6">
-<h2 className="text-3xl font-bold text-gray-800 mb-12 text-center">Explore All Projects</h2>
-<div className="bg-white p-6 rounded-lg shadow-md mb-8">
-<div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-{/* Category Filter */}
-<div className="relative">
-<button
-onClick={() => setShowCategoryDropdown(!showCategoryDropdown)}
-className="w-full flex items-center justify-between bg-gray-50 border border-gray-300 rounded-lg px-4 py-2 text-gray-700 cursor-pointer whitespace-nowrap !rounded-button"
->
-<span>
-<i className="fas fa-tags text-purple-700 mr-2"></i>
-{activeCategory === 'all' ? 'All Categories' :
-activeCategory.charAt(0).toUpperCase() + activeCategory.slice(1)}
-</span>
-<i className="fas fa-chevron-down text-gray-500"></i>
-</button>
-{showCategoryDropdown && (
-<div className="absolute z-10 mt-1 w-full bg-white border border-gray-200 rounded-lg shadow-lg">
-<ul>
-<li
-className={`px-4 py-2 hover:bg-gray-50 cursor-pointer ${activeCategory === 'all' ? 'bg-purple-50 text-purple-700' : ''}`}
-onClick={() => {
-setActiveCategory('all');
-setShowCategoryDropdown(false);
-}}
->
-All Categories
-</li>
-<li
-className={`px-4 py-2 hover:bg-gray-50 cursor-pointer ${activeCategory === 'education' ? 'bg-purple-50 text-purple-700' : ''}`}
-onClick={() => {
-setActiveCategory('education');
-setShowCategoryDropdown(false);
-}}
->
-Education
-</li>
-<li
-className={`px-4 py-2 hover:bg-gray-50 cursor-pointer ${activeCategory === 'healthcare' ? 'bg-purple-50 text-purple-700' : ''}`}
-onClick={() => {
-setActiveCategory('healthcare');
-setShowCategoryDropdown(false);
-}}
->
-Healthcare
-</li>
-<li
-className={`px-4 py-2 hover:bg-gray-50 cursor-pointer ${activeCategory === 'water' ? 'bg-purple-50 text-purple-700' : ''}`}
-onClick={() => {
-setActiveCategory('water');
-setShowCategoryDropdown(false);
-}}
->
-Water Access
-</li>
-<li
-className={`px-4 py-2 hover:bg-gray-50 cursor-pointer ${activeCategory === 'economic' ? 'bg-purple-50 text-purple-700' : ''}`}
-onClick={() => {
-setActiveCategory('economic');
-setShowCategoryDropdown(false);
-}}
->
-Economic Empowerment
-</li>
-</ul>
-</div>
-)}
-</div>
-{/* Location Filter */}
-<div className="relative">
-<button
-onClick={() => setShowLocationDropdown(!showLocationDropdown)}
-className="w-full flex items-center justify-between bg-gray-50 border border-gray-300 rounded-lg px-4 py-2 text-gray-700 cursor-pointer whitespace-nowrap !rounded-button"
->
-<span>
-<i className="fas fa-map-marker-alt text-purple-700 mr-2"></i>
-{activeLocation === 'all' ? 'All Locations' : activeLocation}
-</span>
-<i className="fas fa-chevron-down text-gray-500"></i>
-</button>
-{showLocationDropdown && (
-<div className="absolute z-10 mt-1 w-full bg-white border border-gray-200 rounded-lg shadow-lg">
-<ul>
-<li
-className={`px-4 py-2 hover:bg-gray-50 cursor-pointer ${activeLocation === 'all' ? 'bg-purple-50 text-purple-700' : ''}`}
-onClick={() => {
-setActiveLocation('all');
-setShowLocationDropdown(false);
-}}
->
-All Locations
-</li>
-{locations.map(location => (
-<li
-key={location}
-className={`px-4 py-2 hover:bg-gray-50 cursor-pointer ${activeLocation === location ? 'bg-purple-50 text-purple-700' : ''}`}
-onClick={() => {
-setActiveLocation(location);
-setShowLocationDropdown(false);
-}}
->
-{location}
-</li>
-))}
-</ul>
-</div>
-)}
-</div>
-{/* Status Filter */}
-<div className="relative">
-<button
-onClick={() => setShowStatusDropdown(!showStatusDropdown)}
-className="w-full flex items-center justify-between bg-gray-50 border border-gray-300 rounded-lg px-4 py-2 text-gray-700 cursor-pointer whitespace-nowrap !rounded-button"
->
-<span>
-<i className="fas fa-tasks text-purple-700 mr-2"></i>
-{activeStatus === 'all' ? 'All Statuses' :
-activeStatus.charAt(0).toUpperCase() + activeStatus.slice(1)}
-</span>
-<i className="fas fa-chevron-down text-gray-500"></i>
-</button>
-{showStatusDropdown && (
-<div className="absolute z-10 mt-1 w-full bg-white border border-gray-200 rounded-lg shadow-lg">
-<ul>
-<li
-className={`px-4 py-2 hover:bg-gray-50 cursor-pointer ${activeStatus === 'all' ? 'bg-purple-50 text-purple-700' : ''}`}
-onClick={() => {
-setActiveStatus('all');
-setShowStatusDropdown(false);
-}}
->
-All Statuses
-</li>
-<li
-className={`px-4 py-2 hover:bg-gray-50 cursor-pointer ${activeStatus === 'active' ? 'bg-purple-50 text-purple-700' : ''}`}
-onClick={() => {
-setActiveStatus('active');
-setShowStatusDropdown(false);
-}}
->
-Active
-</li>
-<li
-className={`px-4 py-2 hover:bg-gray-50 cursor-pointer ${activeStatus === 'completed' ? 'bg-purple-50 text-purple-700' : ''}`}
-onClick={() => {
-setActiveStatus('completed');
-setShowStatusDropdown(false);
-}}
->
-Completed
-</li>
-<li
-className={`px-4 py-2 hover:bg-gray-50 cursor-pointer ${activeStatus === 'planned' ? 'bg-purple-50 text-purple-700' : ''}`}
-onClick={() => {
-setActiveStatus('planned');
-setShowStatusDropdown(false);
-}}
->
-Planned
-</li>
-</ul>
-</div>
-)}
-</div>
-{/* Search */}
-<div className="relative">
-<div className="relative">
-<input
-type="text"
-placeholder="Search projects..."
-value={searchQuery}
-onChange={(e) => setSearchQuery(e.target.value)}
-className="w-full bg-gray-50 border border-gray-300 rounded-lg pl-10 pr-4 py-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-/>
-<div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">
-<i className="fas fa-search"></i>
-</div>
-</div>
-</div>
-</div>
-<div className="flex flex-col md:flex-row justify-between items-center mt-6">
-<div className="text-gray-600 mb-4 md:mb-0">
-Showing <span className="font-medium text-purple-700">{filteredProjects.length}</span> projects
-</div>
-<button
-onClick={handleClearFilters}
-className="text-purple-700 hover:text-purple-800 font-medium cursor-pointer whitespace-nowrap !rounded-button"
->
-<i className="fas fa-times-circle mr-2"></i> Clear Filters
-</button>
-</div>
-</div>
-{/* Projects Grid */}
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-{filteredProjects.map(project => (
-<div key={project.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300 group">
-<div className="relative h-48 overflow-hidden">
-<img
-src={project.image}
-alt={project.title}
-className="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500"
-/>
-<div className="absolute top-4 left-4">
-<span className={`text-xs font-bold uppercase py-1 px-2 rounded-full ${
-project.category === 'education' ? 'bg-blue-500 text-white' :
-project.category === 'healthcare' ? 'bg-red-500 text-white' :
-project.category === 'water' ? 'bg-cyan-500 text-white' :
-'bg-green-500 text-white'
-}`}>
-{project.category}
-</span>
-</div>
-</div>
-<div className="p-6">
-<div className="flex justify-between items-start mb-2">
-<h3 className="text-lg font-bold text-gray-800">{project.title}</h3>
-<span className={`text-xs font-medium py-1 px-2 rounded-full ${
-project.status === 'active' ? 'bg-green-100 text-green-800' :
-project.status === 'completed' ? 'bg-blue-100 text-blue-800' :
-'bg-yellow-100 text-yellow-800'
-}`}>
-{project.status.charAt(0).toUpperCase() + project.status.slice(1)}
-</span>
-</div>
-<div className="flex items-center text-sm text-gray-500 mb-3">
-<i className="fas fa-map-marker-alt text-purple-700 mr-2"></i>
-{project.location}
-</div>
-<p className="text-gray-600 text-sm mb-4">{project.description}</p>
-<div className="text-sm text-gray-700 mb-4">
-<span className="font-medium">Impact:</span> {project.impact}
-</div>
-{project.status === 'active' && (
-<div className="mb-4">
-<div className="flex justify-between text-xs mb-1">
-<span className="font-medium text-gray-800">Progress</span>
-<span className="text-purple-700">{project.progress}%</span>
-</div>
-<div className="w-full bg-gray-200 rounded-full h-2">
-<div
-className="bg-purple-700 h-2 rounded-full"
-style={{ width: `${project.progress}%` }}
-></div>
-</div>
-</div>
-)}
-<button className="w-full bg-gray-100 hover:bg-gray-200 text-gray-800 py-2 !rounded-button transition duration-300 cursor-pointer whitespace-nowrap">
-View Details
-</button>
-</div>
-</div>
-))}
-</div>
-{filteredProjects.length === 0 && (
-<div className="text-center py-12">
-<div className="text-5xl text-gray-300 mb-4">
-<i className="fas fa-search"></i>
-</div>
-<h3 className="text-xl font-bold text-gray-800 mb-2">No projects found</h3>
-<p className="text-gray-600">Try adjusting your filters or search criteria</p>
-<button
-onClick={handleClearFilters}
-className="mt-4 bg-purple-700 text-white px-6 py-2 !rounded-button hover:bg-purple-800 transition duration-300 cursor-pointer whitespace-nowrap"
->
-Clear All Filters
-</button>
-</div>
-)}
-</div>
-</section>
+    {/* Project Filter Section */}
+    
 {/* Impact Statistics Section */}
 <section className="py-20 bg-white">
 <div className="container mx-auto px-6">
@@ -525,7 +254,7 @@ Clear All Filters
 <div className="inline-block p-4 rounded-full bg-purple-100 mb-6">
 <i className="fas fa-graduation-cap text-3xl text-purple-700"></i>
 </div>
-<h3 className="text-4xl font-bold text-purple-700 mb-2">15,000+</h3>
+<h3 className="text-4xl font-bold text-purple-700 mb-2">5,000+</h3>
 <p className="text-gray-800 font-medium mb-2">Students Educated</p>
 <p className="text-gray-600">Through our schools, scholarships, and educational programs.</p>
 </div>
@@ -533,25 +262,25 @@ Clear All Filters
 <div className="inline-block p-4 rounded-full bg-blue-100 mb-6">
 <i className="fas fa-heartbeat text-3xl text-blue-700"></i>
 </div>
-<h3 className="text-4xl font-bold text-blue-700 mb-2">22,500+</h3>
+<h3 className="text-4xl font-bold text-blue-700 mb-2">2,500+</h3>
 <p className="text-gray-800 font-medium mb-2">Patients Treated</p>
-<p className="text-gray-600">Through our healthcare initiatives and mobile clinics.</p>
+<p className="text-gray-600">Through our free medical care initiatives.</p>
 </div>
 <div className="bg-cyan-50 p-8 rounded-lg text-center hover:shadow-md transition duration-300">
 <div className="inline-block p-4 rounded-full bg-cyan-100 mb-6">
 <i className="fas fa-tint text-3xl text-cyan-700"></i>
 </div>
-<h3 className="text-4xl font-bold text-cyan-700 mb-2">32,000+</h3>
-<p className="text-gray-800 font-medium mb-2">Clean Water Access</p>
-<p className="text-gray-600">People now have access to clean, safe drinking water.</p>
+<h3 className="text-4xl font-bold text-cyan-700 mb-2">5,000+</h3>
+<p className="text-gray-800 font-medium mb-2">Food Relief Packages</p>
+<p className="text-gray-600">Distribution of food items to families.</p>
 </div>
 <div className="bg-green-50 p-8 rounded-lg text-center hover:shadow-md transition duration-300">
 <div className="inline-block p-4 rounded-full bg-green-100 mb-6">
 <i className="fas fa-seedling text-3xl text-green-700"></i>
 </div>
-<h3 className="text-4xl font-bold text-green-700 mb-2">5,200+</h3>
-<p className="text-gray-800 font-medium mb-2">Businesses Supported</p>
-<p className="text-gray-600">Through microloans, training, and economic initiatives.</p>
+<h3 className="text-4xl font-bold text-green-700 mb-2">2,000+</h3>
+<p className="text-gray-800 font-medium mb-2">Vocational Training</p>
+<p className="text-gray-600">Through 2-weeks skill training, and scholarship for full training initiatives.</p>
 </div>
 </div>
 
