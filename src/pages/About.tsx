@@ -165,12 +165,12 @@ const About: React.FC = () => {
                 <div className="container mx-auto px-6">
                     <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-800">Board of Directors</h2>
                     <p className="text-gray-600 text-center max-w-3xl mx-auto mb-16">Our diverse board brings expertise from various sectors to guide our strategic direction and governance.</p>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <LeadershipCard
                         name="Kayode Philip Fadele"
                         title="President"
                         image="/Images/kayode.jpg"
-                        summary="Oluwakayode Fadele is a dynamic lifestyle coach, author, and social entrepreneur, and content creator, passionate about transforming lives and empowering communities..."
+                        summary="Oluwakayode Fadele is a dynamic lifestyle coach, author, and social entrepreneur, and content creator..."
                         fullText={`Oluwakayode Fadele is a dynamic lifestyle coach, author, social entrepreneur, and content creator, passionate about transforming lives and empowering communities. He is the visionary founder of the Kayode Philip Foundation, a non-profit organization dedicated to youth empowerment, education, and community development across underserved areas.
                                 With a deep commitment to personal growth and societal impact, Oluwakayode combines his expertise in coaching and storytelling to inspire individuals to unlock their full potential. Through his content and public engagements, he addresses themes around purpose, mindset, relationships, and sustainable development.
                                 As a trusted voice in the personal development space, Oluwakayode has authored transformative resources and created digital platforms that reach audiences globally. His work reflects a lifelong mission to create meaningful change, especially among youth and marginalized groups.
@@ -190,7 +190,7 @@ const About: React.FC = () => {
                      <LeadershipCard
                         name="Oriyomi Joseph"
                         title="Member"
-                        image="/Images/gift.png"
+                        image="/Images/Ori.jpg"
                         summary="A fellow at Global Arts In Medicine, His exceptional talents extend across various domains..."
                         fullText={`Oriyomi Joseph, affectionately known as ORí, is a multifaceted performing artist both on screen and stage, with a deep-rooted
                             passion for the arts. A Bachelor of Arts degree holder in Theatre Arts. His journey is a testament to the enriching experiences that the study of Theatre Arts can offer. He embodies the cultural
@@ -223,15 +223,7 @@ const About: React.FC = () => {
                             and depth of Nigerian culture, captivating hearts on both the local and global stages`}
                     />
 
-                    <LeadershipCard
-                        name="Toluwanimi S. Oluwagbemiga"
-                        title="Voluteer Coordinator"
-                        image="/Images/Tolu-1.jpg"
-                        summary="As the Volunteer Coordinator at the Kayode Philip Foundation, I work closely with our amazing team of volunteers the heart of our impact..."
-                        fullText={`As the Volunteer Coordinator at the Kayode Philip Foundation, I work closely with our amazing team of volunteers the heart of our impact.
-                        My role involves recruiting, organizing, and supporting passionate individuals who are committed to community development. I ensure each volunteer is equipped, valued, and inspired to serve with excellence. From events to outreach, I help bridge the gap between vision and execution, making sure every helping hand counts.
-                        I am dedicated to fostering a culture of service, collaboration, and continuous learning. Together, we are not just making a difference we are building a movement of change-makers who believe in the power of community and the potential of every individual.`}
-                    />
+                 
                     </div>
                 </div>
             </section>

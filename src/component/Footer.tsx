@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
 
             <div className="flex space-x-4">
               <a
-                href="https://www.facebook.com/yourpage"
+                href="https://web.facebook.com/profile.php?id=61577570353046"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-purple-800 hover:bg-purple-700 w-10 h-10 rounded-full flex items-center justify-center transition duration-300"
@@ -41,7 +41,7 @@ const Footer: React.FC = () => {
               </a>
 
               <a
-                href="https://www.twitter.com/yourhandle"
+                href="https://x.com/KPF_Global"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-purple-800 hover:bg-purple-700 w-10 h-10 rounded-full flex items-center justify-center transition duration-300"
@@ -61,7 +61,7 @@ const Footer: React.FC = () => {
               </a>
 
               <a
-                href="https://www.linkedin.com/in/yourprofile"
+                href="https://www.linkedin.com/company/kayode-philip-company/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-purple-800 hover:bg-purple-700 w-10 h-10 rounded-full flex items-center justify-center transition duration-300"
