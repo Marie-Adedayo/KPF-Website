@@ -74,7 +74,7 @@ const News: React.FC = () => {
           {/* News Card 3 */}
           <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
             <img
-              src="/Images/edu-2.jpeg"
+              src="/Images/Edu.jpeg"
               alt="Education Outreach"
               className="w-full object-fill object-top"
             />

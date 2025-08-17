@@ -57,7 +57,7 @@ const FeaturedStories: React.FC = () => {
                 {/* Entrepreneurship */}
                 <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300">
                     <img
-                    src="/Images/FEED1 SAVE 1.jpg"
+                    src="/Images/food-2.jpeg"
                     alt="Entrepreneurship Story"
                     className="w-full h-48 object-cover object-top"
                     />
