@@ -26,9 +26,9 @@ const FeaturedStories: React.FC = () => {
                     <p className="text-gray-600 mb-4">
                         Empowering young learners with brand new school bags and essential supplies to fuel their dreams and brighten their classroom experience.
                     </p>
-                    <a href="#" className="text-purple-700 font-medium hover:text-purple-800 transition duration-300 flex items-center cursor-pointer">
+                    {/* <a href="#" className="text-purple-700 font-medium hover:text-purple-800 transition duration-300 flex items-center cursor-pointer">
                         Read More <i className="fas fa-arrow-right ml-2"></i>
-                    </a>
+                    </a> */}
                     </div>
                 </div>
                 
@@ -48,9 +48,9 @@ const FeaturedStories: React.FC = () => {
                     <p className="text-gray-600 mb-4">
                         Offering free health screenings to catch illnesses early and ensure wellness, because everyone deserves accessible healthcare.
                     </p>
-                    <a href="#" className="text-purple-700 font-medium hover:text-purple-800 transition duration-300 flex items-center cursor-pointer">
+                    {/* <a href="#" className="text-purple-700 font-medium hover:text-purple-800 transition duration-300 flex items-center cursor-pointer">
                         Read More <i className="fas fa-arrow-right ml-2"></i>
-                    </a>
+                    </a> */}
                     </div>
                 </div>
                 
@@ -70,9 +70,9 @@ const FeaturedStories: React.FC = () => {
                     <p className="text-gray-600 mb-4">
                         Providing free skill acquisition programs that equip individuals with tools and confidence to build thriving businesses.
                     </p>
-                    <a href="#" className="text-purple-700 font-medium hover:text-purple-800 transition duration-300 flex items-center cursor-pointer">
+                    {/* <a href="#" className="text-purple-700 font-medium hover:text-purple-800 transition duration-300 flex items-center cursor-pointer">
                         Read More <i className="fas fa-arrow-right ml-2"></i>
-                    </a>
+                    </a> */}
                     </div>
                 </div>
 

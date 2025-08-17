@@ -8,15 +8,15 @@ const News: React.FC = () => {
     {
       category: "Event",
       date: "June 4, 2025",
-      title: "Kayode Philip Foundation Celebrates 10 Years of Impact",
-      description: "Join us for our 10th anniversary celebration as we reflect on a decade of community empowerment and look forward to our ambitious goals for the future.",
-      image: "https://readdy.ai/api/search-image?query=African%20community%20celebration%20event%20with%20colorful%20decorations%2C%20people%20gathered%20for%20foundation%20anniversary%2C%20sunset%20with%20orange%20and%20purple%20sky%2C%20festive%20atmosphere%20with%20clean%20simple%20background&width=600&height=400&seq=14&orientation=landscape",
+      title: "Kayode Philip Foundation Celebrates 5 Years of Impact",
+      description: "Join us for our 5th anniversary celebration as we reflect on a years of community empowerment and look forward to our ambitious goals for the future.",
+      image: "/src/assets/logo.png",
     },
     {
       category: "Press Release",
       date: "May 30, 2025",
-      title: "Foundation Secures $2M Grant for Healthcare Initiatives",
-      description: "New funding will expand our mobile clinic program to reach 20 additional rural communities.",
+      title: "Foundation gave free for Healthcare to people in Iroko Town",
+      description: "Over 200 residents received free medical checkups, consultations, and essential medicines during our outreach program.",
       image: "/Images/health-1.jpeg"
     },
     {

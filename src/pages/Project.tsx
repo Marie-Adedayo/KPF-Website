@@ -8,7 +8,7 @@ const [activeStatus, setActiveStatus] = useState('all');
 const [searchQuery, setSearchQuery] = useState('');
 const [showCategoryDropdown, setShowCategoryDropdown] = useState(false);
 const [showLocationDropdown, setShowLocationDropdown] = useState(false);
-const [showStatusDropdown, setShowStatusDropdown] = useState(false);
+const [showStatusDropdown, setShowStatusDropdown] = useState(false); 
 // Project data
 const projects = [
 {
@@ -17,29 +17,29 @@ title: "Bright Future Academy",
 category: "education",
 location: "Nigeria",
 status: "active",
-description: "Building a modern school facility with technology labs to serve 500 children in underserved communities.",
-impact: "500 students enrolled, 20 teachers employed",
-progress: 75,
-image: "https://readdy.ai/api/search-image?query=modern%2520school%2520building%2520in%2520African%2520setting%2520with%2520students%2520in%2520uniform%2520entering%2520bright%2520colorful%2520classrooms%2520with%2520technology%2520equipment%2520visible%2520and%2520teachers%2520guiding%2520students%2520with%2520clean%2520simple%2520background&width=600&height=400&seq=201&orientation=landscape"
+description: "Sponsorship to educate children in underserved communities.",
+impact: " Give access to quality education for 1,000 children",
+progress: 50,
+image: "/Images/edu-3.jpeg"
 },
 {
 id: 2,
-title: "Clean Water Initiative",
-category: "water",
-location: "Kenya",
+title: "An Enterprenuership Skill Center Initiative",
+category: "enterprenuership",
+location: "Nigeria",
 status: "active",
-description: "Installing water purification systems and wells to provide clean drinking water to rural communities.",
-impact: "12,000 people with access to clean water",
-progress: 60,
-image: "https://readdy.ai/api/search-image?query=water%2520well%2520and%2520purification%2520system%2520installation%2520in%2520rural%2520African%2520village%2520with%2520community%2520members%2520collecting%2520clean%2520water%2520and%2520celebration%2520around%2520new%2520infrastructure%2520with%2520clean%2520simple%2520background&width=600&height=400&seq=202&orientation=landscape"
+description: "Building a center to provide vocational training and entrepreneurship skills to youth.",
+impact: "500 youth trained, 200 businesses started",
+progress: 10,
+image: "/Images/voc-2.jpeg"
 },
 {
 id: 3,
-title: "Mobile Health Clinics",
-category: "healthcare",
-location: "Ghana",
+title: "Feed One Save One",
+category: "food",
+location: "Nigeria",
 status: "active",
-description: "Deploying mobile health clinics to provide essential medical services to remote villages.",
+description: "Providing food relief packages, Free Medical Check-up, Fre School Items and Free acquisition of skills ",
 impact: "8,500 patients treated, 15 villages served",
 progress: 85,
 image: "https://readdy.ai/api/search-image?query=mobile%2520health%2520clinic%2520van%2520with%2520medical%2520staff%2520treating%2520patients%2520in%2520rural%2520African%2520setting%2520with%2520medical%2520equipment%2520visible%2520and%2520patients%2520waiting%2520in%2520line%2520with%2520clean%2520simple%2520background&width=600&height=400&seq=203&orientation=landscape"
@@ -48,14 +48,14 @@ image: "https://readdy.ai/api/search-image?query=mobile%2520health%2520clinic%25
 id: 4,
 title: "Women's Microfinance Program",
 category: "economic",
-location: "Tanzania",
-status: "completed",
+location: "Nigeria",
+status: "In Progress",
 description: "Providing microloans and business training to women entrepreneurs to start and grow small businesses.",
-impact: "350 businesses launched, $125,000 in loans distributed",
+impact: "We want to empower several women build their business",
 progress: 100,
-image: "https://readdy.ai/api/search-image?query=group%2520of%2520African%2520women%2520entrepreneurs%2520receiving%2520business%2520training%2520and%2520microloans%2520in%2520community%2520center%2520with%2520small%2520business%2520products%2520displayed%2520and%2520financial%2520training%2520materials%2520visible%2520with%2520clean%2520simple%2520background&width=600&height=400&seq=204&orientation=landscape"
+image: "/Images/food-2.jpeg"
 },
-{
+/* {
 id: 5,
 title: "Solar Power for Schools",
 category: "education",
@@ -76,9 +76,10 @@ description: "Training local community members as health workers to provide basi
 impact: "120 health workers trained, 45 communities served",
 progress: 100,
 image: "https://readdy.ai/api/search-image?query=training%2520session%2520for%2520community%2520health%2520workers%2520in%2520African%2520setting%2520with%2520medical%2520professionals%2520teaching%2520local%2520trainees%2520with%2520medical%2520equipment%2520and%2520educational%2520materials%2520visible%2520with%2520clean%2520simple%2520background&width=600&height=400&seq=206&orientation=landscape"
-},
-{
-id: 7,
+}, */
+
+/*
+{ id: 7,
 title: "Sustainable Agriculture Initiative",
 category: "economic",
 location: "Rwanda",
@@ -109,12 +110,12 @@ description: "Training young people in coding, digital design, and other tech sk
 impact: "250 youth trained, 65% found employment",
 progress: 80,
 image: "https://readdy.ai/api/search-image?query=computer%2520lab%2520in%2520African%2520setting%2520with%2520young%2520people%2520learning%2520coding%2520and%2520digital%2520skills%2520with%2520instructors%2520helping%2520students%2520at%2520modern%2520computers%2520with%2520clean%2520simple%2520background&width=600&height=400&seq=209&orientation=landscape"
-}
+} */
 ];
 // Featured projects (top 3)
 const featuredProjects = projects.filter(project => [1, 2, 3].includes(project.id));
 // Filter projects based on selected filters and search query
-const filteredProjects = projects.filter(project => {
+/* const filteredProjects = projects.filter(project => {
 const matchesCategory = activeCategory === 'all' || project.category === activeCategory;
 const matchesLocation = activeLocation === 'all' || project.location === activeLocation;
 const matchesStatus = activeStatus === 'all' || project.status === activeStatus;
@@ -122,16 +123,16 @@ const matchesSearch = searchQuery === '' ||
 project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
 project.description.toLowerCase().includes(searchQuery.toLowerCase());
 return matchesCategory && matchesLocation && matchesStatus && matchesSearch;
-});
+}); */
 // Get unique locations for filter
-const locations = [...new Set(projects.map(project => project.location))];
+/* const locations = [...new Set(projects.map(project => project.location))];
 
 const handleClearFilters = () => {
 setActiveCategory('all');
 setActiveLocation('all');
 setActiveStatus('all');
 setSearchQuery('');
-};
+};*/
 return (
 <div className="min-h-screen font-sans">
 {/* Header */}

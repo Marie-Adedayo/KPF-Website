@@ -6,24 +6,24 @@ const Testimonials: React.FC = () => {
 
     const testimonials = [
     {
-      quote: "The Kayode Philip Foundation transformed our community with clean water access. Their dedication to sustainable solutions has improved countless lives.",
-      name: "Sarah Johnson",
-      location: "Nairobi, Kenya",
-      image: "https://readdy.ai/api/search-image?query=professional%20portrait%20of%20an%20African%20woman%20in%20her%2030s%20with%20short%20hair%20and%20a%20warm%20smile%20wearing%20professional%20attire%20against%20a%20neutral%20background%20with%20soft%20lighting%20and%20natural%20expression&width=100&height=100&seq=1&orientation=squarish"
+      quote: "The Kayode Philip Foundation made sure my family received the medical care we needed, right when we needed it. Their team treated us with warmth and respect, and we felt truly supported.",
+      name: "Grace Adekanbi",
+      location: "Iroko, Ogun state",
+      
     },
     {
-      quote: "Thanks to the educational programs provided by the Foundation, my children now have access to quality education and resources they never had before.",
-      name: "Michael Okafor",
+      quote: "Thanks to the Foundation, my children have the chance to learn and grow. The school supplies and encouragement they gave us made a real difference in our lives.",
+      name: "Samuel Adeyemi",
       location: "Lagos, Nigeria",
-      image: "https://readdy.ai/api/search-image?query=professional%20portrait%20of%20an%20African%20man%20in%20his%2040s%20with%20glasses%20and%20a%20friendly%20smile%20wearing%20a%20casual%20button-up%20shirt%20against%20a%20neutral%20background%20with%20soft%20lighting%20and%20authentic%20expression&width=100&height=100&seq=2&orientation=squarish"
+      
     },
     {
-      quote: "The healthcare initiative launched in our village has saved lives. The Foundation's commitment to sustainable development is truly inspiring.",
-      name: "Amina Diallo",
-      location: "Accra, Ghana",
-      image: "https://readdy.ai/api/search-image?query=professional%20portrait%20of%20a%20young%20African%20woman%20with%20braided%20hair%20and%20a%20bright%20smile%20wearing%20colorful%20traditional%20clothing%20against%20a%20neutral%20background%20with%20soft%20lighting%20and%20genuine%20expression&width=100&height=100&seq=3&orientation=squarish"
+      quote: "When food was scarce, the relief package from Kayode Philip Foundation brought us hope and comfort. We are grateful for their care and generosity.",
+      name: "Fatima Oyewole",
+      location: "Eleyele, Oyo state",
+     
     }
-  ];
+    ];
   const nextTestimonial = () => {
     setActiveTestimonial((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
   };
@@ -46,11 +46,7 @@ const Testimonials: React.FC = () => {
                         <div className="pt-6">
                             <p className="text-xl text-gray-700 italic mb-8">{testimonials[activeTestimonial].quote}</p>
                             <div className="flex items-center">
-                                <img
-                                    src={testimonials[activeTestimonial].image}
-                                    alt={testimonials[activeTestimonial].name}
-                                    className="w-16 h-16 rounded-full object-cover mr-4"
-                                />
+                                
                                 <div>
                                     <h4 className="font-bold text-gray-800">{testimonials[activeTestimonial].name}</h4>
                                     <p className="text-gray-600">{testimonials[activeTestimonial].location}</p>

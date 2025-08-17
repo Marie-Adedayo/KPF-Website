@@ -47,7 +47,7 @@ const Home: React.FC = () => {
               The Kayode Philip Foundation is dedicated to sustainable development, education, and
               healthcare initiatives across Africa. Join us in making a difference.
             </p>
-            <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+            <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 text-center">
               <a
                 href='#donate'
                 className="bg-orange-500 text-white py-4 px-8 rounded-button hover:bg-orange-600 transition duration-300 font-medium text-lg"
