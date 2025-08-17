@@ -1,14 +1,13 @@
-import React, { useState } from 'react';
 import Header from '../component/Header';
 import Footer from '@/component/Footer';
 const Project: React.FC = () => {
-const [activeCategory, setActiveCategory] = useState('all');
+/* const [activeCategory, setActiveCategory] = useState('all');
 const [activeLocation, setActiveLocation] = useState('all');
 const [activeStatus, setActiveStatus] = useState('all');
 const [searchQuery, setSearchQuery] = useState('');
 const [showCategoryDropdown, setShowCategoryDropdown] = useState(false);
 const [showLocationDropdown, setShowLocationDropdown] = useState(false);
-const [showStatusDropdown, setShowStatusDropdown] = useState(false); 
+const [showStatusDropdown, setShowStatusDropdown] = useState(false);  */
 // Project data
 const projects = [
 {
