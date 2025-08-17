@@ -20,7 +20,7 @@ const News: React.FC = () => {
           {/* News Card 1 */}
           <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
             <img
-              src="/src/assets/logo.png"
+              src="/src/assets/KPF-Logo.png"
               alt="Foundation Anniversary"
               className="w-full h-52 object-cover object-top"
             />
