@@ -7,6 +7,7 @@ import News from './pages/News';
 import Subscribe from './pages/News';
 import VolunteerPage from './pages/VolunteerPage'; 
 import PartnershipPage from './pages/Partnership';
+import Result from './pages/Result';
 
 
 const App: React.FC = () => {
@@ -23,6 +24,7 @@ const App: React.FC = () => {
             <Route path="/partnership" element={<PartnershipPage />} />
             <Route path="/news" element={<News />} />
             <Route path='id=:subscribeId' element={<Subscribe />} />
+            <Route path="/result" element={<Result />} />
           </Routes>
         </main>
 
