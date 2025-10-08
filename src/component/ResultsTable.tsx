@@ -25,7 +25,7 @@ export function ResultsTable({ results, loading }: ResultsTableProps) {
   return (
     <div className="overflow-x-auto">
       <table className="min-w-full bg-white border border-gray-200 rounded-lg shadow-sm">
-        <thead className="bg-gradient-to-r from-blue-600 to-blue-700 text-white">
+        <thead className="bg-gradient-to-r from-purple-600 to-purple-700 text-white">
           <tr>
             <th className="px-6 py-4 text-left text-sm font-semibold">Position</th>
             <th className="px-6 py-4 text-left text-sm font-semibold">Student Name</th>
@@ -43,7 +43,7 @@ export function ResultsTable({ results, loading }: ResultsTableProps) {
             >
               <td className="px-6 py-4">
                 <span
-                  className={`inline-flex items-center justify-center w-10 h-10 rounded-full font-bold ${
+                 /*  className={`inline-flex items-center justify-center w-10 h-10 rounded-full font-bold ${
                     result.position === 1
                       ? 'bg-yellow-400 text-yellow-900'
                       : result.position === 2
@@ -51,7 +51,7 @@ export function ResultsTable({ results, loading }: ResultsTableProps) {
                       : result.position === 3
                       ? 'bg-orange-400 text-orange-900'
                       : 'bg-gray-100 text-gray-700'
-                  }`}
+                  }`} */
                 >
                   {result.position}
                 </span>
