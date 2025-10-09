@@ -59,5 +59,5 @@ export const CompetitionResult: CompetitionResult[] = [
     { id: '45', student_name: 'Ojuolape Eniola', school_name: 'Upper Standard High School', category: 'Senior Secondary', score: 54, position: 5 },
     { id: '46', student_name: 'Baderin Adedeji', school_name: 'Focus Academy Private School', category: 'Senior Secondary', score: 53, position: 6 },
     { id: '47', student_name: 'Olokojobi FareeDah', school_name: 'intellect Bright Hope School ', category: 'Senior Secondary', score: 51, position: 7 },
-    { id: '48', student_name: 'Oyedepo Rodiat ', school_name: 'Hamkod Rahmat Islamiyah School', category: 'Senior Secondary', score: 81, position: 8 },
+    { id: '48', student_name: 'Oyedepo Rodiat ', school_name: 'Hamkod Rahmat Islamiyah School', category: 'Senior Secondary', score: 50, position: 8 },
 ];
