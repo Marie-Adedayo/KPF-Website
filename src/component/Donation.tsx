@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import PaystackPop from '@paystack/inline-js';
+
 
 const DonationSection: React.FC = () => {
   const [showPopup, setShowPopup] = useState<boolean>(false);
@@ -6,6 +8,9 @@ const DonationSection: React.FC = () => {
   const [selectedItem, setSelectedItem] = useState<string>("");
   const [donationMessage, setDonationMessage] = useState<string>("");
   const [contactInfo, setContactInfo] = useState<string>("");
+  const [donorEmail, setDonorEmail] = useState<string>("");
+  const [donationAmount, setDonationAmount] = useState<string>("");
+  const [currency, setCurrency] = useState<string>('NGN');
 
 
   const togglePopup = (): void => {
@@ -47,7 +52,49 @@ const DonationSection: React.FC = () => {
   };
 
 
+  const handlePaystackPayment = (): void => {
+    const publicKey = (import.meta as any).env?.VITE_PAYSTACK_PUBLIC_KEY || '';
+    const amountNumber = Number(donationAmount);
 
+    if (!publicKey) {
+      alert('Payment unavailable: PAYSTACK public key is not configured.');
+      return;
+    }
+    if (!donorEmail || !donorEmail.includes('@')) {
+      alert('Please enter a valid email address.');
+      return;
+    }
+    if (!amountNumber || amountNumber <= 0) {
+      alert('Please enter a valid donation amount.');
+      return;
+    }
+
+    const paystack = new PaystackPop();
+    paystack.newTransaction({
+      key: publicKey,
+      email: donorEmail,
+      amount: Math.round(amountNumber * 100),
+      currency,
+      metadata: {
+        custom_fields: [
+          {
+            display_name: 'Contact Info',
+            variable_name: 'contact_info',
+            value: contactInfo,
+          },
+        ],
+      },
+      onSuccess: (transaction: { reference: string }) => {
+        alert(`Thank you for your donation!\nReference: ${transaction.reference}`);
+        setShowPopup(false);
+        setDonorEmail("");
+        setDonationAmount("");
+      },
+      onCancel: () => {
+        alert('Payment was cancelled.');
+      },
+    });
+  };
 
   return (
     <section className="py-20 bg-gradient-to-r from-purple-900 to-purple-700">
@@ -77,21 +124,55 @@ const DonationSection: React.FC = () => {
                     >
                       &times;
                     </button>
-                    <h3 className="text-xl font-bold mb-4 text-gray-800">Bank Account Details</h3>
-                    <p className="text-gray-700 mb-2">
-                      <strong>Bank:</strong> Polaris Bank
-                    </p>
-                    <p className="text-gray-700 mb-2">
-                      <strong>Account Name:</strong> Kayode Philip Foundation
-                    </p>
-                    <p className="text-gray-700 mb-2">
-                      <strong>Account Number:</strong> 40 9175 7460
-                    </p>
-                    <p className="text-sm text-gray-500 mt-4">Please use your name as the payment reference.</p>
+                    <h3 className="text-xl font-bold mb-4 text-gray-800">Donate Securely</h3>
+                    <div className="space-y-4">
+                      <div className="grid grid-cols-2 gap-3">
+                        <select
+                          className="w-full border border-gray-300 rounded-md p-3 text-gray-700 focus:ring-1 focus:ring-orange-500 focus:outline-none focus:border-orange-500"
+                          value={currency}
+                          onChange={(e) => setCurrency(e.target.value)}
+                        >
+                          <option value="NGN">NGN (₦)</option>
+                          <option value="GHS">GHS (₵)</option>
+                          <option value="USD">USD ($)</option>
+                          <option value="ZAR">ZAR (R)</option>
+                        </select>
+                        <input
+                          type="number"
+                          className="w-full border border-gray-300 rounded-md p-3 text-gray-700 focus:ring-1 focus:ring-orange-500 focus:outline-none focus:border-orange-500"
+                          placeholder={`Amount (${currency})`}
+                          min="0"
+                          value={donationAmount}
+                          onChange={(e) => setDonationAmount(e.target.value)}
+                        />
+                      </div>
+                      <input
+                        type="email"
+                        className="w-full border border-gray-300 rounded-md p-3 text-gray-700 focus:ring-1 focus:ring-orange-500 focus:outline-none focus:border-orange-500"
+                        placeholder="Your email"
+                        value={donorEmail}
+                        onChange={(e) => setDonorEmail(e.target.value)}
+                      />
+                      <input
+                        type="text"
+                        className="w-full border border-gray-300 rounded-md p-3 text-gray-700 focus:ring-1 focus:ring-orange-500 focus:outline-none focus:border-orange-500"
+                        placeholder="Optional: your name / phone"
+                        value={contactInfo}
+                        onChange={(e) => setContactInfo(e.target.value)}
+                      />
+                      <button
+                        onClick={handlePaystackPayment}
+                        className="w-full bg-orange-500 text-white py-3 rounded-md hover:bg-orange-600 transition"
+                      >
+                        Pay with Paystack
+                      </button>
+                     
+                      <p className="text-xs text-gray-500">Powered by Paystack • NGN payments supported</p>
+                    </div>
                   </div>
                 </div>
-             )}
-         
+              )}
+
             </div>
             <div className="md:w-1/2 bg-purple-50 p-8 md:p-12">
               <h3 className="text-xl font-bold text-gray-800 mb-4">Other Items</h3>
@@ -177,7 +258,7 @@ const DonationSection: React.FC = () => {
           </div>
         )}
 
-        
+
       </div>
       <div className="container mx-auto px-6 mt-10">
         <div className="max-w-3xl mx-auto bg-white rounded-xl shadow-xl overflow-hidden p-10 text-center">
@@ -193,7 +274,7 @@ const DonationSection: React.FC = () => {
           </a>
         </div>
       </div>
-      
+
     </section>
   );
 };
