@@ -3,9 +3,17 @@ import Header from "@/component/Header";
 import Footer from "@/component/Footer";
 
 export default function VolunteerPage() {
-  const [form, setForm] = useState({ name: "", email: "", role: "", bio: "" });
-  const [loading, setLoading] = useState(false);
-  const [success, setSuccess] = useState(false);
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    role: "",
+    bio: "",
+    locationType: "",
+    state: "",
+    country: ""
+  });
+   const [success, setSuccess] = useState(false);
+  const [loading, setLoading] = useState(false); // added loading state
   const formRef = useRef<HTMLDivElement>(null);
 
   const scrollToForm = () => {
@@ -28,8 +36,8 @@ export default function VolunteerPage() {
     e.preventDefault();
     setSuccess(false);
 
-    if (!form.name || !form.email || !form.role || !form.bio) {
-      alert("Please fill in all fields.");
+    if (!form.name || !form.email || !form.role || !form.bio || !form.locationType) {
+      alert("Please fill in all required fields.");
       return;
     }
 
@@ -40,19 +48,18 @@ export default function VolunteerPage() {
 
     setLoading(true);
 
-    // ✅ Use FormData to bypass CORS preflight
-    const formData = new FormData();
-    formData.append("name", form.name);
-    formData.append("email", form.email);
-    formData.append("role", form.role);
-    formData.append("bio", form.bio);
+    // Use URLSearchParams so Apps Script can read e.parameter
+    const payload = new URLSearchParams();
+    Object.entries(form).forEach(([k, v]) => {
+      if (v !== "") payload.append(k, String(v));
+    });
 
     try {
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbzJb-BLUXlCZ8r2BO5hkXbC7evds0ls6j6X89qh8y5F1ZMZ-MlILQfvc8AYF99NzfM/exec",
+        "https://script.google.com/macros/s/AKfycbxY-tcbJMog-iqhFY4zFvfsIowB3AlNWzUjdiFwe6nypOkBX3lxyk_jQe0uLnazZ3DE/exec",
         {
           method: "POST",
-          body: formData,
+          body: payload
         }
       );
 
@@ -60,7 +67,7 @@ export default function VolunteerPage() {
 
       if (result.status === "success") {
         setSuccess(true);
-        setForm({ name: "", email: "", role: "", bio: "" });
+        setForm({ name: "", email: "", role: "", bio: "", locationType: "", state: "", country: "" });
       } else {
         alert("Failed to submit. Server responded with an error.");
       }
