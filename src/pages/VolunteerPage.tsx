@@ -150,11 +150,7 @@ export default function VolunteerPage() {
         className="bg-white border border-gray-400 p-8 rounded-xl shadow max-w-xl mx-auto my-20"
       >
         <h2 className="text-2xl font-bold text-center mb-6">Apply to Volunteer</h2>
-        {success && (
-          <div className="text-green-600 text-center font-medium mb-4">
-            🎉 Thank you! Your application has been received.
-          </div>
-        )}
+        
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label htmlFor="name" className="block font-medium text-gray-700 mb-1">
@@ -196,11 +192,17 @@ export default function VolunteerPage() {
               className="w-full border border-gray-400 px-3 py-2 rounded-md mb-4 focus:ring-1 focus:ring-purple-600 focus:border-purple-600 focus:outline-none"
             >
               <option value="">-- Select a role --</option>
-              <option value="Teaching">Teaching / Mentoring</option>
-              <option value="Event Support">Event Support</option>
-              <option value="Fundraising">Fundraising</option>
-              <option value="Communications">Communications / Social Media</option>
-              <option value="Administration">Administration</option>
+              <option value="Coordination & Logistics">Coordination & Logistics</option>
+              <option value="Registration & Crowd Management">Registration & Crowd Management</option>
+              <option value="Medical & Health Services">Medical & Health Services</option>
+              <option value="Welfare & Feeding">Welfare & Feeding</option>
+              <option value="Education & Empowerment">Education & Empowerment</option>
+              <option value="Media & Documentation">Media & Documentation</option>
+              <option value="Security & Safety">Security & Safety</option>
+              <option value="Sanitation & Environment">Sanitation & Environment</option>
+              <option value="Technical / IT Support">Technical / IT Support</option>
+              <option value="Counseling & Community Engagement">Counseling & Community Engagement</option>
+              <option value="Logistics">Logistics</option>
               <option value="Other">Other</option>
             </select>
 
@@ -300,7 +302,14 @@ export default function VolunteerPage() {
           >
             {loading ? "Submitting..." : "Submit Application"}
           </button>
+
         </form>
+        {success && (
+          <div className="text-green-600 text-center font-medium mb-4">
+            ✅ Thank you! Your application has been received.
+          </div>
+        )}
+        
       </section>
 
       <Footer />
