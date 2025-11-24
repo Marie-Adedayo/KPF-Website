@@ -180,6 +180,87 @@ export default function VolunteerPage() {
             <label htmlFor="role" className="block font-medium text-gray-700 mb-1">
               Preferred Role
             </label>
+            <select
+              id="role"
+              name="role"
+              value={(form as any).role || ""}
+              onChange={(e) => handleChange(e as any)}
+              required
+              className="w-full border border-gray-400 px-3 py-2 rounded-md mb-4 focus:ring-1 focus:ring-purple-600 focus:border-purple-600 focus:outline-none"
+            >
+              <option value="">-- Select a role --</option>
+              <option value="Teaching">Teaching / Mentoring</option>
+              <option value="Event Support">Event Support</option>
+              <option value="Fundraising">Fundraising</option>
+              <option value="Communications">Communications / Social Media</option>
+              <option value="Administration">Administration</option>
+              <option value="Other">Other</option>
+            </select>
+
+            <label htmlFor="locationType" className="block font-medium text-gray-700 mb-1">
+              Where are you based?
+            </label>
+            <select
+              id="locationType"
+              name="locationType"
+              value={(form as any).locationType || ""}
+              onChange={(e) => handleChange(e as any)}
+              required
+              className="w-full border border-gray-400 px-3 py-2 rounded-md mb-4 focus:ring-1 focus:ring-purple-600 focus:border-purple-600 focus:outline-none"
+            >
+              <option value="">-- Select location --</option>
+              <option value="nigeria">Nigeria</option>
+              <option value="abroad">Abroad</option>
+            </select>
+
+            {/* Nigerian states list */}
+            {((form as any).locationType === "nigeria") && (() => {
+              const NIGERIAN_STATES = [
+              "Abia","Adamawa","Akwa Ibom","Anambra","Bauchi","Bayelsa","Benue",
+              "Borno","Cross River","Delta","Ebonyi","Edo","Ekiti","Enugu","Gombe",
+              "Imo","Jigawa","Kaduna","Kano","Katsina","Kebbi","Kogi","Kwara",
+              "Lagos","Nasarawa","Niger","Ogun","Ondo","Osun","Oyo","Plateau",
+              "Rivers","Sokoto","Taraba","Yobe","Zamfara","Federal Capital Territory"
+              ];
+              return (
+              <>
+                <label htmlFor="state" className="block font-medium text-gray-700 mb-1">
+                State in Nigeria
+                </label>
+                <select
+                id="state"
+                name="state"
+                value={(form as any).state || ""}
+                onChange={(e) => handleChange(e as any)}
+                required
+                className="w-full border border-gray-400 px-3 py-2 rounded-md mb-4 focus:ring-1 focus:ring-purple-600 focus:border-purple-600 focus:outline-none"
+                >
+                <option value="">-- Select state --</option>
+                {NIGERIAN_STATES.map((s) => (
+                  <option key={s} value={s}>
+                  {s}
+                  </option>
+                ))}
+                </select>
+              </>
+              );
+            })()}
+
+            {((form as any).locationType === "abroad") && (
+              <>
+              <label htmlFor="country" className="block font-medium text-gray-700 mb-1">
+                Country
+              </label>
+              <input
+                id="country"
+                name="country"
+                value={(form as any).country || ""}
+                onChange={handleChange}
+                required
+                className="w-full border border-gray-400 px-3 py-2 rounded-md mb-4 focus:ring-1 focus:ring-purple-600 focus:border-purple-600 focus:outline-none"
+              />
+              </>
+            )}
             <input
               id="role"
               name="role"
