@@ -165,65 +165,88 @@ const About: React.FC = () => {
                 <div className="container mx-auto px-6">
                     <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-800">Board of Directors</h2>
                     <p className="text-gray-600 text-center max-w-3xl mx-auto mb-16">Our diverse board brings expertise from various sectors to guide our strategic direction and governance.</p>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <LeadershipCard
-                        name="Kayode Philip Fadele"
-                        title="President"
-                        image="/Images/kayode.jpg"
-                        summary="Oluwakayode Fadele is a dynamic lifestyle coach, author, and social entrepreneur, and content creator..."
-                        fullText={`Oluwakayode Fadele is a dynamic lifestyle coach, author, social entrepreneur, and content creator, passionate about transforming lives and empowering communities. He is the visionary founder of the Kayode Philip Foundation, a non-profit organization dedicated to youth empowerment, education, and community development across underserved areas.
-                                With a deep commitment to personal growth and societal impact, Oluwakayode combines his expertise in coaching and storytelling to inspire individuals to unlock their full potential. Through his content and public engagements, he addresses themes around purpose, mindset, relationships, and sustainable development.
-                                As a trusted voice in the personal development space, Oluwakayode has authored transformative resources and created digital platforms that reach audiences globally. His work reflects a lifelong mission to create meaningful change, especially among youth and marginalized groups.
-                                Whether in coaching sessions, community projects, or digital content, Oluwakayode Fadele continues to lead with authenticity, compassion, and an unwavering belief in the power of purpose-driven living.`}
-                        
-                    />
+                    <div className="flex flex-wrap justify-center">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <LeadershipCard
+                                name="Kayode Philip Fadele"
+                                title="President"
+                                image="/Images/kayode.jpg"
+                                summary="Oluwakayode Fadele is a dynamic lifestyle coach, author, and social entrepreneur, and content creator..."
+                                fullText={`Oluwakayode Fadele is a dynamic lifestyle coach, author, social entrepreneur, and content creator, passionate about transforming lives and empowering communities. He is the visionary founder of the Kayode Philip Foundation, a non-profit organization dedicated to youth empowerment, education, and community development across underserved areas.
+                                        With a deep commitment to personal growth and societal impact, Oluwakayode combines his expertise in coaching and storytelling to inspire individuals to unlock their full potential. Through his content and public engagements, he addresses themes around purpose, mindset, relationships, and sustainable development.
+                                        As a trusted voice in the personal development space, Oluwakayode has authored transformative resources and created digital platforms that reach audiences globally. His work reflects a lifelong mission to create meaningful change, especially among youth and marginalized groups.
+                                        Whether in coaching sessions, community projects, or digital content, Oluwakayode Fadele continues to lead with authenticity, compassion, and an unwavering belief in the power of purpose-driven living.`}
+                                
+                            />
 
-                    <LeadershipCard
-                        name="Jumoby D.A"
-                        title="Vice President"
-                        image="/Images/Vice President.jpg"
-                        summary="Creator. Disruptor. Curator. Founder & Chief Thinking Officer at Travul.org Ltd, a travel..."
-                        fullText={`Creator. Disruptor. Curator. Founder & Chief Thinking Officer at Travul.org Ltd, a travel fintech company reimagining how people explore, save, and grow through borderless living.
-                        I fuse creativity with strategy, disruption with execution. With a proven track record in innovation, entrepreneurship, and client experience, I don’t just think outside the box—I redesign the box entirely.
-                        Known for bold ideas, detailed execution, and a relentless drive for excellence, I lead with vision, build with purpose, and deliver with heart.`}
-                    />
-                     <LeadershipCard
-                        name="Oriyomi Joseph"
-                        title="Member"
-                        image="/Images/Ori.jpg"
-                        summary="A fellow at Global Arts In Medicine, His exceptional talents extend across various domains..."
-                        fullText={`Oriyomi Joseph, affectionately known as ORí, is a multifaceted performing artist both on screen and stage, with a deep-rooted
-                            passion for the arts. A Bachelor of Arts degree holder in Theatre Arts. His journey is a testament to the enriching experiences that the study of Theatre Arts can offer. He embodies the cultural
-                            richness and diversity of his heritage. A fellow at Global Arts In Medicine, His exceptional talents extend across various domains,
-                            making him a true Renaissance artist. ORí has earned recognition and awards for his outstanding contributions to the theatre, excelling in areas such as dance, drums, acting, recitation,
-                            voice(over)acting, singing, chanting, etc. Hailing from the esteemed lineage of the Ojomu of Ajiran Kingdom in Lagos, Nigeria, One of
-                            ORí's notable achievements lies in his captivating portrayal of 'Wasiu Wakanaki' in the renowned
-                            TV sitcom, "The Johnsons." This beloved character continues to entertain audiences on Africa's
-                            most-viewed TV platform, Africa Magic, available on DsTV. Additionally, ORí has taken on
-                            leading roles in a Yoruba TV series titled "ELENINI," produced by NOSTALGIA MEDIA NG,
-                            sub-lead, supporting roles in other films and television series.
-                            Beyond the screen, ORí has achieved international acclaim, representing Nigerian culture and the
-                            arts on global
-                            platforms. He led a group of performers at the International Youth Arts Festival (IYAF) in the UK,
-                            promoting African culture and artistic excellence. He has also facilitated theatre workshops and
-                            cultural exchanges in Ghana, the Republic of Benin, Togo, and the Ivory Coast, further
-                            strengthening the ties between nations through the medium of theatre.
-                            ORí is more than just an actor; he's a cultural ambassador and educator. He has shared his vast
-                            knowledge of Theatre for Development (TFD) by engaging with colleges, NGOs, Higher
-                            institutions, communities, and beyond. This work showcases his commitment to preserving and
-                            promoting cultural aesthetics through the transformative power of theatre.
-                            Notably, he has made two special theater appearances at the Badagry Diaspora Festival (BDF),
-                            alongside distinguished figures like Honorable Abike Dabiri, Senior Special Assistant to the former
-                            President of Nigeria on Foreign Affairs and Diaspora. His contributions to cultural enrichment have
-                            been recognized and celebrated, as evidenced by his recent decoration and award as an Ambassador
-                            of Arts and Culture under the auspices of the Alimosho Art Initiative (AAI) and the Alimosho Art
-                            Community (AAC).
-                            ORí's journey from conception to application to becoming a cultural icon and ambassador is an
-                            inspiring testament to the boundless adventures which continue to enrich the world with the beauty
-                            and depth of Nigerian culture, captivating hearts on both the local and global stages`}
-                    />
+                            <LeadershipCard
+                                name="Jumoby D.A"
+                                title="Vice President"
+                                image="/Images/Vice President.jpg"
+                                summary="Creator. Disruptor. Curator. Founder & Chief Thinking Officer at Travul.org Ltd, a travel..."
+                                fullText={`Creator. Disruptor. Curator. Founder & Chief Thinking Officer at Travul.org Ltd, a travel fintech company reimagining how people explore, save, and grow through borderless living.
+                                I fuse creativity with strategy, disruption with execution. With a proven track record in innovation, entrepreneurship, and client experience, I don’t just think outside the box—I redesign the box entirely.
+                                Known for bold ideas, detailed execution, and a relentless drive for excellence, I lead with vision, build with purpose, and deliver with heart.`}
+                            />
+                            <LeadershipCard
+                                name="Oriyomi Joseph"
+                                title="Member"
+                                image="/Images/Ori.jpg"
+                                summary="A fellow at Global Arts In Medicine, His exceptional talents extend across various domains..."
+                                fullText={`Oriyomi Joseph, affectionately known as ORí, is a multifaceted performing artist both on screen and stage, with a deep-rooted
+                                    passion for the arts. A Bachelor of Arts degree holder in Theatre Arts. His journey is a testament to the enriching experiences that the study of Theatre Arts can offer. He embodies the cultural
+                                    richness and diversity of his heritage. A fellow at Global Arts In Medicine, His exceptional talents extend across various domains,
+                                    making him a true Renaissance artist. ORí has earned recognition and awards for his outstanding contributions to the theatre, excelling in areas such as dance, drums, acting, recitation,
+                                    voice(over)acting, singing, chanting, etc. Hailing from the esteemed lineage of the Ojomu of Ajiran Kingdom in Lagos, Nigeria, One of
+                                    ORí's notable achievements lies in his captivating portrayal of 'Wasiu Wakanaki' in the renowned
+                                    TV sitcom, "The Johnsons." This beloved character continues to entertain audiences on Africa's
+                                    most-viewed TV platform, Africa Magic, available on DsTV. Additionally, ORí has taken on
+                                    leading roles in a Yoruba TV series titled "ELENINI," produced by NOSTALGIA MEDIA NG,
+                                    sub-lead, supporting roles in other films and television series.
+                                    Beyond the screen, ORí has achieved international acclaim, representing Nigerian culture and the
+                                    arts on global
+                                    platforms. He led a group of performers at the International Youth Arts Festival (IYAF) in the UK,
+                                    promoting African culture and artistic excellence. He has also facilitated theatre workshops and
+                                    cultural exchanges in Ghana, the Republic of Benin, Togo, and the Ivory Coast, further
+                                    strengthening the ties between nations through the medium of theatre.
+                                    ORí is more than just an actor; he's a cultural ambassador and educator. He has shared his vast
+                                    knowledge of Theatre for Development (TFD) by engaging with colleges, NGOs, Higher
+                                    institutions, communities, and beyond. This work showcases his commitment to preserving and
+                                    promoting cultural aesthetics through the transformative power of theatre.
+                                    Notably, he has made two special theater appearances at the Badagry Diaspora Festival (BDF),
+                                    alongside distinguished figures like Honorable Abike Dabiri, Senior Special Assistant to the former
+                                    President of Nigeria on Foreign Affairs and Diaspora. His contributions to cultural enrichment have
+                                    been recognized and celebrated, as evidenced by his recent decoration and award as an Ambassador
+                                    of Arts and Culture under the auspices of the Alimosho Art Initiative (AAI) and the Alimosho Art
+                                    Community (AAC).
+                                    ORí's journey from conception to application to becoming a cultural icon and ambassador is an
+                                    inspiring testament to the boundless adventures which continue to enrich the world with the beauty
+                                    and depth of Nigerian culture, captivating hearts on both the local and global stages`}
+                            />
+                            <LeadershipCard
+                                name="Aderemi Idowu Abel"
+                                title="Director of Finance"
+                                image="/Images/mr ID.jpeg"
+                                summary="Prince Aderemi Idowu Abel is a graduate of Business Administration from Osun State University, Osogbo, and a Chartered Manager..."
+                                fullText={`Prince Aderemi Idowu Abel is a graduate of Business Administration from Osun State University, Osogbo, and a Chartered Manager and member of the Nigerian Institute of Management (NIM). He is the Founder of ArcGlobal Group, a business organization established in 2021 with operational subsidiaries spanning Haulage, Mining, Real Estate, Finance, and Agriculture.
+                                With several years of practical experience in both the corporate and business sectors, Prince Aderemi is widely recognized for his passion and expertise in supporting business growth across Nigeria and beyond. He is particularly renowned for providing strategic financial support through diverse well tailored loan schemes, financial advisory services, and long-term business growth strategies, enabling them to strengthen operations and achieve sustainable expansion, helping businesses strengthen their financial capacity, seize opportunities, and enhance operational stability.
+                                A skilled business analyst, strategist, and consultant, Prince Aderemi has delivered impactful consultations for numerous enterprises in both the private and public sectors. His work with the Lagos State Government is especially notable, driven by his strong background in human resources, capacity building, and organizational development.
+                                He is also an alumnus of Youniverse Business School in the United Kingdom—an international institute dedicated to equipping entrepreneurs around the world with the skills and expertise needed to build sustainable and scalable businesses.
+                                A serial entrepreneur with an unwavering commitment to excellence, Prince Aderemi Idowu Abel believes in getting the job done before giving excuses. He stands as a true embodiment of competence, resilience, and visionary leadership.`}
+                            />
+                            
+                            <LeadershipCard
+                                name="Fasanya Marie Adedayo"
+                                title="Head of Operation"
+                                image="/Images/Adedayo.jpg"
+                                summary="Marie is a passionate operations leader, social entrepreneur, and community-impact..."
+                                fullText={`Marie is a passionate operations leader, social entrepreneur, and community-impact advocate committed to creating opportunities for young people and underserved communities. With a strong track record in coordinating educational 
+                                    programs, organizing statewide competitions, and managing high-impact foundation projects, she brings grace, strategy, and excellence to every initiative she leads. Her work is driven by a deep belief in empowerment, purpose, and meaningful
+                                    change—making her a vital force in advancing the mission of the Kayode Philip Foundation.`}
+                            />
 
-                 
+                    
+                        </div>
                     </div>
                 </div>
             </section>

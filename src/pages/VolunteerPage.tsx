@@ -95,9 +95,9 @@ export default function VolunteerPage() {
         </div>
 
         <div className="container mx-auto px-6 relative z-10 flex items-center h-full" style={{ minHeight: "80vh" }}>
-          <div className="max-w-2xl text-white">
+          <div className="max-w-xl text-white">
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-              Partner or Volunteer with Us<br /> and Transform Lives
+              Partner or Volunteer with Us and Transform Lives
             </h1>
             <p className="text-xl mb-8">
               Whether you're looking to contribute your time or resources, your involvement can help us bring hope, education, and empowerment to communities in need.
