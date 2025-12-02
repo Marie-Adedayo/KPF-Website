@@ -8,6 +8,9 @@ import Subscribe from './pages/News';
 import VolunteerPage from './pages/VolunteerPage'; 
 import PartnershipPage from './pages/Partnership';
 import Result from './pages/Result';
+import Impact from './pages/Impact';
+import PaymentSuccess from './pages/PaymentSuccess';
+import PaymentFailed from './pages/PaymentFailed';
 
 
 const App: React.FC = () => {
@@ -23,6 +26,9 @@ const App: React.FC = () => {
             <Route path="/volunteer" element={<VolunteerPage />} /> 
             <Route path="/partnership" element={<PartnershipPage />} />
             <Route path="/news" element={<News />} />
+            <Route path="/impact" element={<Impact />} />
+            <Route path="/payment-success" element={<PaymentSuccess />} />
+            <Route path="/payment-failed" element={<PaymentFailed />} />
             <Route path='id=:subscribeId' element={<Subscribe />} />
             <Route path="/result" element={<Result />} />
           </Routes>

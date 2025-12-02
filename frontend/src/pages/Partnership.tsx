@@ -33,6 +33,12 @@ export default function PartnershipPage() {
     e.preventDefault();
     setSuccess(false);
 
+    // Check honeypot first to prevent bot submissions
+    if (form.honeypot) {
+      console.warn("Bot detected. Submission blocked.");
+      return;
+    }
+
     const requiredFields = ["name", "email", "organization", "phone", "partnershipType", "offer", "reason"];
     const missingFields = requiredFields.filter((field) => !form[field as keyof typeof form]);
 
@@ -86,11 +92,6 @@ export default function PartnershipPage() {
     } finally {
       setLoading(false);
     }
-    if (form.honeypot) {
-        console.warn("Bot detected. Submission blocked.");
-        return;
-    }
-
   };
 
   return (
@@ -208,8 +209,8 @@ export default function PartnershipPage() {
           <input
                 type="text"
                 name="honeypot"
-                value=""
-                onChange={() => {}}
+                value={form.honeypot}
+                onChange={handleChange}
                 style={{ display: "none" }}
                 tabIndex={-1}
             />

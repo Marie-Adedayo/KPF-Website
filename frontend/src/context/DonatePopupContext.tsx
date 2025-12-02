@@ -1,6 +1,6 @@
 // src/context/DonatePopupContext.tsx
 import React, { createContext, useState, useContext } from 'react';
-import DonatePopup from '../component/DonatePopup';
+import DonatePopup from '../components/DonatePopup';
 
 interface DonatePopupContextType {
   openPopup: () => void;

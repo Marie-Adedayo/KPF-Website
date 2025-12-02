@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import PaystackPop from '@paystack/inline-js';
+import { PayPalButtons } from '@paypal/react-paypal-js';
 
+type PaymentMethod = 'paypal' | 'paystack' | null;
 
 const DonationSection: React.FC = () => {
   const [showPopup, setShowPopup] = useState<boolean>(false);
+  const [paymentMethod, setPaymentMethod] = useState<PaymentMethod>(null);
   const [showItemPopup, setShowItemPopup] = useState(false);
   const [selectedItem, setSelectedItem] = useState<string>("");
   const [donationMessage, setDonationMessage] = useState<string>("");
@@ -13,8 +16,17 @@ const DonationSection: React.FC = () => {
   const [currency, setCurrency] = useState<string>('NGN');
 
 
-  const togglePopup = (): void => {
-    setShowPopup((prev) => !prev);
+  const openPopup = (method: 'paypal' | 'paystack'): void => {
+    setPaymentMethod(method);
+    setShowPopup(true);
+  };
+
+  const closePopup = (): void => {
+    setShowPopup(false);
+    setPaymentMethod(null);
+    setDonorEmail("");
+    setDonationAmount("");
+    setContactInfo("");
   };
 
   const handleItemClick = (itemName: string) => {
@@ -94,10 +106,7 @@ const DonationSection: React.FC = () => {
 
     onSuccess: async (transaction: { reference: string }) => {
       alert(`Thank you for your donation!\nReference: ${transaction.reference}`);
-      setShowPopup(false);
-      setDonorEmail("");
-      setDonationAmount("");
-      setContactInfo("");
+      closePopup();
       try {
         // send minimal info to backend for server-side verification
         const resp = await fetch("/api/verify", {
@@ -115,14 +124,14 @@ const DonationSection: React.FC = () => {
         const data = await resp.json();
         if (resp.ok && data.verified) {
           // Verified by server
-          window.location.href = `${process.env.REACT_APP_SUCCESS_URL || "/payment-success"}?ref=${encodeURIComponent(transaction.reference)}`;
+          window.location.href = `${import.meta.env.VITE_SUCCESS_URL || "/payment-success"}?ref=${encodeURIComponent(transaction.reference)}`;
         } else {
           // Not verified
-          window.location.href = `${process.env.REACT_APP_FAIL_URL || "/payment-failed"}?ref=${encodeURIComponent(transaction.reference)}`;
+          window.location.href = `${import.meta.env.VITE_FAIL_URL || "/payment-failed"}?ref=${encodeURIComponent(transaction.reference)}`;
         }
       } catch (err) {
         console.error("Verification request failed", err);
-        window.location.href = `${process.env.REACT_APP_FAIL_URL || "/payment-failed"}?ref=${encodeURIComponent(transaction.reference)}`;
+        window.location.href = `${import.meta.env.VITE_FAIL_URL || "/payment-failed"}?ref=${encodeURIComponent(transaction.reference)}`;
       }
     },
 
@@ -144,24 +153,34 @@ const DonationSection: React.FC = () => {
                 Your contribution helps us continue our mission of empowering communities and transforming lives across Africa.
               </p>
 
-              <button
-                onClick={togglePopup}
-                className="bg-orange-500 text-white py-4 px-8 rounded-button hover:bg-orange-600 transition duration-300 font-medium text-lg"
-              >
-                Donate with Paystack
-              </button>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button
+                  onClick={() => openPopup('paystack')}
+                  className="bg-orange-500 text-white py-4 px-8 rounded-button hover:bg-orange-600 transition duration-300 font-medium text-lg"
+                >
+                  Donate with Paystack
+                </button>
+                <button
+                  onClick={() => openPopup('paypal')}
+                  className="bg-blue-600 text-white py-4 px-8 rounded-button hover:bg-blue-700 transition duration-300 font-medium text-lg"
+                >
+                  Donate with PayPal
+                </button>
+              </div>
 
               {showPopup && (
                 <div className="fixed inset-0 bg-white/10 backdrop-blur-sm flex justify-center items-center z-50">
-                  <div className="bg-white p-8 rounded-xl shadow-lg text-left max-w-sm w-full relative">
+                  <div className="bg-white p-8 rounded-xl shadow-lg text-left max-w-sm w-full relative max-h-[90vh] overflow-y-auto">
                     <button
-                      onClick={togglePopup}
+                      onClick={closePopup}
                       className="absolute top-3 right-3 text-gray-500 hover:text-gray-700 text-xl"
                       aria-label="Close"
                     >
                       &times;
                     </button>
-                    <h3 className="text-xl font-bold mb-4 text-gray-800">Donate Securely</h3>
+                    <h3 className="text-xl font-bold mb-4 text-gray-800">
+                      Donate Securely via {paymentMethod === 'paypal' ? 'PayPal' : 'Paystack'}
+                    </h3>
                     <div className="space-y-4">
                       <div className="grid grid-cols-2 gap-3">
                         <select
@@ -169,10 +188,20 @@ const DonationSection: React.FC = () => {
                           value={currency}
                           onChange={(e) => setCurrency(e.target.value)}
                         >
-                          <option value="NGN">NGN (₦)</option>
-                          <option value="GHS">GHS (₵)</option>
-                          <option value="USD">USD ($)</option>
-                          <option value="ZAR">ZAR (R)</option>
+                          {paymentMethod === 'paypal' ? (
+                            <>
+                              <option value="USD">USD ($)</option>
+                              <option value="EUR">EUR (€)</option>
+                              <option value="GBP">GBP (£)</option>
+                            </>
+                          ) : (
+                            <>
+                              <option value="NGN">NGN (₦)</option>
+                              <option value="GHS">GHS (₵)</option>
+                              <option value="USD">USD ($)</option>
+                              <option value="ZAR">ZAR (R)</option>
+                            </>
+                          )}
                         </select>
                         <input
                           type="number"
@@ -183,28 +212,100 @@ const DonationSection: React.FC = () => {
                           onChange={(e) => setDonationAmount(e.target.value)}
                         />
                       </div>
-                      <input
-                        type="email"
-                        className="w-full border border-gray-300 rounded-md p-3 text-gray-700 focus:ring-1 focus:ring-orange-500 focus:outline-none focus:border-orange-500"
-                        placeholder="Your email"
-                        value={donorEmail}
-                        onChange={(e) => setDonorEmail(e.target.value)}
-                      />
-                      <input
-                        type="text"
-                        className="w-full border border-gray-300 rounded-md p-3 text-gray-700 focus:ring-1 focus:ring-orange-500 focus:outline-none focus:border-orange-500"
-                        placeholder="Optional: your name / phone"
-                        value={contactInfo}
-                        onChange={(e) => setContactInfo(e.target.value)}
-                      />
-                      <button
-                        onClick={handlePaystackPayment}
-                        className="w-full bg-orange-500 text-white py-3 rounded-md hover:bg-orange-600 transition"
-                      >
-                        Pay with Paystack
-                      </button>
-                     
-                      <p className="text-xs text-gray-500">Powered by Paystack • NGN payments supported</p>
+                      {paymentMethod === 'paystack' && (
+                        <>
+                          <input
+                            type="email"
+                            className="w-full border border-gray-300 rounded-md p-3 text-gray-700 focus:ring-1 focus:ring-orange-500 focus:outline-none focus:border-orange-500"
+                            placeholder="Your email"
+                            value={donorEmail}
+                            onChange={(e) => setDonorEmail(e.target.value)}
+                          />
+                          <input
+                            type="text"
+                            className="w-full border border-gray-300 rounded-md p-3 text-gray-700 focus:ring-1 focus:ring-orange-500 focus:outline-none focus:border-orange-500"
+                            placeholder="Optional: your name / phone"
+                            value={contactInfo}
+                            onChange={(e) => setContactInfo(e.target.value)}
+                          />
+                          <button
+                            onClick={handlePaystackPayment}
+                            className="w-full bg-orange-500 text-white py-3 rounded-md hover:bg-orange-600 transition"
+                          >
+                            Pay with Paystack
+                          </button>
+                          <p className="text-xs text-gray-500">Powered by Paystack • NGN payments supported</p>
+                        </>
+                      )}
+                      {paymentMethod === 'paypal' && (
+                        <>
+                          <input
+                            type="text"
+                            className="w-full border border-gray-300 rounded-md p-3 text-gray-700 focus:ring-1 focus:ring-orange-500 focus:outline-none focus:border-orange-500"
+                            placeholder="Optional: your name / phone"
+                            value={contactInfo}
+                            onChange={(e) => setContactInfo(e.target.value)}
+                          />
+                          {donationAmount && Number(donationAmount) > 0 ? (
+                            <PayPalButtons
+                              style={{
+                                layout: "vertical",
+                                color: "gold",
+                                shape: "rect",
+                                label: "paypal",
+                              }}
+                              forceReRender={[donationAmount, currency]}
+                              createOrder={(data, actions) => {
+                                return actions.order.create({
+                                  intent: "CAPTURE",
+                                  purchase_units: [
+                                    {
+                                      amount: { 
+                                        value: donationAmount, 
+                                        currency_code: currency 
+                                      },
+                                    },
+                                  ],
+                                });
+                              }}
+                              onApprove={async (_, actions) => {
+                                if (!actions.order) return;
+                                const details = await actions.order.capture();
+                                const payer = details.payer;
+                                
+                                alert(`Donation completed! Thank you ${payer?.name?.given_name || 'for your support'}`);
+                                closePopup();
+                                
+                                // Send to backend for verification
+                                try {
+                                  const backendUrl = import.meta.env.VITE_PAYPAL_BACKEND_URL || '';
+                                  if (backendUrl) {
+                                    await fetch(`${backendUrl}/verify-paypal`, {
+                                      method: "POST",
+                                      headers: { "Content-Type": "application/json" },
+                                      body: JSON.stringify({
+                                        orderId: details.id,
+                                        amount: donationAmount,
+                                        currency,
+                                        email: payer?.email_address,
+                                        contact: contactInfo,
+                                      }),
+                                    });
+                                  }
+                                } catch (err) {
+                                  console.error("PayPal verification request failed", err);
+                                }
+                              }}
+                              onError={() => alert("Payment error. Please try again.")}
+                            />
+                          ) : (
+                            <p className="text-sm text-gray-500 text-center py-4">
+                              Please enter an amount to proceed with PayPal payment
+                            </p>
+                          )}
+                          <p className="text-xs text-gray-500">Powered by PayPal • International payments supported</p>
+                        </>
+                      )}
                     </div>
                   </div>
                 </div>
