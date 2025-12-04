@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+// @ts-ignore: module '@paystack/inline-js' has no type declarations
 import PaystackPop from '@paystack/inline-js';
 import { PayPalButtons } from '@paypal/react-paypal-js';
 
@@ -124,14 +125,14 @@ const DonationSection: React.FC = () => {
         const data = await resp.json();
         if (resp.ok && data.verified) {
           // Verified by server
-          window.location.href = `${import.meta.env.VITE_SUCCESS_URL || "/payment-success"}?ref=${encodeURIComponent(transaction.reference)}`;
+          window.location.href = `${(import.meta as any).env.VITE_SUCCESS_URL || "/payment-success"}?ref=${encodeURIComponent(transaction.reference)}`;
         } else {
           // Not verified
-          window.location.href = `${import.meta.env.VITE_FAIL_URL || "/payment-failed"}?ref=${encodeURIComponent(transaction.reference)}`;
+          window.location.href = `${(import.meta as any).env.VITE_FAIL_URL || "/payment-failed"}?ref=${encodeURIComponent(transaction.reference)}&reason=verification_failed`;
         }
       } catch (err) {
         console.error("Verification request failed", err);
-        window.location.href = `${import.meta.env.VITE_FAIL_URL || "/payment-failed"}?ref=${encodeURIComponent(transaction.reference)}`;
+        window.location.href = `${(import.meta as any).env.VITE_FAIL_URL || "/payment-failed"}?ref=${encodeURIComponent(transaction.reference)}`;
       }
     },
 
@@ -278,7 +279,7 @@ const DonationSection: React.FC = () => {
                                 
                                 // Send to backend for verification
                                 try {
-                                  const backendUrl = import.meta.env.VITE_PAYPAL_BACKEND_URL || '';
+                                  const backendUrl = (import.meta as any).env.VITE_PAYPAL_BACKEND_URL || '';
                                   if (backendUrl) {
                                     await fetch(`${backendUrl}/verify-paypal`, {
                                       method: "POST",

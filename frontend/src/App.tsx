@@ -11,6 +11,7 @@ import Result from './pages/Result';
 import Impact from './pages/Impact';
 import PaymentSuccess from './pages/PaymentSuccess';
 import PaymentFailed from './pages/PaymentFailed';
+import CampaignPage from './pages/CampaignPage';
 
 
 const App: React.FC = () => {
@@ -31,6 +32,7 @@ const App: React.FC = () => {
             <Route path="/payment-failed" element={<PaymentFailed />} />
             <Route path='id=:subscribeId' element={<Subscribe />} />
             <Route path="/result" element={<Result />} />
+            <Route path="/fodo2026" element={<CampaignPage />} />
           </Routes>
         </main>
 

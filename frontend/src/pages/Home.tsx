@@ -1,15 +1,15 @@
-import React, {useEffect} from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import Header from '../component/Header';
-import Footer from '../component/Footer';
-
-import background from '../assets/herobackground.jpg';
-import DonationSection from '../component/Donation';
-import OurWorkSection from '../component/OurWork';
-import News from '../component/News/News';
-import Testimonials from '../component/Testimonials';
-import ImpactSection from '../component/ImpactSection';
-import  FeaturedStories from '../component/FeaturedStories'
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+// @ts-ignore: image module without type declarations
+import background from '../assets/homepage.jpg';
+import DonationSection from '../components/Donation';
+import OurWorkSection from '../components/OurWork';
+import News from '../components/News/News';
+import Testimonials from '../components/Testimonials';
+import ImpactSection from '../components/ImpactSection';
+import  FeaturedStories from '../components/FeaturedStories'
 
 const Home: React.FC = () => {
  const location = useLocation();
@@ -21,11 +21,61 @@ const Home: React.FC = () => {
         element.scrollIntoView({ behavior: 'smooth' });
       }
     }
-  }, [location]);
-    
-  return (
-    <div className="min-h-screen font-sans">
-      <Header />
+}, [location]);
+  
+const [showPopup, setShowPopup] = useState(true);
+
+return (
+  <div className="min-h-screen font-sans">
+    <Header />
+{/* Popup modal shown on page load - edit content as needed */}
+{showPopup && (
+  <div className="fixed inset-0 z-50 flex items-center justify-center">
+    <div
+      className="absolute inset-0 bg-black/60"
+      onClick={() => setShowPopup(false)}
+    />
+
+    <div
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="popup-title"
+      onClick={(e) => e.stopPropagation()}
+      className="relative bg-white rounded-lg shadow-xl max-w-xl w-full mx-4 p-6 text-left"
+    >
+      <button
+        aria-label="Close"
+        onClick={() => setShowPopup(false)}
+        className="absolute top-3 right-3 text-gray-600 hover:text-gray-800"
+      >
+        ✕
+      </button>
+
+      <h2 id="popup-title" className="text-2xl font-bold mb-2">
+        Feed One Save One 2026
+      </h2>
+      <p className="text-gray-700 mb-4">
+        [Replace this with a short description, dates, or CTA for the campaign.]
+      </p>
+
+      <div className="flex justify-end gap-3">
+        <a
+          href="/fodo2026"
+          className="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600"
+        >
+          Learn more
+        </a>
+        <button
+          onClick={() => setShowPopup(false)}
+          className="px-4 py-2 border rounded"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+)}
+{/* Hero Section */}
       {/* Hero Section */}
       <section className="relative pt-24 overflow-hidden" style={{ minHeight: '90vh' }}>
         <div className="absolute inset-0 z-0">

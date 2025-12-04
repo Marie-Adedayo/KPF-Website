@@ -16,5 +16,27 @@ declare module '@paystack/inline-js' {
         }): void;
     }
 }
+/* 
+declare module "@paystack/inline-js" {
+  interface PaystackPopOptions {
+    key: string;
+    email: string;
+    amount: number;
+    ref?: string;
+    currency?: string;
+    metadata?: Record<string, any>;
+    callback?: (response: any) => void;
+    onClose?: () => void;
+  }
+
+  class PaystackPop {
+    static setup(options: PaystackPopOptions): PaystackPop;
+    openIframe(): void;
+  }
+
+  export = PaystackPop;
+}
 
 
+
+ */
