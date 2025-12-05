@@ -1,7 +1,7 @@
 import React from 'react';
-import Header from '../component/Header';
-import Footer from '../component/Footer';
-import NewsCard from '../component/News/NewsCard';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import NewsCard from '../components/News/NewsCard';
 
 const News: React.FC = () => {
   const newsItems = [

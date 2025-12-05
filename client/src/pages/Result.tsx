@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Trophy } from 'lucide-react';
-import { ResultsTable } from '../component/ResultsTable';
+import { ResultsTable } from '../components/ResultsTable';
 import { CompetitionResult as allResults } from '../lib/supbase';
-import Header from '@/component/Header';
+import Header from '../components/Header';
 
 type Category = 'Primary' | 'Junior Secondary' | 'Senior Secondary';
 

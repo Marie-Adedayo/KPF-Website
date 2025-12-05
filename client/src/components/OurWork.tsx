@@ -245,4 +245,3 @@ const OurWorkSection: React.FC = () => {
 };
 
 export default OurWorkSection;
-

@@ -42,4 +42,3 @@ const ImpactSection : React.FC = () => {
 
 }
 export default ImpactSection;
-

@@ -41,7 +41,7 @@ return (
       aria-modal="true"
       aria-labelledby="popup-title"
       onClick={(e) => e.stopPropagation()}
-      className="relative bg-white rounded-lg shadow-xl max-w-xl w-full mx-4 p-6 text-left"
+      className="relative bg-white rounded-lg shadow-xl max-w-md w-full mx-2 p-4 text-left"
     >
       <button
         aria-label="Close"
@@ -51,12 +51,9 @@ return (
         ✕
       </button>
 
-      <h2 id="popup-title" className="text-2xl font-bold mb-2">
-        Feed One Save One 2026
-      </h2>
-      <p className="text-gray-700 mb-4">
-        [Replace this with a short description, dates, or CTA for the campaign.]
-      </p>
+      <div className="flex justify-center items-center my-6">
+        <img src="/Images/foso.jpeg" alt="foso" className="w-[80%] max-w-md h-auto object-cover" />
+      </div>
 
       <div className="flex justify-end gap-3">
         <a

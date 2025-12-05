@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
-import Header from "../component/Header";
-import Footer from "../component/Footer";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export default function VolunteerPage() {
   const [form, setForm] = useState({
@@ -12,7 +12,7 @@ export default function VolunteerPage() {
     state: "",
     country: ""
   });
-   const [success, setSuccess] = useState(false);
+  const [success, setSuccess] = useState(false);
   const [loading, setLoading] = useState(false); // added loading state
   const formRef = useRef<HTMLDivElement>(null);
 
@@ -150,7 +150,7 @@ export default function VolunteerPage() {
         className="bg-white border border-gray-400 p-8 rounded-xl shadow max-w-xl mx-auto my-20"
       >
         <h2 className="text-2xl font-bold text-center mb-6">Apply to Volunteer</h2>
-        
+
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label htmlFor="name" className="block font-medium text-gray-700 mb-1">
@@ -225,49 +225,49 @@ export default function VolunteerPage() {
             {/* Nigerian states list */}
             {((form as any).locationType === "nigeria") && (() => {
               const NIGERIAN_STATES = [
-              "Abia","Adamawa","Akwa Ibom","Anambra","Bauchi","Bayelsa","Benue",
-              "Borno","Cross River","Delta","Ebonyi","Edo","Ekiti","Enugu","Gombe",
-              "Imo","Jigawa","Kaduna","Kano","Katsina","Kebbi","Kogi","Kwara",
-              "Lagos","Nasarawa","Niger","Ogun","Ondo","Osun","Oyo","Plateau",
-              "Rivers","Sokoto","Taraba","Yobe","Zamfara","Federal Capital Territory"
+                "Abia", "Adamawa", "Akwa Ibom", "Anambra", "Bauchi", "Bayelsa", "Benue",
+                "Borno", "Cross River", "Delta", "Ebonyi", "Edo", "Ekiti", "Enugu", "Gombe",
+                "Imo", "Jigawa", "Kaduna", "Kano", "Katsina", "Kebbi", "Kogi", "Kwara",
+                "Lagos", "Nasarawa", "Niger", "Ogun", "Ondo", "Osun", "Oyo", "Plateau",
+                "Rivers", "Sokoto", "Taraba", "Yobe", "Zamfara", "Federal Capital Territory"
               ];
               return (
-              <>
-                <label htmlFor="state" className="block font-medium text-gray-700 mb-1">
-                State in Nigeria
-                </label>
-                <select
-                id="state"
-                name="state"
-                value={(form as any).state || ""}
-                onChange={(e) => handleChange(e as any)}
-                required
-                className="w-full border border-gray-400 px-3 py-2 rounded-md mb-4 focus:ring-1 focus:ring-purple-600 focus:border-purple-600 focus:outline-none"
-                >
-                <option value="">-- Select state --</option>
-                {NIGERIAN_STATES.map((s) => (
-                  <option key={s} value={s}>
-                  {s}
-                  </option>
-                ))}
-                </select>
-              </>
+                <>
+                  <label htmlFor="state" className="block font-medium text-gray-700 mb-1">
+                    State in Nigeria
+                  </label>
+                  <select
+                    id="state"
+                    name="state"
+                    value={(form as any).state || ""}
+                    onChange={(e) => handleChange(e as any)}
+                    required
+                    className="w-full border border-gray-400 px-3 py-2 rounded-md mb-4 focus:ring-1 focus:ring-purple-600 focus:border-purple-600 focus:outline-none"
+                  >
+                    <option value="">-- Select state --</option>
+                    {NIGERIAN_STATES.map((s) => (
+                      <option key={s} value={s}>
+                        {s}
+                      </option>
+                    ))}
+                  </select>
+                </>
               );
             })()}
 
             {((form as any).locationType === "abroad") && (
               <>
-              <label htmlFor="country" className="block font-medium text-gray-700 mb-1">
-                Country
-              </label>
-              <input
-                id="country"
-                name="country"
-                value={(form as any).country || ""}
-                onChange={handleChange}
-                required
-                className="w-full border border-gray-400 px-3 py-2 rounded-md mb-4 focus:ring-1 focus:ring-purple-600 focus:border-purple-600 focus:outline-none"
-              />
+                <label htmlFor="country" className="block font-medium text-gray-700 mb-1">
+                  Country
+                </label>
+                <input
+                  id="country"
+                  name="country"
+                  value={(form as any).country || ""}
+                  onChange={handleChange}
+                  required
+                  className="w-full border border-gray-400 px-3 py-2 rounded-md mb-4 focus:ring-1 focus:ring-purple-600 focus:border-purple-600 focus:outline-none"
+                />
               </>
             )}
             <input
@@ -283,7 +283,7 @@ export default function VolunteerPage() {
             <label htmlFor="bio" className="block font-medium text-gray-700 mb-1">
               Tell us about yourself
             </label>
-           <textarea
+            <textarea
               id="bio"
               name="bio"
               rows={4}
@@ -296,9 +296,8 @@ export default function VolunteerPage() {
           <button
             type="submit"
             disabled={loading}
-            className={`w-full bg-orange-500 text-white py-2 rounded-md transition ${
-              loading ? "opacity-50 cursor-not-allowed" : "hover:bg-orange-600"
-            }`}
+            className={`w-full bg-orange-500 text-white py-2 rounded-md transition ${loading ? "opacity-50 cursor-not-allowed" : "hover:bg-orange-600"
+              }`}
           >
             {loading ? "Submitting..." : "Submit Application"}
           </button>
@@ -309,7 +308,7 @@ export default function VolunteerPage() {
             ✅ Thank you! Your application has been received.
           </div>
         )}
-        
+
       </section>
 
       <Footer />

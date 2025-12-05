@@ -36,7 +36,7 @@ const Header: React.FC = () => {
             <Link to="/about" className="text-gray-800 hover:text-purple-700 font-medium">About Us</Link>
             <Link to="/project" className="text-gray-800 hover:text-purple-700 font-medium">Projects</Link>
             <Link to="/news" className="text-gray-800 hover:text-purple-700 font-medium">News</Link>
-            <Link to="/impact" className="text-gray-800 hover:text-purple-700 font-medium">Impact</Link>
+            {/* <Link to="/impat" className="text-gray-800 hover:text-purple-700 font-medium">Impact</Link> */}
             <div className='flex items-center space-x-4'>
               <Link
                 to={"/#donate"}
@@ -66,7 +66,7 @@ const Header: React.FC = () => {
               <Link to="/about" onClick={toggleMobileMenu} className="block text-gray-800 hover:text-purple-700 font-medium">About Us</Link>
               <Link to="/projects" onClick={toggleMobileMenu} className="block text-gray-800 hover:text-purple-700 font-medium">Projects</Link>
               <Link to="/news" onClick={toggleMobileMenu} className="block text-gray-800 hover:text-purple-700 font-medium">News</Link>
-              <Link to="/impact" onClick={toggleMobileMenu} className="block text-gray-800 hover:text-purple-700 font-medium">Impact</Link>
+              {/* <Link to="/impact" onClick={toggleMobileMenu} className="block text-gray-800 hover:text-purple-700 font-medium">Impact</Link> */}
               
               <Link
                 to="/#donate"
@@ -86,4 +86,3 @@ const Header: React.FC = () => {
 };
 
 export default Header;
-

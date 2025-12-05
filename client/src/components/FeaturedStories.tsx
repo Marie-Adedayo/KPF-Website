@@ -83,4 +83,3 @@ const FeaturedStories: React.FC = () => {
     )
 }
 export default FeaturedStories;
-

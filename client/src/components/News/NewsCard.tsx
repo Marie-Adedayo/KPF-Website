@@ -38,4 +38,3 @@ const NewsCard: React.FC<{ item: NewsItem }> = ({ item }) => {
 };
 
 export default NewsCard;
-
