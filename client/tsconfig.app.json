@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "tsBuildInfoFile": "frontend/node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    "tsBuildInfoFile": "client/node_modules/.tmp/tsconfig.app.tsbuildinfo",
     "target": "ES2020",
     "useDefineForClassFields": true,
     "lib": [
@@ -28,15 +28,16 @@
     "baseUrl": ".", // needed for import alias
     "paths": {
       "@/*": [
-        "frontend/src/*"
+        "client/src/*"
       ]
     }
   },
   "include": [
-    "frontend/src",
-    "frontend/src/types/**/*.d.ts",
+    "client/src",
+    "client/src/types/**/*.d.ts",
     "src/components/ui/button.tsx",
     "src/components/ui/card.tsx",
-    "lib"
-, "src/lib/utils.ts"  ]
+    "lib",
+    "lib/utils.ts"
+  ]
 }

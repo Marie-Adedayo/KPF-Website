@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import PaystackPop from '@paystack/inline-js';
 import { PayPalScriptProvider, PayPalButtons } from '@paypal/react-paypal-js';
 
+
+
 type PaymentMethod = 'paypal' | 'paystack' | null;
 
 const DonationSection: React.FC = () => {
@@ -122,7 +124,7 @@ const DonationSection: React.FC = () => {
   };
 
   return (
-    <PayPalScriptProvider options={{ "client-id": import.meta.env.VITE_PAYPAL_CLIENT_ID || "", currency }}>
+   
       <section className="py-20 bg-gradient-to-r from-purple-900 to-purple-700">
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto bg-white rounded-xl shadow-xl overflow-hidden p-10 text-center">
@@ -363,7 +365,7 @@ const DonationSection: React.FC = () => {
           </div>
         </div>
       </section>
-    </PayPalScriptProvider>
+
   );
 };
 
