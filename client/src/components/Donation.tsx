@@ -89,7 +89,7 @@ const DonationSection: React.FC = () => {
 
     const paystack = new PaystackPop();
 
-    paystack.newTransaction({
+    (paystack as any).newTransaction({
       key: publicKey,
       email: donorEmail,
       amount: Math.round(amountNumber * 100),
@@ -167,13 +167,13 @@ const DonationSection: React.FC = () => {
                   Donate with Paystack
                 </button>
 
-           {/*      <button
+               {/*  <button
                   onClick={() => openPopup('paypal')}
                   className="bg-blue-600 text-white py-4 px-8 rounded-button hover:bg-blue-700 transition duration-300 font-medium text-lg"
                 >
                   Donate with PayPal
-                </button> */}
-
+                </button>
+ */}
                 <button
                   onClick={() => openPopup('bank')}
                   className="bg-green-600 text-white py-4 px-8 rounded-button hover:bg-green-700 transition duration-300 font-medium text-lg"
