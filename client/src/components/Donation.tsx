@@ -178,7 +178,7 @@ const DonationSection: React.FC = () => {
                   onClick={() => openPopup('bank')}
                   className="bg-green-600 text-white py-4 px-8 rounded-button hover:bg-green-700 transition duration-300 font-medium text-lg"
                 >
-                  Donate through Bank Transfer
+                  Donate through Local Bank Transfer
                 </button>
                 </div>
 
