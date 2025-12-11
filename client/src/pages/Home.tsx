@@ -52,7 +52,7 @@ return (
       </button>
 
       <div className="flex justify-center items-center my-6">
-        <img src="/Images/foso.jpeg" alt="foso" className="w-[80%] max-w-md h-auto object-cover" />
+        <img src="/Images/Feed one save one.jpeg" alt="foso" className="w-[80%] max-w-md h-auto object-cover" />
       </div>
 
       <div className="flex justify-end gap-3">
